@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nuggetizer"
+version = "0.0.6"
+description = "A package for Nuggetizer - a tool for information nugget creation and assignment to LLM-generated answers."
+readme = "README.md"
+authors = [
+    { name = "Ronak Pradeep", email = "rpradeep@uwaterloo.ca" },
+]
+license = { file = "LICENSE" }
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["Nuggetizer", "Fact Recall", "LLM", "Nuggets", "Fact Extraction", "RAG Evaluation", "Evaluation", "RAG"]
+dynamic = ["dependencies"]
+requires-python = ">= 3.10"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[project.urls]
+Homepage = "https://github.com/castorini/nuggetizer"
+
+[tool.bumpver]
+current_version = "0.0.6"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message = "Bump version {old_version} -> {new_version}"
+commit = true
+tag = true
+push = false
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = [
+    'current_version = "{version}"', 'version = "{version}"'
+]
+"README.md" = [
+    "{version}",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = [
+    "nuggetizer",
+    "nuggetizer.core",
+    "nuggetizer.models",
+    "nuggetizer.utils",
+]
+namespaces = false
+
+[tool.setuptools]
+provides = ["nuggetizer"]

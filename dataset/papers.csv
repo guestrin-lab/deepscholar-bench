@@ -1,0 +1,1212 @@
+arxiv_id,title,authors,abstract,categories,published_date,updated_date,abs_url
+2506.02838v1,TaxAgent: How Large Language Model Designs Fiscal Policy,"Jizhou Wang, Xiaodan Fang, Lei Huang, Yongfeng Huang","Economic inequality is a global challenge, intensifying disparities in
+education, healthcare, and social stability. Traditional systems like the U.S.
+federal income tax reduce inequality but lack adaptability. Although models
+like the Saez Optimal Taxation adjust dynamically, they fail to address
+taxpayer heterogeneity and irrational behavior. This study introduces TaxAgent,
+a novel integration of large language models (LLMs) with agent-based modeling
+(ABM) to design adaptive tax policies. In our macroeconomic simulation,
+heterogeneous H-Agents (households) simulate real-world taxpayer behaviors
+while the TaxAgent (government) utilizes LLMs to iteratively optimize tax
+rates, balancing equity and productivity. Benchmarked against Saez Optimal
+Taxation, U.S. federal income taxes, and free markets, TaxAgent achieves
+superior equity-efficiency trade-offs. This research offers a novel taxation
+solution and a scalable, data-driven framework for fiscal policy evaluation.","cs.AI, econ.GN, q-fin.EC, I.2.11, I.6.5, J.4",2025-06-03T13:06:19+00:00,2025-06-03T13:06:19+00:00,http://arxiv.org/abs/2506.02838v1
+2506.02634v1,"KVCache Cache in the Wild: Characterizing and Optimizing KVCache Cache
+  at a Large Cloud Provider","Jiahao Wang, Jinbo Han, Xingda Wei, Sijie Shen, Dingyan Zhang, Chenguang Fang, Rong Chen, Wenyuan Yu, Haibo Chen","Serving large language models (LLMs) is important for cloud providers, and
+caching intermediate results (KV\$) after processing each request substantially
+improves serving throughput and latency. However, there is limited
+understanding of how LLM serving benefits from KV\$ caching, where system
+design decisions like cache eviction policies are highly workload-dependent. In
+this paper, we present the first systematic characterization of the KV\$
+workload patterns from one of the leading LLM service providers. We draw
+observations that were not covered by previous studies focusing on synthetic
+workloads, including: KV\$ reuses are skewed across requests, where reuses
+between single-turn requests are equally important as multi-turn requests; the
+reuse time and probability are diverse considering all requests, but for a
+specific request category, the pattern tends to be predictable; and the overall
+cache size required for an ideal cache hit ratio is moderate. Based on the
+characterization, we further propose a workload-aware cache eviction policy
+that improves the serving performance under real-world traces, especially with
+limited cache capacity.","cs.DC, cs.AI",2025-06-03T08:51:38+00:00,2025-06-03T08:51:38+00:00,http://arxiv.org/abs/2506.02634v1
+2506.00958v1,"Speaking Beyond Language: A Large-Scale Multimodal Dataset for Learning
+  Nonverbal Cues from Video-Grounded Dialogues","Youngmin Kim, Jiwan Chung, Jisoo Kim, Sunghyun Lee, Sangkyu Lee, Junhyeok Kim, Cheoljong Yang, Youngjae Yu","Nonverbal communication is integral to human interaction, with gestures,
+facial expressions, and body language conveying critical aspects of intent and
+emotion. However, existing large language models (LLMs) fail to effectively
+incorporate these nonverbal elements, limiting their capacity to create fully
+immersive conversational experiences. We introduce MARS, a multimodal language
+model designed to understand and generate nonverbal cues alongside text,
+bridging this gap in conversational AI. Our key innovation is VENUS, a
+large-scale dataset comprising annotated videos with time-aligned text, facial
+expressions, and body language. Leveraging VENUS, we train MARS with a
+next-token prediction objective, combining text with vector-quantized nonverbal
+representations to achieve multimodal understanding and generation within a
+unified framework. Based on various analyses of the VENUS datasets, we validate
+its substantial scale and high effectiveness. Our quantitative and qualitative
+results demonstrate that MARS successfully generates text and nonverbal
+languages, corresponding to conversational input.","cs.AI, cs.CL, cs.CV",2025-06-01T11:07:25+00:00,2025-06-01T11:07:25+00:00,http://arxiv.org/abs/2506.00958v1
+2506.00832v1,"Counterfactual Activation Editing for Post-hoc Prosody and
+  Mispronunciation Correction in TTS Models","Kyowoon Lee, Artyom Stitsyuk, Gunu Jho, Inchul Hwang, Jaesik Choi","Recent advances in Text-to-Speech (TTS) have significantly improved speech
+naturalness, increasing the demand for precise prosody control and
+mispronunciation correction. Existing approaches for prosody manipulation often
+depend on specialized modules or additional training, limiting their capacity
+for post-hoc adjustments. Similarly, traditional mispronunciation correction
+relies on grapheme-to-phoneme dictionaries, making it less practical in
+low-resource settings. We introduce Counterfactual Activation Editing, a
+model-agnostic method that manipulates internal representations in a
+pre-trained TTS model to achieve post-hoc control of prosody and pronunciation.
+Experimental results show that our method effectively adjusts prosodic features
+and corrects mispronunciations while preserving synthesis quality. This opens
+the door to inference-time refinement of TTS outputs without retraining,
+bridging the gap between pre-trained TTS models and editable speech synthesis.","cs.SD, cs.AI, eess.AS",2025-06-01T04:33:37+00:00,2025-06-01T04:33:37+00:00,http://arxiv.org/abs/2506.00832v1
+2506.00418v1,Dual Debiasing for Noisy In-Context Learning for Text Generation,"Siqi Liang, Sumyeong Ahn, Paramveer S. Dhillon, Jiayu Zhou","In context learning (ICL) relies heavily on high quality demonstrations drawn
+from large annotated corpora. Existing approaches detect noisy annotations by
+ranking local perplexities, presuming that noisy samples yield higher
+perplexities than their clean counterparts. However, this assumption breaks
+down when the noise ratio is high and many demonstrations are flawed. We
+reexamine the perplexity based paradigm for text generation under noisy
+annotations, highlighting two sources of bias in perplexity: the annotation
+itself and the domain specific knowledge inherent in large language models
+(LLMs). To overcome these biases, we introduce a dual debiasing framework that
+uses synthesized neighbors to explicitly correct perplexity estimates, yielding
+a robust Sample Cleanliness Score. This metric uncovers absolute sample
+cleanliness regardless of the overall corpus noise level. Extensive experiments
+demonstrate our method's superior noise detection capabilities and show that
+its final ICL performance is comparable to that of a fully clean demonstration
+corpus. Moreover, our approach remains robust even when noise ratios are
+extremely high.","cs.CL, cs.AI, I.2.7",2025-05-31T06:44:48+00:00,2025-05-31T06:44:48+00:00,http://arxiv.org/abs/2506.00418v1
+2505.24754v1,"Don't Reinvent the Wheel: Efficient Instruction-Following Text Embedding
+  based on Guided Space Transformation","Yingchaojie Feng, Yiqun Sun, Yandong Sun, Minfeng Zhu, Qiang Huang, Anthony K. H. Tung, Wei Chen","In this work, we investigate an important task named instruction-following
+text embedding, which generates dynamic text embeddings that adapt to user
+instructions, highlighting specific attributes of text. Despite recent
+advancements, existing approaches suffer from significant computational
+overhead, as they require re-encoding the entire corpus for each new
+instruction. To address this challenge, we propose GSTransform, a novel
+instruction-following text embedding framework based on Guided Space
+Transformation. Our key observation is that instruction-relevant information is
+inherently encoded in generic embeddings but remains underutilized. Instead of
+repeatedly encoding the corpus for each instruction, GSTransform is a
+lightweight transformation mechanism that adapts pre-computed embeddings in
+real time to align with user instructions, guided by a small amount of text
+data with instruction-focused label annotation. We conduct extensive
+experiments on three instruction-awareness downstream tasks across nine
+real-world datasets, demonstrating that GSTransform improves
+instruction-following text embedding quality over state-of-the-art methods
+while achieving dramatic speedups of 6~300x in real-time processing on
+large-scale datasets. The source code is available at
+https://github.com/YingchaojieFeng/GSTransform.","cs.CL, cs.AI, cs.IR",2025-05-30T16:16:22+00:00,2025-05-30T16:16:22+00:00,http://arxiv.org/abs/2505.24754v1
+2505.24575v1,NexusSum: Hierarchical LLM Agents for Long-Form Narrative Summarization,"Hyuntak Kim, Byung-Hak Kim","Summarizing long-form narratives--such as books, movies, and TV
+scripts--requires capturing intricate plotlines, character interactions, and
+thematic coherence, a task that remains challenging for existing LLMs. We
+introduce NexusSum, a multi-agent LLM framework for narrative summarization
+that processes long-form text through a structured, sequential
+pipeline--without requiring fine-tuning. Our approach introduces two key
+innovations: (1) Dialogue-to-Description Transformation: A narrative-specific
+preprocessing method that standardizes character dialogue and descriptive text
+into a unified format, improving coherence. (2) Hierarchical Multi-LLM
+Summarization: A structured summarization pipeline that optimizes chunk
+processing and controls output length for accurate, high-quality summaries. Our
+method establishes a new state-of-the-art in narrative summarization, achieving
+up to a 30.0% improvement in BERTScore (F1) across books, movies, and TV
+scripts. These results demonstrate the effectiveness of multi-agent LLMs in
+handling long-form content, offering a scalable approach for structured
+summarization in diverse storytelling domains.","cs.CL, cs.AI",2025-05-30T13:26:23+00:00,2025-05-30T13:26:23+00:00,http://arxiv.org/abs/2505.24575v1
+2506.00085v1,COSMIC: Generalized Refusal Direction Identification in LLM Activations,"Vincent Siu, Nicholas Crispino, Zihao Yu, Sam Pan, Zhun Wang, Yang Liu, Dawn Song, Chenguang Wang","Large Language Models (LLMs) encode behaviors such as refusal within their
+activation space, yet identifying these behaviors remains a significant
+challenge. Existing methods often rely on predefined refusal templates
+detectable in output tokens or require manual analysis. We introduce
+\textbf{COSMIC} (Cosine Similarity Metrics for Inversion of Concepts), an
+automated framework for direction selection that identifies viable steering
+directions and target layers using cosine similarity - entirely independent of
+model outputs. COSMIC achieves steering performance comparable to prior methods
+without requiring assumptions about a model's refusal behavior, such as the
+presence of specific refusal tokens. It reliably identifies refusal directions
+in adversarial settings and weakly aligned models, and is capable of steering
+such models toward safer behavior with minimal increase in false refusals,
+demonstrating robustness across a wide range of alignment conditions.","cs.CL, cs.AI",2025-05-30T04:54:18+00:00,2025-05-30T04:54:18+00:00,http://arxiv.org/abs/2506.00085v1
+2505.23996v1,"Is Your Model Fairly Certain? Uncertainty-Aware Fairness Evaluation for
+  LLMs","Yinong Oliver Wang, Nivedha Sivakumar, Falaah Arif Khan, Rin Metcalf Susa, Adam Golinski, Natalie Mackraz, Barry-John Theobald, Luca Zappella, Nicholas Apostoloff","The recent rapid adoption of large language models (LLMs) highlights the
+critical need for benchmarking their fairness. Conventional fairness metrics,
+which focus on discrete accuracy-based evaluations (i.e., prediction
+correctness), fail to capture the implicit impact of model uncertainty (e.g.,
+higher model confidence about one group over another despite similar accuracy).
+To address this limitation, we propose an uncertainty-aware fairness metric,
+UCerF, to enable a fine-grained evaluation of model fairness that is more
+reflective of the internal bias in model decisions compared to conventional
+fairness measures. Furthermore, observing data size, diversity, and clarity
+issues in current datasets, we introduce a new gender-occupation fairness
+evaluation dataset with 31,756 samples for co-reference resolution, offering a
+more diverse and suitable dataset for evaluating modern LLMs. We establish a
+benchmark, using our metric and dataset, and apply it to evaluate the behavior
+of ten open-source LLMs. For example, Mistral-7B exhibits suboptimal fairness
+due to high confidence in incorrect predictions, a detail overlooked by
+Equalized Odds but captured by UCerF. Overall, our proposed LLM benchmark,
+which evaluates fairness with uncertainty awareness, paves the way for
+developing more transparent and accountable AI systems.","cs.CL, cs.AI, cs.LG",2025-05-29T20:45:18+00:00,2025-05-29T20:45:18+00:00,http://arxiv.org/abs/2505.23996v1
+2505.23353v1,"Synthetic Generation and Latent Projection Denoising of Rim Lesions in
+  Multiple Sclerosis","Alexandra G. Roberts, Ha M. Luu, Mert Şişman, Alexey V. Dimov, Ceren Tozlu, Ilhami Kovanlikaya, Susan A. Gauthier, Thanh D. Nguyen, Yi Wang","Quantitative susceptibility maps from magnetic resonance images can provide
+both prognostic and diagnostic information in multiple sclerosis, a
+neurodegenerative disease characterized by the formation of lesions in white
+matter brain tissue. In particular, susceptibility maps provide adequate
+contrast to distinguish between ""rim"" lesions, surrounded by deposited
+paramagnetic iron, and ""non-rim"" lesion types. These paramagnetic rim lesions
+(PRLs) are an emerging biomarker in multiple sclerosis. Much effort has been
+devoted to both detection and segmentation of such lesions to monitor
+longitudinal change. As paramagnetic rim lesions are rare, addressing this
+problem requires confronting the class imbalance between rim and non-rim
+lesions. We produce synthetic quantitative susceptibility maps of paramagnetic
+rim lesions and show that inclusion of such synthetic data improves classifier
+performance and provide a multi-channel extension to generate accompanying
+contrasts and probabilistic segmentation maps. We exploit the projection
+capability of our trained generative network to demonstrate a novel denoising
+approach that allows us to train on ambiguous rim cases and substantially
+increase the minority class. We show that both synthetic lesion synthesis and
+our proposed rim lesion label denoising method best approximate the unseen rim
+lesion distribution and improve detection in a clinically interpretable manner.
+We release our code and generated data at https://github.com/agr78/PRLx-GAN
+upon publication.","eess.IV, cs.AI, cs.CV",2025-05-29T11:22:48+00:00,2025-05-29T11:22:48+00:00,http://arxiv.org/abs/2505.23353v1
+2505.22757v1,Pre-Training Curriculum for Multi-Token Prediction in Language Models,"Ansar Aynetdinov, Alan Akbik","Multi-token prediction (MTP) is a recently proposed pre-training objective
+for language models. Rather than predicting only the next token (NTP), MTP
+predicts the next $k$ tokens at each prediction step, using multiple prediction
+heads. MTP has shown promise in improving downstream performance, inference
+speed, and training efficiency, particularly for large models. However, prior
+work has shown that smaller language models (SLMs) struggle with the MTP
+objective. To address this, we propose a curriculum learning strategy for MTP
+training, exploring two variants: a forward curriculum, which gradually
+increases the complexity of the pre-training objective from NTP to MTP, and a
+reverse curriculum, which does the opposite. Our experiments show that the
+forward curriculum enables SLMs to better leverage the MTP objective during
+pre-training, improving downstream NTP performance and generative output
+quality, while retaining the benefits of self-speculative decoding. The reverse
+curriculum achieves stronger NTP performance and output quality, but fails to
+provide any self-speculative decoding benefits.","cs.CL, cs.AI",2025-05-28T18:19:18+00:00,2025-05-28T18:19:18+00:00,http://arxiv.org/abs/2505.22757v1
+2506.02853v1,"Learning Pyramid-structured Long-range Dependencies for 3D Human Pose
+  Estimation","Mingjie Wei, Xuemei Xie, Yutong Zhong, Guangming Shi","Action coordination in human structure is indispensable for the spatial
+constraints of 2D joints to recover 3D pose. Usually, action coordination is
+represented as a long-range dependence among body parts. However, there are two
+main challenges in modeling long-range dependencies. First, joints should not
+only be constrained by other individual joints but also be modulated by the
+body parts. Second, existing methods make networks deeper to learn dependencies
+between non-linked parts. They introduce uncorrelated noise and increase the
+model size. In this paper, we utilize a pyramid structure to better learn
+potential long-range dependencies. It can capture the correlation across joints
+and groups, which complements the context of the human sub-structure. In an
+effective cross-scale way, it captures the pyramid-structured long-range
+dependence. Specifically, we propose a novel Pyramid Graph Attention (PGA)
+module to capture long-range cross-scale dependencies. It concatenates
+information from various scales into a compact sequence, and then computes the
+correlation between scales in parallel. Combining PGA with graph convolution
+modules, we develop a Pyramid Graph Transformer (PGFormer) for 3D human pose
+estimation, which is a lightweight multi-scale transformer architecture. It
+encapsulates human sub-structures into self-attention by pooling. Extensive
+experiments show that our approach achieves lower error and smaller model size
+than state-of-the-art methods on Human3.6M and MPI-INF-3DHP datasets. The code
+is available at https://github.com/MingjieWe/PGFormer.",cs.CV,2025-06-03T13:21:37+00:00,2025-06-03T13:21:37+00:00,http://arxiv.org/abs/2506.02853v1
+2506.02547v1,Probabilistic Online Event Downsampling,"Andreu Girbau-Xalabarder, Jun Nagata, Shinichi Sumiyoshi","Event cameras capture scene changes asynchronously on a per-pixel basis,
+enabling extremely high temporal resolution. However, this advantage comes at
+the cost of high bandwidth, memory, and computational demands. To address this,
+prior work has explored event downsampling, but most approaches rely on fixed
+heuristics or threshold-based strategies, limiting their adaptability. Instead,
+we propose a probabilistic framework, POLED, that models event importance
+through an event-importance probability density function (ePDF), which can be
+arbitrarily defined and adapted to different applications. Our approach
+operates in a purely online setting, estimating event importance on-the-fly
+from raw event streams, enabling scene-specific adaptation. Additionally, we
+introduce zero-shot event downsampling, where downsampled events must remain
+usable for models trained on the original event stream, without task-specific
+adaptation. We design a contour-preserving ePDF that prioritizes structurally
+important events and evaluate our method across four datasets and tasks--object
+classification, image interpolation, surface normal estimation, and object
+detection--demonstrating that intelligent sampling is crucial for maintaining
+performance under event-budget constraints.","cs.CV, cs.ET",2025-06-03T07:33:11+00:00,2025-06-03T07:33:11+00:00,http://arxiv.org/abs/2506.02547v1
+2506.01071v1,Aligned Contrastive Loss for Long-Tailed Recognition,"Jiali Ma, Jiequan Cui, Maeno Kazuki, Lakshmi Subramanian, Karlekar Jayashree, Sugiri Pranata, Hanwang Zhang","In this paper, we propose an Aligned Contrastive Learning (ACL) algorithm to
+address the long-tailed recognition problem. Our findings indicate that while
+multi-view training boosts the performance, contrastive learning does not
+consistently enhance model generalization as the number of views increases.
+Through theoretical gradient analysis of supervised contrastive learning (SCL),
+we identify gradient conflicts, and imbalanced attraction and repulsion
+gradients between positive and negative pairs as the underlying issues. Our ACL
+algorithm is designed to eliminate these problems and demonstrates strong
+performance across multiple benchmarks. We validate the effectiveness of ACL
+through experiments on long-tailed CIFAR, ImageNet, Places, and iNaturalist
+datasets. Results show that ACL achieves new state-of-the-art performance.",cs.CV,2025-06-01T16:19:30+00:00,2025-06-01T16:19:30+00:00,http://arxiv.org/abs/2506.01071v1
+2506.01037v1,"Self-supervised ControlNet with Spatio-Temporal Mamba for Real-world
+  Video Super-resolution","Shijun Shi, Jing Xu, Lijing Lu, Zhihang Li, Kai Hu","Existing diffusion-based video super-resolution (VSR) methods are susceptible
+to introducing complex degradations and noticeable artifacts into
+high-resolution videos due to their inherent randomness. In this paper, we
+propose a noise-robust real-world VSR framework by incorporating
+self-supervised learning and Mamba into pre-trained latent diffusion models. To
+ensure content consistency across adjacent frames, we enhance the diffusion
+model with a global spatio-temporal attention mechanism using the Video
+State-Space block with a 3D Selective Scan module, which reinforces coherence
+at an affordable computational cost. To further reduce artifacts in generated
+details, we introduce a self-supervised ControlNet that leverages HR features
+as guidance and employs contrastive learning to extract degradation-insensitive
+features from LR videos. Finally, a three-stage training strategy based on a
+mixture of HR-LR videos is proposed to stabilize VSR training. The proposed
+Self-supervised ControlNet with Spatio-Temporal Continuous Mamba based VSR
+algorithm achieves superior perceptual quality than state-of-the-arts on
+real-world VSR benchmark datasets, validating the effectiveness of the proposed
+model design and training strategies.","cs.CV, I.4.4, I.2.6",2025-06-01T14:36:25+00:00,2025-06-01T14:36:25+00:00,http://arxiv.org/abs/2506.01037v1
+2506.00434v1,"Efficient 3D Brain Tumor Segmentation with Axial-Coronal-Sagittal
+  Embedding","Tuan-Luc Huynh, Thanh-Danh Le, Tam V. Nguyen, Trung-Nghia Le, Minh-Triet Tran","In this paper, we address the crucial task of brain tumor segmentation in
+medical imaging and propose innovative approaches to enhance its performance.
+The current state-of-the-art nnU-Net has shown promising results but suffers
+from extensive training requirements and underutilization of pre-trained
+weights. To overcome these limitations, we integrate Axial-Coronal-Sagittal
+convolutions and pre-trained weights from ImageNet into the nnU-Net framework,
+resulting in reduced training epochs, reduced trainable parameters, and
+improved efficiency. Two strategies for transferring 2D pre-trained weights to
+the 3D domain are presented, ensuring the preservation of learned relationships
+and feature representations critical for effective information propagation.
+Furthermore, we explore a joint classification and segmentation model that
+leverages pre-trained encoders from a brain glioma grade classification proxy
+task, leading to enhanced segmentation performance, especially for challenging
+tumor labels. Experimental results demonstrate that our proposed methods in the
+fast training settings achieve comparable or even outperform the ensemble of
+cross-validation models, a common practice in the brain tumor segmentation
+literature.","eess.IV, cs.CV",2025-05-31T07:30:37+00:00,2025-05-31T07:30:37+00:00,http://arxiv.org/abs/2506.00434v1
+2506.00333v1,Test-time Vocabulary Adaptation for Language-driven Object Detection,"Mingxuan Liu, Tyler L. Hayes, Massimiliano Mancini, Elisa Ricci, Riccardo Volpi, Gabriela Csurka","Open-vocabulary object detection models allow users to freely specify a class
+vocabulary in natural language at test time, guiding the detection of desired
+objects. However, vocabularies can be overly broad or even mis-specified,
+hampering the overall performance of the detector. In this work, we propose a
+plug-and-play Vocabulary Adapter (VocAda) to refine the user-defined
+vocabulary, automatically tailoring it to categories that are relevant for a
+given image. VocAda does not require any training, it operates at inference
+time in three steps: i) it uses an image captionner to describe visible
+objects, ii) it parses nouns from those captions, and iii) it selects relevant
+classes from the user-defined vocabulary, discarding irrelevant ones.
+Experiments on COCO and Objects365 with three state-of-the-art detectors show
+that VocAda consistently improves performance, proving its versatility. The
+code is open source.",cs.CV,2025-05-31T01:15:29+00:00,2025-05-31T01:15:29+00:00,http://arxiv.org/abs/2506.00333v1
+2505.24443v1,"Diversify and Conquer: Open-set Disagreement for Robust Semi-supervised
+  Learning with Outliers","Heejo Kong, Sung-Jin Kim, Gunho Jung, Seong-Whan Lee","Conventional semi-supervised learning (SSL) ideally assumes that labeled and
+unlabeled data share an identical class distribution, however in practice, this
+assumption is easily violated, as unlabeled data often includes unknown class
+data, i.e., outliers. The outliers are treated as noise, considerably degrading
+the performance of SSL models. To address this drawback, we propose a novel
+framework, Diversify and Conquer (DAC), to enhance SSL robustness in the
+context of open-set semi-supervised learning. In particular, we note that
+existing open-set SSL methods rely on prediction discrepancies between inliers
+and outliers from a single model trained on labeled data. This approach can be
+easily failed when the labeled data is insufficient, leading to performance
+degradation that is worse than naive SSL that do not account for outliers. In
+contrast, our approach exploits prediction disagreements among multiple models
+that are differently biased towards the unlabeled distribution. By leveraging
+the discrepancies arising from training on unlabeled data, our method enables
+robust outlier detection even when the labeled data is underspecified. Our key
+contribution is constructing a collection of differently biased models through
+a single training process. By encouraging divergent heads to be differently
+biased towards outliers while making consistent predictions for inliers, we
+exploit the disagreement among these heads as a measure to identify unknown
+concepts. Our code is available at https://github.com/heejokong/DivCon.","cs.CV, cs.LG",2025-05-30T10:24:30+00:00,2025-05-30T10:24:30+00:00,http://arxiv.org/abs/2505.24443v1
+2505.24334v1,"KairosAD: A SAM-Based Model for Industrial Anomaly Detection on Embedded
+  Devices","Uzair Khan, Franco Fummi, Luigi Capogrosso","In the era of intelligent manufacturing, anomaly detection has become
+essential for maintaining quality control on modern production lines. However,
+while many existing models show promising performance, they are often too
+large, computationally demanding, and impractical to deploy on
+resource-constrained embedded devices that can be easily installed on the
+production lines of Small and Medium Enterprises (SMEs). To bridge this gap, we
+present KairosAD, a novel supervised approach that uses the power of the Mobile
+Segment Anything Model (MobileSAM) for image-based anomaly detection. KairosAD
+has been evaluated on the two well-known industrial anomaly detection datasets,
+i.e., MVTec-AD and ViSA. The results show that KairosAD requires 78% fewer
+parameters and boasts a 4x faster inference time compared to the leading
+state-of-the-art model, while maintaining comparable AUROC performance. We
+deployed KairosAD on two embedded devices, the NVIDIA Jetson NX, and the NVIDIA
+Jetson AGX. Finally, KairosAD was successfully installed and tested on the real
+production line of the Industrial Computer Engineering Laboratory (ICE Lab) at
+the University of Verona. The code is available at
+https://github.com/intelligolabs/KairosAD.",cs.CV,2025-05-30T08:18:49+00:00,2025-05-30T08:18:49+00:00,http://arxiv.org/abs/2505.24334v1
+2505.23290v1,"Wav2Sem: Plug-and-Play Audio Semantic Decoupling for 3D Speech-Driven
+  Facial Animation","Hao Li, Ju Dai, Xin Zhao, Feng Zhou, Junjun Pan, Lei Li","In 3D speech-driven facial animation generation, existing methods commonly
+employ pre-trained self-supervised audio models as encoders. However, due to
+the prevalence of phonetically similar syllables with distinct lip shapes in
+language, these near-homophone syllables tend to exhibit significant coupling
+in self-supervised audio feature spaces, leading to the averaging effect in
+subsequent lip motion generation. To address this issue, this paper proposes a
+plug-and-play semantic decorrelation module-Wav2Sem. This module extracts
+semantic features corresponding to the entire audio sequence, leveraging the
+added semantic information to decorrelate audio encodings within the feature
+space, thereby achieving more expressive audio features. Extensive experiments
+across multiple Speech-driven models indicate that the Wav2Sem module
+effectively decouples audio features, significantly alleviating the averaging
+effect of phonetically similar syllables in lip shape generation, thereby
+enhancing the precision and naturalness of facial animations. Our source code
+is available at https://github.com/wslh852/Wav2Sem.git.","cs.SD, cs.CV, eess.AS",2025-05-29T09:42:03+00:00,2025-05-29T09:42:03+00:00,http://arxiv.org/abs/2505.23290v1
+2505.23180v1,"Proximal Algorithm Unrolling: Flexible and Efficient Reconstruction
+  Networks for Single-Pixel Imaging","Ping Wang, Lishun Wang, Gang Qu, Xiaodong Wang, Yulun Zhang, Xin Yuan","Deep-unrolling and plug-and-play (PnP) approaches have become the de-facto
+standard solvers for single-pixel imaging (SPI) inverse problem. PnP
+approaches, a class of iterative algorithms where regularization is implicitly
+performed by an off-the-shelf deep denoiser, are flexible for varying
+compression ratios (CRs) but are limited in reconstruction accuracy and speed.
+Conversely, unrolling approaches, a class of multi-stage neural networks where
+a truncated iterative optimization process is transformed into an end-to-end
+trainable network, typically achieve better accuracy with faster inference but
+require fine-tuning or even retraining when CR changes. In this paper, we
+address the challenge of integrating the strengths of both classes of solvers.
+To this end, we design an efficient deep image restorer (DIR) for the unrolling
+of HQS (half quadratic splitting) and ADMM (alternating direction method of
+multipliers). More importantly, a general proximal trajectory (PT) loss
+function is proposed to train HQS/ADMM-unrolling networks such that learned DIR
+approximates the proximal operator of an ideal explicit restoration
+regularizer. Extensive experiments demonstrate that, the resulting proximal
+unrolling networks can not only flexibly handle varying CRs with a single model
+like PnP algorithms, but also outperform previous CR-specific unrolling
+networks in both reconstruction accuracy and speed. Source codes and models are
+available at https://github.com/pwangcs/ProxUnroll.","eess.IV, cs.CV",2025-05-29T07:16:57+00:00,2025-05-29T07:16:57+00:00,http://arxiv.org/abs/2505.23180v1
+2505.22616v1,"PS4PRO: Pixel-to-pixel Supervision for Photorealistic Rendering and
+  Optimization","Yezhi Shen, Qiuchen Zhai, Fengqing Zhu","Neural rendering methods have gained significant attention for their ability
+to reconstruct 3D scenes from 2D images. The core idea is to take multiple
+views as input and optimize the reconstructed scene by minimizing the
+uncertainty in geometry and appearance across the views. However, the
+reconstruction quality is limited by the number of input views. This limitation
+is further pronounced in complex and dynamic scenes, where certain angles of
+objects are never seen. In this paper, we propose to use video frame
+interpolation as the data augmentation method for neural rendering.
+Furthermore, we design a lightweight yet high-quality video frame interpolation
+model, PS4PRO (Pixel-to-pixel Supervision for Photorealistic Rendering and
+Optimization). PS4PRO is trained on diverse video datasets, implicitly modeling
+camera movement as well as real-world 3D geometry. Our model performs as an
+implicit world prior, enriching the photo supervision for 3D reconstruction. By
+leveraging the proposed method, we effectively augment existing datasets for
+neural rendering methods. Our experimental results indicate that our method
+improves the reconstruction performance on both static and dynamic scenes.","cs.CV, eess.IV",2025-05-28T17:35:39+00:00,2025-05-28T17:35:39+00:00,http://arxiv.org/abs/2505.22616v1
+2505.22458v1,Universal Domain Adaptation for Semantic Segmentation,"Seun-An Choe, Keon-Hee Park, Jinwoo Choi, Gyeong-Moon Park","Unsupervised domain adaptation for semantic segmentation (UDA-SS) aims to
+transfer knowledge from labeled source data to unlabeled target data. However,
+traditional UDA-SS methods assume that category settings between source and
+target domains are known, which is unrealistic in real-world scenarios. This
+leads to performance degradation if private classes exist. To address this
+limitation, we propose Universal Domain Adaptation for Semantic Segmentation
+(UniDA-SS), achieving robust adaptation even without prior knowledge of
+category settings. We define the problem in the UniDA-SS scenario as low
+confidence scores of common classes in the target domain, which leads to
+confusion with private classes. To solve this problem, we propose UniMAP:
+UniDA-SS with Image Matching and Prototype-based Distinction, a novel framework
+composed of two key components. First, Domain-Specific Prototype-based
+Distinction (DSPD) divides each class into two domain-specific prototypes,
+enabling finer separation of domain-specific features and enhancing the
+identification of common classes across domains. Second, Target-based Image
+Matching (TIM) selects a source image containing the most common-class pixels
+based on the target pseudo-label and pairs it in a batch to promote effective
+learning of common classes. We also introduce a new UniDA-SS benchmark and
+demonstrate through various experiments that UniMAP significantly outperforms
+baselines. The code is available at
+\href{https://github.com/KU-VGI/UniMAP}{this https URL}.",cs.CV,2025-05-28T15:14:11+00:00,2025-05-28T15:14:11+00:00,http://arxiv.org/abs/2505.22458v1
+2505.22427v1,RC-AutoCalib: An End-to-End Radar-Camera Automatic Calibration Network,"Van-Tin Luu, Yon-Lin Cai, Vu-Hoang Tran, Wei-Chen Chiu, Yi-Ting Chen, Ching-Chun Huang","This paper presents a groundbreaking approach - the first online automatic
+geometric calibration method for radar and camera systems. Given the
+significant data sparsity and measurement uncertainty in radar height data,
+achieving automatic calibration during system operation has long been a
+challenge. To address the sparsity issue, we propose a Dual-Perspective
+representation that gathers features from both frontal and bird's-eye views.
+The frontal view contains rich but sensitive height information, whereas the
+bird's-eye view provides robust features against height uncertainty. We thereby
+propose a novel Selective Fusion Mechanism to identify and fuse reliable
+features from both perspectives, reducing the effect of height uncertainty.
+Moreover, for each view, we incorporate a Multi-Modal Cross-Attention Mechanism
+to explicitly find location correspondences through cross-modal matching.
+During the training phase, we also design a Noise-Resistant Matcher to provide
+better supervision and enhance the robustness of the matching mechanism against
+sparsity and height uncertainty. Our experimental results, tested on the
+nuScenes dataset, demonstrate that our method significantly outperforms
+previous radar-camera auto-calibration methods, as well as existing
+state-of-the-art LiDAR-camera calibration techniques, establishing a new
+benchmark for future research. The code is available at
+https://github.com/nycu-acm/RC-AutoCalib.",cs.CV,2025-05-28T14:52:31+00:00,2025-05-28T14:52:31+00:00,http://arxiv.org/abs/2505.22427v1
+2505.22167v1,"Q-VDiT: Towards Accurate Quantization and Distillation of
+  Video-Generation Diffusion Transformers","Weilun Feng, Chuanguang Yang, Haotong Qin, Xiangqi Li, Yu Wang, Zhulin An, Libo Huang, Boyu Diao, Zixiang Zhao, Yongjun Xu, Michele Magno","Diffusion transformers (DiT) have demonstrated exceptional performance in
+video generation. However, their large number of parameters and high
+computational complexity limit their deployment on edge devices. Quantization
+can reduce storage requirements and accelerate inference by lowering the
+bit-width of model parameters. Yet, existing quantization methods for image
+generation models do not generalize well to video generation tasks. We identify
+two primary challenges: the loss of information during quantization and the
+misalignment between optimization objectives and the unique requirements of
+video generation. To address these challenges, we present Q-VDiT, a
+quantization framework specifically designed for video DiT models. From the
+quantization perspective, we propose the Token-aware Quantization Estimator
+(TQE), which compensates for quantization errors in both the token and feature
+dimensions. From the optimization perspective, we introduce Temporal
+Maintenance Distillation (TMD), which preserves the spatiotemporal correlations
+between frames and enables the optimization of each frame with respect to the
+overall video context. Our W3A6 Q-VDiT achieves a scene consistency of 23.40,
+setting a new benchmark and outperforming current state-of-the-art quantization
+methods by 1.9$\times$. Code will be available at
+https://github.com/cantbebetter2/Q-VDiT.",cs.CV,2025-05-28T09:33:52+00:00,2025-05-28T09:33:52+00:00,http://arxiv.org/abs/2505.22167v1
+2505.22552v1,"ClaimPKG: Enhancing Claim Verification via Pseudo-Subgraph Generation
+  with Lightweight Specialized LLM","Hoang Pham, Thanh-Do Nguyen, Khac-Hoai Nam Bui","Integrating knowledge graphs (KGs) to enhance the reasoning capabilities of
+large language models (LLMs) is an emerging research challenge in claim
+verification. While KGs provide structured, semantically rich representations
+well-suited for reasoning, most existing verification methods rely on
+unstructured text corpora, limiting their ability to effectively leverage KGs.
+Additionally, despite possessing strong reasoning abilities, modern LLMs
+struggle with multi-step modular pipelines and reasoning over KGs without
+adaptation. To address these challenges, we propose ClaimPKG, an end-to-end
+framework that seamlessly integrates LLM reasoning with structured knowledge
+from KGs. Specifically, the main idea of ClaimPKG is to employ a lightweight,
+specialized LLM to represent the input claim as pseudo-subgraphs, guiding a
+dedicated subgraph retrieval module to identify relevant KG subgraphs. These
+retrieved subgraphs are then processed by a general-purpose LLM to produce the
+final verdict and justification. Extensive experiments on the FactKG dataset
+demonstrate that ClaimPKG achieves state-of-the-art performance, outperforming
+strong baselines in this research field by 9%-12% accuracy points across
+multiple categories. Furthermore, ClaimPKG exhibits zero-shot generalizability
+to unstructured datasets such as HoVer and FEVEROUS, effectively combining
+structured knowledge from KGs with LLM reasoning across various LLM backbones.","cs.CL, cs.AI, cs.DB",2025-05-28T16:34:14+00:00,2025-05-28T16:34:14+00:00,http://arxiv.org/abs/2505.22552v1
+2504.21752v1,"VDDP: Verifiable Distributed Differential Privacy under the
+  Client-Server-Verifier Setup","Haochen Sun, Xi He","Despite differential privacy (DP) often being considered the de facto
+standard for data privacy, its realization is vulnerable to unfaithful
+execution of its mechanisms by servers, especially in distributed settings.
+Specifically, servers may sample noise from incorrect distributions or generate
+correlated noise while appearing to follow established protocols. This work
+analyzes these malicious behaviors in a general differential privacy framework
+within a distributed client-server-verifier setup. To address these adversarial
+problems, we propose a novel definition called Verifiable Distributed
+Differential Privacy (VDDP) by incorporating additional verification
+mechanisms. We also explore the relationship between zero-knowledge proofs
+(ZKP) and DP, demonstrating that while ZKPs are sufficient for achieving DP
+under verifiability requirements, they are not necessary. Furthermore, we
+develop two novel and efficient mechanisms that satisfy VDDP: (1) the
+Verifiable Distributed Discrete Laplacian Mechanism (VDDLM), which offers up to
+a $4 \times 10^5$x improvement in proof generation efficiency with only
+0.1-0.2x error compared to the previous state-of-the-art verifiable
+differentially private mechanism; (2) an improved solution to Verifiable
+Randomized Response (VRR) under local DP, a special case of VDDP, achieving up
+a reduction of up to 5000x in communication costs and the verifier's overhead.","cs.CR, cs.DB",2025-04-30T15:46:55+00:00,2025-04-30T15:46:55+00:00,http://arxiv.org/abs/2504.21752v1
+2504.21282v1,"Birdie: Natural Language-Driven Table Discovery Using Differentiable
+  Search Index","Yuxiang Guo, Zhonghao Hu, Yuren Mao, Baihua Zheng, Yunjun Gao, Mingwei Zhou","Natural language (NL)-driven table discovery identifies relevant tables from
+large table repositories based on NL queries. While current deep-learning-based
+methods using the traditional dense vector search pipeline, i.e.,
+representation-index-search, achieve remarkable accuracy, they face several
+limitations that impede further performance improvements: (i) the errors
+accumulated during the table representation and indexing phases affect the
+subsequent search accuracy; and (ii) insufficient query-table interaction
+hinders effective semantic alignment, impeding accuracy improvements. In this
+paper, we propose a novel framework Birdie, using a differentiable search
+index. It unifies the indexing and search into a single encoder-decoder
+language model, thus getting rid of error accumulations. Birdie first assigns
+each table a prefix-aware identifier and leverages a large language model-based
+query generator to create synthetic queries for each table. It then encodes the
+mapping between synthetic queries/tables and their corresponding table
+identifiers into the parameters of an encoder-decoder language model, enabling
+deep query-table interactions. During search, the trained model directly
+generates table identifiers for a given query. To accommodate the continual
+indexing of dynamic tables, we introduce an index update strategy via parameter
+isolation, which mitigates the issue of catastrophic forgetting. Extensive
+experiments demonstrate that Birdie outperforms state-of-the-art dense methods
+by 16.8% in accuracy, and reduces forgetting by over 90% compared to other
+continual learning approaches.",cs.DB,2025-04-30T03:30:21+00:00,2025-04-30T03:30:21+00:00,http://arxiv.org/abs/2504.21282v1
+2504.17448v1,"CHASe: Client Heterogeneity-Aware Data Selection for Effective Federated
+  Active Learning","Jun Zhang, Jue Wang, Huan Li, Zhongle Xie, Ke Chen, Lidan Shou","Active learning (AL) reduces human annotation costs for machine learning
+systems by strategically selecting the most informative unlabeled data for
+annotation, but performing it individually may still be insufficient due to
+restricted data diversity and annotation budget. Federated Active Learning
+(FAL) addresses this by facilitating collaborative data selection and model
+training, while preserving the confidentiality of raw data samples. Yet,
+existing FAL methods fail to account for the heterogeneity of data distribution
+across clients and the associated fluctuations in global and local model
+parameters, adversely affecting model accuracy. To overcome these challenges,
+we propose CHASe (Client Heterogeneity-Aware Data Selection), specifically
+designed for FAL. CHASe focuses on identifying those unlabeled samples with
+high epistemic variations (EVs), which notably oscillate around the decision
+boundaries during training. To achieve both effectiveness and efficiency,
+\model{} encompasses techniques for 1) tracking EVs by analyzing inference
+inconsistencies across training epochs, 2) calibrating decision boundaries of
+inaccurate models with a new alignment loss, and 3) enhancing data selection
+efficiency via a data freeze and awaken mechanism with subset sampling.
+Experiments show that CHASe surpasses various established baselines in terms of
+effectiveness and efficiency, validated across diverse datasets, model
+complexities, and heterogeneous federation settings.","cs.LG, cs.DB, cs.DC",2025-04-24T11:28:00+00:00,2025-04-24T11:28:00+00:00,http://arxiv.org/abs/2504.17448v1
+2504.14861v1,"Stitching Inner Product and Euclidean Metrics for Topology-aware Maximum
+  Inner Product Search","Tingyang Chen, Cong Fu, Xiangyu Ke, Yunjun Gao, Yabo Ni, Anxiang Zeng","Maximum Inner Product Search (MIPS) is a fundamental challenge in machine
+learning and information retrieval, particularly in high-dimensional data
+applications. Existing approaches to MIPS either rely solely on Inner Product
+(IP) similarity, which faces issues with local optima and redundant
+computations, or reduce the MIPS problem to the Nearest Neighbor Search under
+the Euclidean metric via space projection, leading to topology destruction and
+information loss. Despite the divergence of the two paradigms, we argue that
+there is no inherent binary opposition between IP and Euclidean metrics. By
+stitching IP and Euclidean in the design of indexing and search algorithms, we
+can significantly enhance MIPS performance. Specifically, this paper explores
+the theoretical and empirical connections between these two metrics from the
+MIPS perspective. Our investigation, grounded in graph-based search, reveals
+that different indexing and search strategies offer distinct advantages for
+MIPS, depending on the underlying data topology. Building on these insights, we
+introduce a novel graph-based index called Metric-Amphibious Graph (MAG) and a
+corresponding search algorithm, Adaptive Navigation with Metric Switch (ANMS).
+To facilitate parameter tuning for optimal performance, we identify three
+statistical indicators that capture essential data topology properties and
+correlate strongly with parameter tuning. Extensive experiments on 12
+real-world datasets demonstrate that MAG outperforms existing state-of-the-art
+methods, achieving up to 4x search speedup while maintaining adaptability and
+scalability.","cs.DB, cs.IR",2025-04-21T05:01:58+00:00,2025-04-21T05:01:58+00:00,http://arxiv.org/abs/2504.14861v1
+2504.06975v1,AWDIT: An Optimal Weak Database Isolation Tester,"Lasse Møldrup, Andreas Pavlogiannis","In order to achieve low latency, high throughput, and partition tolerance,
+modern databases forgo strong transaction isolation for weak isolation
+guarantees. However, several production databases have been found to suffer
+from isolation bugs, breaking their data-consistency contract. Black-box
+testing is a prominent technique for detecting isolation bugs, by checking
+whether histories of database transactions adhere to a prescribed isolation
+level.
+  Testing databases on realistic workloads of large size requires isolation
+testers to be as efficient as possible, a requirement that has initiated a
+study of the complexity of isolation testing. Although testing strong isolation
+has been known to be NP-complete, weak isolation levels were recently shown to
+be testable in polynomial time, which has propelled the scalability of testing
+tools. However, existing testers have a large polynomial complexity,
+restricting testing to workloads of only moderate size, which is not typical of
+large-scale databases.
+  In this work, we develop AWDIT, a highly-efficient and provably optimal
+tester for weak database isolation. Given a history $H$ of size $n$ and $k$
+sessions, AWDIT tests whether H satisfies the most common weak isolation levels
+of Read Committed (RC), Read Atomic (RA), and Causal Consistency (CC) in time
+$O(n^{3/2})$, $O(n^{3/2})$, and $O(n \cdot k)$, respectively, improving
+significantly over the state of the art. Moreover, we prove that AWDIT is
+essentially optimal, in the sense that there is a conditional lower bound of
+$n^{3/2}$ for any weak isolation level between RC and CC. Our experiments show
+that AWDIT is significantly faster than existing, highly optimized testers;
+e.g., for the $\sim$20% largest histories, AWDIT obtains an average speedup of
+$245\times$, $193\times$, and $62\times$ for RC, RA, and CC, respectively, over
+the best baseline.","cs.PL, cs.DB, H.2.4, D.2.5, F.2.2",2025-04-09T15:30:09+00:00,2025-04-09T15:30:09+00:00,http://arxiv.org/abs/2504.06975v1
+2506.01833v1,SPACE: Your Genomic Profile Predictor is a Powerful DNA Foundation Model,"Zhao Yang, Jiwei Zhu, Bing Su","Inspired by the success of unsupervised pre-training paradigms, researchers
+have applied these approaches to DNA pre-training. However, we argue that these
+approaches alone yield suboptimal results because pure DNA sequences lack
+sufficient information, since their functions are regulated by genomic profiles
+like chromatin accessibility. Here, we demonstrate that supervised training for
+genomic profile prediction serves as a more effective alternative to pure
+sequence pre-training. Furthermore, considering the multi-species and
+multi-profile nature of genomic profile prediction, we introduce our
+$\textbf{S}$pecies-$\textbf{P}$rofile $\textbf{A}$daptive
+$\textbf{C}$ollaborative $\textbf{E}$xperts (SPACE) that leverages Mixture of
+Experts (MoE) to better capture the relationships between DNA sequences across
+different species and genomic profiles, thereby learning more effective DNA
+representations. Through extensive experiments across various tasks, our model
+achieves state-of-the-art performance, establishing that DNA models trained
+with supervised genomic profiles serve as powerful DNA representation learners.
+The code is available at https://github.com/ZhuJiwei111/SPACE.","cs.LG, q-bio.GN",2025-06-02T16:23:05+00:00,2025-06-02T16:23:05+00:00,http://arxiv.org/abs/2506.01833v1
+2506.00382v1,"Spectral Insights into Data-Oblivious Critical Layers in Large Language
+  Models","Xuyuan Liu, Lei Hsiung, Yaoqing Yang, Yujun Yan","Understanding how feature representations evolve across layers in large
+language models (LLMs) is key to improving their interpretability and
+robustness. While recent studies have identified critical layers linked to
+specific functions or behaviors, these efforts typically rely on data-dependent
+analyses of fine-tuned models, limiting their use to post-hoc settings. In
+contrast, we introduce a data-oblivious approach to identify intrinsic critical
+layers in pre-fine-tuned LLMs by analyzing representation dynamics via Centered
+Kernel Alignment(CKA). We show that layers with significant shifts in
+representation space are also those most affected during fine-tuning--a pattern
+that holds consistently across tasks for a given model. Our spectral analysis
+further reveals that these shifts are driven by changes in the top principal
+components, which encode semantic transitions from rationales to conclusions.
+We further apply these findings to two practical scenarios: efficient domain
+adaptation, where fine-tuning critical layers leads to greater loss reduction
+compared to non-critical layers; and backdoor defense, where freezing them
+reduces attack success rates by up to 40%.","cs.LG, cs.CL",2025-05-31T04:21:39+00:00,2025-05-31T04:21:39+00:00,http://arxiv.org/abs/2506.00382v1
+2506.00205v1,"Unlocking the Power of Rehearsal in Continual Learning: A Theoretical
+  Perspective","Junze Deng, Qinhang Wu, Peizhong Ju, Sen Lin, Yingbin Liang, Ness Shroff","Rehearsal-based methods have shown superior performance in addressing
+catastrophic forgetting in continual learning (CL) by storing and training on a
+subset of past data alongside new data in current task. While such a concurrent
+rehearsal strategy is widely used, it remains unclear if this approach is
+always optimal. Inspired by human learning, where sequentially revisiting tasks
+helps mitigate forgetting, we explore whether sequential rehearsal can offer
+greater benefits for CL compared to standard concurrent rehearsal. To address
+this question, we conduct a theoretical analysis of rehearsal-based CL in
+overparameterized linear models, comparing two strategies: 1) Concurrent
+Rehearsal, where past and new data are trained together, and 2) Sequential
+Rehearsal, where new data is trained first, followed by revisiting past data
+sequentially. By explicitly characterizing forgetting and generalization error,
+we show that sequential rehearsal performs better when tasks are less similar.
+These insights further motivate a novel Hybrid Rehearsal method, which trains
+similar tasks concurrently and revisits dissimilar tasks sequentially. We
+characterize its forgetting and generalization performance, and our experiments
+with deep neural networks further confirm that the hybrid approach outperforms
+standard concurrent rehearsal. This work provides the first comprehensive
+theoretical analysis of rehearsal-based CL.",cs.LG,2025-05-30T20:23:15+00:00,2025-05-30T20:23:15+00:00,http://arxiv.org/abs/2506.00205v1
+2505.24835v1,"Timing is important: Risk-aware Fund Allocation based on Time-Series
+  Forecasting","Fuyuan Lyu, Linfeng Du, Yunpeng Weng, Qiufang Ying, Zhiyan Xu, Wen Zou, Haolun Wu, Xiuqiang He, Xing Tang","Fund allocation has been an increasingly important problem in the financial
+domain. In reality, we aim to allocate the funds to buy certain assets within a
+certain future period. Naive solutions such as prediction-only or
+Predict-then-Optimize approaches suffer from goal mismatch. Additionally, the
+introduction of the SOTA time series forecasting model inevitably introduces
+additional uncertainty in the predicted result. To solve both problems
+mentioned above, we introduce a Risk-aware Time-Series Predict-and-Allocate
+(RTS-PnO) framework, which holds no prior assumption on the forecasting models.
+Such a framework contains three features: (i) end-to-end training with
+objective alignment measurement, (ii) adaptive forecasting uncertainty
+calibration, and (iii) agnostic towards forecasting models. The evaluation of
+RTS-PnO is conducted over both online and offline experiments. For offline
+experiments, eight datasets from three categories of financial applications are
+used: Currency, Stock, and Cryptos. RTS-PnO consistently outperforms other
+competitive baselines. The online experiment is conducted on the Cross-Border
+Payment business at FiT, Tencent, and an 8.4\% decrease in regret is witnessed
+when compared with the product-line approach. The code for the offline
+experiment is available at https://github.com/fuyuanlyu/RTS-PnO.",cs.LG,2025-05-30T17:36:45+00:00,2025-05-30T17:36:45+00:00,http://arxiv.org/abs/2505.24835v1
+2505.24203v1,Aligning Protein Conformation Ensemble Generation with Physical Feedback,"Jiarui Lu, Xiaoyin Chen, Stephen Zhewen Lu, Aurélie Lozano, Vijil Chenthamarakshan, Payel Das, Jian Tang","Protein dynamics play a crucial role in protein biological functions and
+properties, and their traditional study typically relies on time-consuming
+molecular dynamics (MD) simulations conducted in silico. Recent advances in
+generative modeling, particularly denoising diffusion models, have enabled
+efficient accurate protein structure prediction and conformation sampling by
+learning distributions over crystallographic structures. However, effectively
+integrating physical supervision into these data-driven approaches remains
+challenging, as standard energy-based objectives often lead to intractable
+optimization. In this paper, we introduce Energy-based Alignment (EBA), a
+method that aligns generative models with feedback from physical models,
+efficiently calibrating them to appropriately balance conformational states
+based on their energy differences. Experimental results on the MD ensemble
+benchmark demonstrate that EBA achieves state-of-the-art performance in
+generating high-quality protein ensembles. By improving the physical
+plausibility of generated structures, our approach enhances model predictions
+and holds promise for applications in structural biology and drug discovery.","q-bio.BM, cs.LG",2025-05-30T04:33:39+00:00,2025-05-30T04:33:39+00:00,http://arxiv.org/abs/2505.24203v1
+2506.02847v1,"CLONE: Customizing LLMs for Efficient Latency-Aware Inference at the
+  Edge","Chunlin Tian, Xinpeng Qin, Kahou Tam, Li Li, Zijian Wang, Yuanzhe Zhao, Minglei Zhang, Chengzhong Xu","Deploying large language models (LLMs) on edge devices is crucial for
+delivering fast responses and ensuring data privacy. However, the limited
+storage, weight, and power of edge devices make it difficult to deploy
+LLM-powered applications. These devices must balance latency requirements with
+energy consumption and model accuracy. In this paper, we first quantify the
+challenges of deploying LLMs on off-the-shelf edge devices and then we present
+CLONE, an in-depth algorithm-hardware co-design at both the model- and
+system-level that intelligently integrates real-time, energy optimization while
+maintaining robust generality. In order to maximize the synergistic benefits of
+these algorithms in always-on and intermediate edge computing settings, we
+specialize in a 28nm scalable hardware accelerator system. We implement and
+extensively evaluate CLONE on two off-the-shelf edge platforms. Experiments
+show that CLONE effectively accelerates the inference process up to 11.92x, and
+saves energy up to 7.36x, while maintaining high-generation.","cs.AR, cs.SY, eess.SY",2025-06-03T13:16:00+00:00,2025-06-03T13:16:00+00:00,http://arxiv.org/abs/2506.02847v1
+2505.22194v1,Refining Datapath for Microscaling ViTs,"Can Xiao, Jianyi Cheng, Aaron Zhao","Vision Transformers (ViTs) leverage the transformer architecture to
+effectively capture global context, demonstrating strong performance in
+computer vision tasks. A major challenge in ViT hardware acceleration is that
+the model family contains complex arithmetic operations that are sensitive to
+model accuracy, such as the Softmax and LayerNorm operations, which cannot be
+mapped onto efficient hardware with low precision. Existing methods only
+exploit parallelism in the matrix multiplication operations of the model on
+hardware and keep these complex operations on the CPU. This results in
+suboptimal performance due to the communication overhead between the CPU and
+accelerator. Can new data formats solve this problem?
+  In this work, we present the first ViT accelerator that maps all operations
+of the ViT models onto FPGAs. We exploit a new arithmetic format named
+Microscaling Integer (MXInt) for datapath designs and evaluate how different
+design choices can be made to trade off accuracy, hardware performance, and
+hardware utilization. Our contributions are twofold. First, we quantize ViTs
+using the MXInt format, achieving both high area efficiency and accuracy.
+Second, we propose MXInt-specific hardware optimization that map these complex
+arithmetic operations into custom hardware. Within 1\% accuracy loss, our
+method achieves at least 93$\times$ speedup compared to Float16 and at least
+1.9$\times$ speedup compared to related work.",cs.AR,2025-05-28T10:15:37+00:00,2025-05-28T10:15:37+00:00,http://arxiv.org/abs/2505.22194v1
+2505.11554v1,"Multi-Objective Memory Bandwidth Regulation and Cache Partitioning for
+  Multicore Real-Time Systems","Binqi Sun, Zhihang Wei, Andrea Bastoni, Debayan Roy, Mirco Theile, Tomasz Kloda, Rodolfo Pellizzoni, Marco Caccamo","Memory bandwidth regulation and cache partitioning are widely used techniques
+for achieving predictable timing in real-time computing systems. Combined with
+partitioned scheduling, these methods require careful co-allocation of tasks
+and resources to cores, as task execution times strongly depend on available
+allocated resources. To address this challenge, this paper presents a 0-1
+linear program for task-resource co-allocation, along with a multi-objective
+heuristic designed to minimize resource usage while guaranteeing schedulability
+under a preemptive EDF scheduling policy. Our heuristic employs a multi-layer
+framework, where an outer layer explores resource allocations using
+Pareto-pruned search, and an inner layer optimizes task allocation by solving a
+knapsack problem using dynamic programming. To evaluate the performance of the
+proposed optimization algorithm, we profile real-world benchmarks on an
+embedded AMD UltraScale+ ZCU102 platform, with fine-grained resource
+partitioning enabled by the Jailhouse hypervisor, leveraging cache set
+partitioning and MemGuard for memory bandwidth regulation. Experiments based on
+the benchmarking results show that the proposed 0-1 linear program outperforms
+existing mixed-integer programs by finding more optimal solutions within the
+same time limit. Moreover, the proposed multi-objective multi-layer heuristic
+performs consistently better than the state-of-the-art multi-resource-task
+co-allocation algorithm in terms of schedulability, resource usage, number of
+non-dominated solutions, and computational efficiency.","math.OC, cs.AR, cs.DC, cs.OS",2025-05-15T16:40:14+00:00,2025-05-15T16:40:14+00:00,http://arxiv.org/abs/2505.11554v1
+2505.08071v1,"NMP-PaK: Near-Memory Processing Acceleration of Scalable De Novo Genome
+  Assembly","Heewoo Kim, Sanjay Sri Vallabh Singapuram, Haojie Ye, Joseph Izraelevitz, Trevor Mudge, Ronald Dreslinski, Nishil Talati","De novo assembly enables investigations of unknown genomes, paving the way
+for personalized medicine and disease management. However, it faces immense
+computational challenges arising from the excessive data volumes and
+algorithmic complexity.
+  While state-of-the-art de novo assemblers utilize distributed systems for
+extreme-scale genome assembly, they demand substantial computational and memory
+resources. They also fail to address the inherent challenges of de novo
+assembly, including a large memory footprint, memory-bound behavior, and
+irregular data patterns stemming from complex, interdependent data structures.
+Given these challenges, de novo assembly merits a custom hardware solution,
+though existing approaches have not fully addressed the limitations.
+  We propose NMP-PaK, a hardware-software co-design that accelerates scalable
+de novo genome assembly through near-memory processing (NMP). Our channel-level
+NMP architecture addresses memory bottlenecks while providing sufficient
+scratchpad space for processing elements. Customized processing elements
+maximize parallelism while efficiently handling large data structures that are
+both dynamic and interdependent. Software optimizations include customized
+batch processing to reduce the memory footprint and hybrid CPU-NMP processing
+to address hardware underutilization caused by irregular data patterns.
+  NMP-PaK conducts the same genome assembly while incurring a 14X smaller
+memory footprint compared to the state-of-the-art de novo assembly. Moreover,
+NMP-PaK delivers a 16X performance improvement over the CPU baseline, with a
+2.4X reduction in memory operations. Consequently, NMP-PaK achieves 8.3X
+greater throughput than state-of-the-art de novo assembly under the same
+resource constraints, showcasing its superior computational efficiency.","cs.AR, cs.DC, q-bio.GN",2025-05-12T21:17:20+00:00,2025-05-12T21:17:20+00:00,http://arxiv.org/abs/2505.08071v1
+2504.06211v1,Need for zkSpeed: Accelerating HyperPlonk for Zero-Knowledge Proofs,"Alhad Daftardar, Jianqiao Mo, Joey Ah-kiow, Benedikt Bünz, Ramesh Karri, Siddharth Garg, Brandon Reagen","Zero-Knowledge Proofs (ZKPs) are rapidly gaining importance in
+privacy-preserving and verifiable computing. ZKPs enable a proving party to
+prove the truth of a statement to a verifying party without revealing anything
+else. ZKPs have applications in blockchain technologies, verifiable machine
+learning, and electronic voting, but have yet to see widespread adoption due to
+the computational complexity of the proving process. Recent works have
+accelerated the key primitives of state-of-the-art ZKP protocols on GPU and
+ASIC. However, the protocols accelerated thus far face one of two challenges:
+they either require a trusted setup for each application, or they generate
+larger proof sizes with higher verification costs, limiting their applicability
+in scenarios with numerous verifiers or strict verification time constraints.
+This work presents an accelerator, zkSpeed, for HyperPlonk, a state-of-the-art
+ZKP protocol that supports both one-time, universal setup and small proof sizes
+for typical ZKP applications in publicly verifiable, consensus-based systems.
+We accelerate the entire protocol, including two major primitives: SumCheck and
+Multi-scalar Multiplications (MSMs). We develop a full-chip architecture using
+366.46 mm$^2$ and 2 TB/s of bandwidth to accelerate the entire proof generation
+process, achieving geometric mean speedups of 801$\times$ over CPU baselines.","cs.AR, cs.CR",2025-04-08T16:56:10+00:00,2025-04-08T16:56:10+00:00,http://arxiv.org/abs/2504.06211v1
+2504.19283v1,"Efficient Serverless Cold Start: Reducing Library Loading Overhead by
+  Profile-guided Optimization","Syed Salauddin Mohammad Tariq, Ali Al Zein, Soumya Sripad Vaidya, Arati Khanolkar, Zheng Song, Probir Roy","Serverless computing abstracts away server management, enabling automatic
+scaling, efficient resource utilization, and cost-effective pricing models.
+However, despite these advantages, it faces the significant challenge of
+cold-start latency, adversely impacting end-to-end performance. Our study shows
+that many serverless functions initialize libraries that are rarely or never
+used under typical workloads, thus introducing unnecessary overhead. Although
+existing static analysis techniques can identify unreachable libraries, they
+fail to address workload-dependent inefficiencies, resulting in limited
+performance improvements. To overcome these limitations, we present SLIMSTART,
+a profile-guided optimization tool designed to identify and mitigate
+inefficient library usage patterns in serverless applications. By leveraging
+statistical sampling and call-path profiling, SLIMSTART collects runtime
+library usage data, generates detailed optimization reports, and applies
+automated code transformations to reduce cold-start overhead. Furthermore,
+SLIMSTART integrates seamlessly into CI/CD pipelines, enabling adaptive
+monitoring and continuous optimizations tailored to evolving workloads. Through
+extensive evaluation across three benchmark suites and four real-world
+serverless applications, SLIMSTART achieves up to a 2.30X speedup in
+initialization latency, a 2.26X improvement in end-to-end latency, and a 1.51X
+reduction in memory usage, demonstrating its effectiveness in addressing
+cold-start inefficiencies and optimizing resource utilization.","cs.DC, cs.PF",2025-04-27T15:50:45+00:00,2025-04-27T15:50:45+00:00,http://arxiv.org/abs/2504.19283v1
+2504.11007v1,"Kubernetes in the Cloud vs. Bare Metal: A Comparative Study of Network
+  Costs","Rodrigo Mompo Redoli, Amjad Ullah","Modern cloud-native applications increasingly utilise managed cloud services
+and containerisation technologies, such as Kubernetes, to achieve rapid
+time-to-market and scalable deployments. Organisations must consider various
+factors, including cost implications when deciding on a hosting platform for
+containerised applications as the usage grows. An emerging discipline called
+FinOps combines financial management and cloud operations to optimise costs in
+cloud-based applications. While prior research has explored system-level
+optimisation strategies for cost and resource efficiency in containerized
+systems, analysing network costs in Kubernetes clusters remains underexplored.
+This paper investigates the network usage and cost implications of
+containerised applications running on Kubernetes clusters. Using a methodology
+that combines measurement analysis, experimentation, and cost modelling, we aim
+to provide organisations with actionable insights into network cost
+optimisation. Our findings highlight key considerations for analysing network
+expenditures and evaluating the potential cost benefits of deploying
+applications on cloud providers. Overall, this paper contributes to the
+emerging FinOps discipline by addressing the financial and operational aspects
+of managing network costs in cloud-native environments.",cs.DC,2025-04-15T09:26:08+00:00,2025-04-15T09:26:08+00:00,http://arxiv.org/abs/2504.11007v1
+2504.09307v1,"Lumos: Efficient Performance Modeling and Estimation for Large-scale LLM
+  Training","Mingyu Liang, Hiwot Tadese Kassa, Wenyin Fu, Brian Coutinho, Louis Feng, Christina Delimitrou","Training LLMs in distributed environments presents significant challenges due
+to the complexity of model execution, deployment systems, and the vast space of
+configurable strategies. Although various optimization techniques exist,
+achieving high efficiency in practice remains difficult. Accurate performance
+models that effectively characterize and predict a model's behavior are
+essential for guiding optimization efforts and system-level studies. We propose
+Lumos, a trace-driven performance modeling and estimation toolkit for
+large-scale LLM training, designed to accurately capture and predict the
+execution behaviors of modern LLMs. We evaluate Lumos on a production ML
+cluster with up to 512 NVIDIA H100 GPUs using various GPT-3 variants,
+demonstrating that it can replay execution time with an average error of just
+3.3%, along with other runtime details, across different models and
+configurations. Additionally, we validate its ability to estimate performance
+for new setups from existing traces, facilitating efficient exploration of
+model and deployment configurations.","cs.DC, cs.AI",2025-04-12T18:43:24+00:00,2025-04-12T18:43:24+00:00,http://arxiv.org/abs/2504.09307v1
+2506.02750v1,"Learning Binarized Representations with Pseudo-positive Sample
+  Enhancement for Efficient Graph Collaborative Filtering","Yankai Chen, Yue Que, Xinni Zhang, Chen Ma, Irwin King","Learning vectorized embeddings is fundamental to many recommender systems for
+user-item matching. To enable efficient online inference, representation
+binarization, which embeds latent features into compact binary sequences, has
+recently shown significant promise in optimizing both memory usage and
+computational overhead. However, existing approaches primarily focus on
+numerical quantization, neglecting the associated information loss, which often
+results in noticeable performance degradation. To address these issues, we
+study the problem of graph representation binarization for efficient
+collaborative filtering. Our findings indicate that explicitly mitigating
+information loss at various stages of embedding binarization has a significant
+positive impact on performance. Building on these insights, we propose an
+enhanced framework, BiGeaR++, which specifically leverages supervisory signals
+from pseudo-positive samples, incorporating both real item data and latent
+embedding samples. Compared to its predecessor BiGeaR, BiGeaR++ introduces a
+fine-grained inference distillation mechanism and an effective embedding sample
+synthesis approach. Empirical evaluations across five real-world datasets
+demonstrate that the new designs in BiGeaR++ work seamlessly well with other
+modules, delivering substantial improvements of around 1%-10% over BiGeaR and
+thus achieving state-of-the-art performance compared to the competing methods.
+Our implementation is available at https://github.com/QueYork/BiGeaR-SS.",cs.IR,2025-06-03T11:11:43+00:00,2025-06-03T11:11:43+00:00,http://arxiv.org/abs/2506.02750v1
+2505.23452v1,"What About Emotions? Guiding Fine-Grained Emotion Extraction from Mobile
+  App Reviews","Quim Motger, Marc Oriol, Max Tiessler, Xavier Franch, Jordi Marco","Opinion mining plays a vital role in analysing user feedback and extracting
+insights from textual data. While most research focuses on sentiment polarity
+(e.g., positive, negative, neutral), fine-grained emotion classification in app
+reviews remains underexplored. This paper addresses this gap by identifying and
+addressing the challenges and limitations in fine-grained emotion analysis in
+the context of app reviews. Our study adapts Plutchik's emotion taxonomy to app
+reviews by developing a structured annotation framework and dataset. Through an
+iterative human annotation process, we define clear annotation guidelines and
+document key challenges in emotion classification. Additionally, we evaluate
+the feasibility of automating emotion annotation using large language models,
+assessing their cost-effectiveness and agreement with human-labelled data. Our
+findings reveal that while large language models significantly reduce manual
+effort and maintain substantial agreement with human annotators, full
+automation remains challenging due to the complexity of emotional
+interpretation. This work contributes to opinion mining by providing structured
+guidelines, an annotated dataset, and insights for developing automated
+pipelines to capture the complexity of emotions in app reviews.","cs.IR, cs.SE",2025-05-29T13:58:38+00:00,2025-05-29T13:58:38+00:00,http://arxiv.org/abs/2505.23452v1
+2505.21811v1,Revisiting Self-attention for Cross-domain Sequential Recommendation,"Clark Mingxuan Ju, Leonardo Neves, Bhuvesh Kumar, Liam Collins, Tong Zhao, Yuwei Qiu, Qing Dou, Sohail Nizam, Sen Yang, Neil Shah","Sequential recommendation is a popular paradigm in modern recommender
+systems. In particular, one challenging problem in this space is cross-domain
+sequential recommendation (CDSR), which aims to predict future behaviors given
+user interactions across multiple domains. Existing CDSR frameworks are mostly
+built on the self-attention transformer and seek to improve by explicitly
+injecting additional domain-specific components (e.g. domain-aware module
+blocks). While these additional components help, we argue they overlook the
+core self-attention module already present in the transformer, a naturally
+powerful tool to learn correlations among behaviors. In this work, we aim to
+improve the CDSR performance for simple models from a novel perspective of
+enhancing the self-attention. Specifically, we introduce a Pareto-optimal
+self-attention and formulate the cross-domain learning as a multi-objective
+problem, where we optimize the recommendation task while dynamically minimizing
+the cross-domain attention scores. Our approach automates knowledge transfer in
+CDSR (dubbed as AutoCDSR) -- it not only mitigates negative transfer but also
+encourages complementary knowledge exchange among auxiliary domains. Based on
+the idea, we further introduce AutoCDSR+, a more performant variant with slight
+additional cost. Our proposal is easy to implement and works as a plug-and-play
+module that can be incorporated into existing transformer-based recommenders.
+Besides flexibility, it is practical to deploy because it brings little extra
+computational overheads without heavy hyper-parameter tuning. AutoCDSR on
+average improves Recall@10 for SASRec and Bert4Rec by 9.8% and 16.0% and
+NDCG@10 by 12.0% and 16.7%, respectively. Code is available at
+https://github.com/snap-research/AutoCDSR.","cs.IR, cs.AI",2025-05-27T22:38:32+00:00,2025-05-27T22:38:32+00:00,http://arxiv.org/abs/2505.21811v1
+2505.20227v1,"Measure Domain's Gap: A Similar Domain Selection Principle for
+  Multi-Domain Recommendation","Yi Wen, Yue Liu, Derong Xu, Huishi Luo, Pengyue Jia, Yiqing Wu, Siwei Wang, Ke Liang, Maolin Wang, Yiqi Wang, Fuzhen Zhuang, Xiangyu Zhao","Multi-Domain Recommendation (MDR) achieves the desirable recommendation
+performance by effectively utilizing the transfer information across different
+domains. Despite the great success, most existing MDR methods adopt a single
+structure to transfer complex domain-shared knowledge. However, the beneficial
+transferring information should vary across different domains. When there is
+knowledge conflict between domains or a domain is of poor quality,
+unselectively leveraging information from all domains will lead to a serious
+Negative Transfer Problem (NTP). Therefore, how to effectively model the
+complex transfer relationships between domains to avoid NTP is still a
+direction worth exploring. To address these issues, we propose a simple and
+dynamic Similar Domain Selection Principle (SDSP) for multi-domain
+recommendation in this paper. SDSP presents the initial exploration of
+selecting suitable domain knowledge for each domain to alleviate NTP.
+Specifically, we propose a novel prototype-based domain distance measure to
+effectively model the complexity relationship between domains. Thereafter, the
+proposed SDSP can dynamically find similar domains for each domain based on the
+supervised signals of the domain metrics and the unsupervised distance measure
+from the learned domain prototype. We emphasize that SDSP is a lightweight
+method that can be incorporated with existing MDR methods for better
+performance while not introducing excessive time overheads. To the best of our
+knowledge, it is the first solution that can explicitly measure domain-level
+gaps and dynamically select appropriate domains in the MDR field. Extensive
+experiments on three datasets demonstrate the effectiveness of our proposed
+method.",cs.IR,2025-05-26T17:07:31+00:00,2025-05-26T17:07:31+00:00,http://arxiv.org/abs/2505.20227v1
+2505.19356v1,"Optimized Text Embedding Models and Benchmarks for Amharic Passage
+  Retrieval","Kidist Amde Mekonnen, Yosef Worku Alemneh, Maarten de Rijke","Neural retrieval methods using transformer-based pre-trained language models
+have advanced multilingual and cross-lingual retrieval. However, their
+effectiveness for low-resource, morphologically rich languages such as Amharic
+remains underexplored due to data scarcity and suboptimal tokenization. We
+address this gap by introducing Amharic-specific dense retrieval models based
+on pre-trained Amharic BERT and RoBERTa backbones. Our proposed
+RoBERTa-Base-Amharic-Embed model (110M parameters) achieves a 17.6% relative
+improvement in MRR@10 and a 9.86% gain in Recall@10 over the strongest
+multilingual baseline, Arctic Embed 2.0 (568M parameters). More compact
+variants, such as RoBERTa-Medium-Amharic-Embed (42M), remain competitive while
+being over 13x smaller. Additionally, we train a ColBERT-based late interaction
+retrieval model that achieves the highest MRR@10 score (0.843) among all
+evaluated models. We benchmark our proposed models against both sparse and
+dense retrieval baselines to systematically assess retrieval effectiveness in
+Amharic. Our analysis highlights key challenges in low-resource settings and
+underscores the importance of language-specific adaptation. To foster future
+research in low-resource IR, we publicly release our dataset, codebase, and
+trained models at https://github.com/kidist-amde/amharic-ir-benchmarks.","cs.IR, cs.AI, cs.CL, cs.LG, 68T50 (Primary), 68T05 (Secondary), H.3.3, H.3.1, I.2.7",2025-05-25T23:06:20+00:00,2025-05-25T23:06:20+00:00,http://arxiv.org/abs/2505.19356v1
+2505.19307v1,"Aligning Web Query Generation with Ranking Objectives via Direct
+  Preference Optimization","João Coelho, Bruno Martins, João Magalhães, Chenyan Xiong","Neural retrieval models excel in Web search, but their training requires
+substantial amounts of labeled query-document pairs, which are costly to
+obtain. With the widespread availability of Web document collections like
+ClueWeb22, synthetic queries generated by large language models offer a
+scalable alternative. Still, synthetic training queries often vary in quality,
+which leads to suboptimal downstream retrieval performance. Existing methods
+typically filter out noisy query-document pairs based on signals from an
+external re-ranker. In contrast, we propose a framework that leverages Direct
+Preference Optimization (DPO) to integrate ranking signals into the query
+generation process, aiming to directly optimize the model towards generating
+high-quality queries that maximize downstream retrieval effectiveness.
+Experiments show higher ranker-assessed relevance between query-document pairs
+after DPO, leading to stronger downstream performance on the MS~MARCO benchmark
+when compared to baseline models trained with synthetic data.",cs.IR,2025-05-25T20:34:12+00:00,2025-05-25T20:34:12+00:00,http://arxiv.org/abs/2505.19307v1
+2505.17507v1,"Benchmarking Recommendation, Classification, and Tracing Based on
+  Hugging Face Knowledge Graph","Qiaosheng Chen, Kaijia Huang, Xiao Zhou, Weiqing Luo, Yuanning Cui, Gong Cheng","The rapid growth of open source machine learning (ML) resources, such as
+models and datasets, has accelerated IR research. However, existing platforms
+like Hugging Face do not explicitly utilize structured representations,
+limiting advanced queries and analyses such as tracing model evolution and
+recommending relevant datasets. To fill the gap, we construct HuggingKG, the
+first large-scale knowledge graph built from the Hugging Face community for ML
+resource management. With 2.6 million nodes and 6.2 million edges, HuggingKG
+captures domain-specific relations and rich textual attributes. It enables us
+to further present HuggingBench, a multi-task benchmark with three novel test
+collections for IR tasks including resource recommendation, classification, and
+tracing. Our experiments reveal unique characteristics of HuggingKG and the
+derived tasks. Both resources are publicly available, expected to advance
+research in open source resource sharing and management.",cs.IR,2025-05-23T06:00:20+00:00,2025-05-23T06:00:20+00:00,http://arxiv.org/abs/2505.17507v1
+2505.12791v1,"Unlearning for Federated Online Learning to Rank: A Reproducibility
+  Study","Yiling Tao, Shuyi Wang, Jiaxi Yang, Guido Zuccon","This paper reports on findings from a comparative study on the effectiveness
+and efficiency of federated unlearning strategies within Federated Online
+Learning to Rank (FOLTR), with specific attention to systematically analysing
+the unlearning capabilities of methods in a verifiable manner.
+  Federated approaches to ranking of search results have recently garnered
+attention to address users privacy concerns. In FOLTR, privacy is safeguarded
+by collaboratively training ranking models across decentralized data sources,
+preserving individual user data while optimizing search results based on
+implicit feedback, such as clicks.
+  Recent legislation introduced across numerous countries is establishing the
+so called ""the right to be forgotten"", according to which services based on
+machine learning models like those in FOLTR should provide capabilities that
+allow users to remove their own data from those used to train models. This has
+sparked the development of unlearning methods, along with evaluation practices
+to measure whether unlearning of a user data successfully occurred. Current
+evaluation practices are however often controversial, necessitating the use of
+multiple metrics for a more comprehensive assessment -- but previous proposals
+of unlearning methods only used single evaluation metrics.
+  This paper addresses this limitation: our study rigorously assesses the
+effectiveness of unlearning strategies in managing both under-unlearning and
+over-unlearning scenarios using adapted, and newly proposed evaluation metrics.
+Thanks to our detailed analysis, we uncover the strengths and limitations of
+five unlearning strategies, offering valuable insights into optimizing
+federated unlearning to balance data privacy and system performance within
+FOLTR. We publicly release our code and complete results at
+https://github.com/Iris1026/Unlearning-for-FOLTR.git.","cs.IR, cs.LG",2025-05-19T07:23:46+00:00,2025-05-19T07:23:46+00:00,http://arxiv.org/abs/2505.12791v1
+2505.07166v1,"Pre-training vs. Fine-tuning: A Reproducibility Study on Dense Retrieval
+  Knowledge Acquisition","Zheng Yao, Shuai Wang, Guido Zuccon","Dense retrievers utilize pre-trained backbone language models (e.g., BERT,
+LLaMA) that are fine-tuned via contrastive learning to perform the task of
+encoding text into sense representations that can be then compared via a
+shallow similarity operation, e.g. inner product. Recent research has
+questioned the role of fine-tuning vs. that of pre-training within dense
+retrievers, specifically arguing that retrieval knowledge is primarily gained
+during pre-training, meaning knowledge not acquired during pre-training cannot
+be sub-sequentially acquired via fine-tuning. We revisit this idea here as the
+claim was only studied in the context of a BERT-based encoder using DPR as
+representative dense retriever. We extend the previous analysis by testing
+other representation approaches (comparing the use of CLS tokens with that of
+mean pooling), backbone architectures (encoder-only BERT vs. decoder-only
+LLaMA), and additional datasets (MSMARCO in addition to Natural Questions). Our
+study confirms that in DPR tuning, pre-trained knowledge underpins retrieval
+performance, with fine-tuning primarily adjusting neuron activation rather than
+reorganizing knowledge. However, this pattern does not hold universally, such
+as in mean-pooled (Contriever) and decoder-based (LLaMA) models. We ensure full
+reproducibility and make our implementation publicly available at
+https://github.com/ielab/DenseRetriever-Knowledge-Acquisition.","cs.IR, cs.CL",2025-05-12T01:24:00+00:00,2025-05-12T01:24:00+00:00,http://arxiv.org/abs/2505.07166v1
+2505.03484v1,"STAR-Rec: Making Peace with Length Variance and Pattern Diversity in
+  Sequential Recommendation","Maolin Wang, Sheng Zhang, Ruocheng Guo, Wanyu Wang, Xuetao Wei, Zitao Liu, Hongzhi Yin, Yi Chang, Xiangyu Zhao","Recent deep sequential recommendation models often struggle to effectively
+model key characteristics of user behaviors, particularly in handling sequence
+length variations and capturing diverse interaction patterns. We propose
+STAR-Rec, a novel architecture that synergistically combines preference-aware
+attention and state-space modeling through a sequence-level mixture-of-experts
+framework. STAR-Rec addresses these challenges by: (1) employing
+preference-aware attention to capture both inherently similar item
+relationships and diverse preferences, (2) utilizing state-space modeling to
+efficiently process variable-length sequences with linear complexity, and (3)
+incorporating a mixture-of-experts component that adaptively routes different
+behavioral patterns to specialized experts, handling both focused
+category-specific browsing and diverse category exploration patterns. We
+theoretically demonstrate how the state space model and attention mechanisms
+can be naturally unified in recommendation scenarios, where SSM captures
+temporal dynamics through state compression while attention models both similar
+and diverse item relationships. Extensive experiments on four real-world
+datasets demonstrate that STAR-Rec consistently outperforms state-of-the-art
+sequential recommendation methods, particularly in scenarios involving diverse
+user behaviors and varying sequence lengths.",cs.IR,2025-05-06T12:40:38+00:00,2025-05-06T12:40:38+00:00,http://arxiv.org/abs/2505.03484v1
+2505.00552v1,Graph Spectral Filtering with Chebyshev Interpolation for Recommendation,"Chanwoo Kim, Jinkyu Sung, Yebonn Han, Joonseok Lee","Graph convolutional networks have recently gained prominence in collaborative
+filtering (CF) for recommendations. However, we identify potential bottlenecks
+in two foundational components. First, the embedding layer leads to a latent
+space with limited capacity, overlooking locally observed but potentially
+valuable preference patterns. Also, the widely-used neighborhood aggregation is
+limited in its ability to leverage diverse preference patterns in a
+fine-grained manner. Building on spectral graph theory, we reveal that these
+limitations stem from graph filtering with a cut-off in the frequency spectrum
+and a restricted linear form. To address these issues, we introduce ChebyCF, a
+CF framework based on graph spectral filtering. Instead of a learned embedding,
+it takes a user's raw interaction history to utilize the full spectrum of
+signals contained in it. Also, it adopts Chebyshev interpolation to effectively
+approximate a flexible non-linear graph filter, and further enhances it by
+using an additional ideal pass filter and degree-based normalization. Through
+extensive experiments, we verify that ChebyCF overcomes the aforementioned
+bottlenecks and achieves state-of-the-art performance across multiple
+benchmarks and reasonably fast inference. Our code is available at
+https://github.com/chanwoo0806/ChebyCF.","cs.IR, cs.LG",2025-05-01T14:28:44+00:00,2025-05-01T14:28:44+00:00,http://arxiv.org/abs/2505.00552v1
+2504.20458v1,"Search-Based Interaction For Conversation Recommendation via Generative
+  Reward Model Based Simulated User","Xiaolei Wang, Chunxuan Xia, Junyi Li, Fanzhe Meng, Lei Huang, Jinpeng Wang, Wayne Xin Zhao, Ji-Rong Wen","Conversational recommendation systems (CRSs) use multi-turn interaction to
+capture user preferences and provide personalized recommendations. A
+fundamental challenge in CRSs lies in effectively understanding user
+preferences from conversations. User preferences can be multifaceted and
+complex, posing significant challenges for accurate recommendations even with
+access to abundant external knowledge. While interaction with users can clarify
+their true preferences, frequent user involvement can lead to a degraded user
+experience.
+  To address this problem, we propose a generative reward model based simulated
+user, named GRSU, for automatic interaction with CRSs. The simulated user
+provides feedback to the items recommended by CRSs, enabling them to better
+capture intricate user preferences through multi-turn interaction. Inspired by
+generative reward models, we design two types of feedback actions for the
+simulated user: i.e., generative item scoring, which offers coarse-grained
+feedback, and attribute-based item critique, which provides fine-grained
+feedback. To ensure seamless integration, these feedback actions are unified
+into an instruction-based format, allowing the development of a unified
+simulated user via instruction tuning on synthesized data. With this simulated
+user, automatic multi-turn interaction with CRSs can be effectively conducted.
+Furthermore, to strike a balance between effectiveness and efficiency, we draw
+inspiration from the paradigm of reward-guided search in complex reasoning
+tasks and employ beam search for the interaction process. On top of this, we
+propose an efficient candidate ranking method to improve the recommendation
+results derived from interaction. Extensive experiments on public datasets
+demonstrate the effectiveness, efficiency, and transferability of our approach.","cs.IR, cs.CL",2025-04-29T06:37:30+00:00,2025-04-29T06:37:30+00:00,http://arxiv.org/abs/2504.20458v1
+2504.18383v1,"Bridge the Domains: Large Language Models Enhanced Cross-domain
+  Sequential Recommendation","Qidong Liu, Xiangyu Zhao, Yejing Wang, Zijian Zhang, Howard Zhong, Chong Chen, Xiang Li, Wei Huang, Feng Tian","Cross-domain Sequential Recommendation (CDSR) aims to extract the preference
+from the user's historical interactions across various domains. Despite some
+progress in CDSR, two problems set the barrier for further advancements, i.e.,
+overlap dilemma and transition complexity. The former means existing CDSR
+methods severely rely on users who own interactions on all domains to learn
+cross-domain item relationships, compromising the practicability. The latter
+refers to the difficulties in learning the complex transition patterns from the
+mixed behavior sequences. With powerful representation and reasoning abilities,
+Large Language Models (LLMs) are promising to address these two problems by
+bridging the items and capturing the user's preferences from a semantic view.
+Therefore, we propose an LLMs Enhanced Cross-domain Sequential Recommendation
+model (LLM4CDSR). To obtain the semantic item relationships, we first propose
+an LLM-based unified representation module to represent items. Then, a
+trainable adapter with contrastive regularization is designed to adapt the CDSR
+task. Besides, a hierarchical LLMs profiling module is designed to summarize
+user cross-domain preferences. Finally, these two modules are integrated into
+the proposed tri-thread framework to derive recommendations. We have conducted
+extensive experiments on three public cross-domain datasets, validating the
+effectiveness of LLM4CDSR. We have released the code online.","cs.IR, cs.AI",2025-04-25T14:30:25+00:00,2025-04-25T14:30:25+00:00,http://arxiv.org/abs/2504.18383v1
+2504.17519v1,Replication and Exploration of Generative Retrieval over Dynamic Corpora,"Zhen Zhang, Xinyu Ma, Weiwei Sun, Pengjie Ren, Zhumin Chen, Shuaiqiang Wang, Dawei Yin, Maarten de Rijke, Zhaochun Ren","Generative retrieval (GR) has emerged as a promising paradigm in information
+retrieval (IR). However, most existing GR models are developed and evaluated
+using a static document collection, and their performance in dynamic corpora
+where document collections evolve continuously is rarely studied. In this
+paper, we first reproduce and systematically evaluate various representative GR
+approaches over dynamic corpora. Through extensive experiments, we reveal that
+existing GR models with \textit{text-based} docids show superior generalization
+to unseen documents. We observe that the more fine-grained the docid design in
+the GR model, the better its performance over dynamic corpora, surpassing BM25
+and even being comparable to dense retrieval methods. While GR models with
+\textit{numeric-based} docids show high efficiency, their performance drops
+significantly over dynamic corpora. Furthermore, our experiments find that the
+underperformance of numeric-based docids is partly due to their excessive
+tendency toward the initial document set, which likely results from overfitting
+on the training set. We then conduct an in-depth analysis of the
+best-performing GR methods. We identify three critical advantages of text-based
+docids in dynamic corpora: (i) Semantic alignment with language models'
+pretrained knowledge, (ii) Fine-grained docid design, and (iii) High lexical
+diversity. Building on these insights, we finally propose a novel multi-docid
+design that leverages both the efficiency of numeric-based docids and the
+effectiveness of text-based docids, achieving improved performance in dynamic
+corpus without requiring additional retraining. Our work offers empirical
+evidence for advancing GR methods over dynamic corpora and paves the way for
+developing more generalized yet efficient GR models in real-world search
+engines.",cs.IR,2025-04-24T13:01:23+00:00,2025-04-24T13:01:23+00:00,http://arxiv.org/abs/2504.17519v1
+2504.15849v1,"NLCTables: A Dataset for Marrying Natural Language Conditions with Table
+  Discovery","Lingxi Cui, Huan Li, Ke Chen, Lidan Shou, Gang Chen","With the growing abundance of repositories containing tabular data,
+discovering relevant tables for in-depth analysis remains a challenging task.
+Existing table discovery methods primarily retrieve desired tables based on a
+query table or several vague keywords, leaving users to manually filter large
+result sets. To address this limitation, we propose a new task: NL-conditional
+table discovery (nlcTD), where users combine a query table with natural
+language (NL) requirements to refine search results. To advance research in
+this area, we present nlcTables, a comprehensive benchmark dataset comprising
+627 diverse queries spanning NL-only, union, join, and fuzzy conditions, 22,080
+candidate tables, and 21,200 relevance annotations. Our evaluation of six
+state-of-the-art table discovery methods on nlcTables reveals substantial
+performance gaps, highlighting the need for advanced techniques to tackle this
+challenging nlcTD scenario. The dataset, construction framework, and baseline
+implementations are publicly available at
+https://github.com/SuDIS-ZJU/nlcTables to foster future research.","cs.IR, 68P20",2025-04-22T12:44:59+00:00,2025-04-22T12:44:59+00:00,http://arxiv.org/abs/2504.15849v1
+2504.14991v1,"Understanding Accuracy-Fairness Trade-offs in Re-ranking through
+  Elasticity in Economics","Chen Xu, Jujia Zhao, Wenjie Wang, Liang Pang, Jun Xu, Tat-Seng Chua, Maarten de Rijke","Fairness is an increasingly important factor in re-ranking tasks. Prior work
+has identified a trade-off between ranking accuracy and item fairness. However,
+the underlying mechanisms are still not fully understood. An analogy can be
+drawn between re-ranking and the dynamics of economic transactions. The
+accuracy-fairness trade-off parallels the coupling of the commodity tax
+transfer process. Fairness considerations in re-ranking, similar to a commodity
+tax on suppliers, ultimately translate into a cost passed on to consumers.
+Analogously, item-side fairness constraints result in a decline in user-side
+accuracy. In economics, the extent to which commodity tax on the supplier (item
+fairness) transfers to commodity tax on users (accuracy loss) is formalized
+using the notion of elasticity. The re-ranking fairness-accuracy trade-off is
+similarly governed by the elasticity of utility between item groups. This
+insight underscores the limitations of current fair re-ranking evaluations,
+which often rely solely on a single fairness metric, hindering comprehensive
+assessment of fair re-ranking algorithms. Centered around the concept of
+elasticity, this work presents two significant contributions. We introduce the
+Elastic Fairness Curve (EF-Curve) as an evaluation framework. This framework
+enables a comparative analysis of algorithm performance across different
+elasticity levels, facilitating the selection of the most suitable approach.
+Furthermore, we propose ElasticRank, a fair re-ranking algorithm that employs
+elasticity calculations to adjust inter-item distances within a curved space.
+Experiments on three widely used ranking datasets demonstrate its effectiveness
+and efficiency.",cs.IR,2025-04-21T09:41:08+00:00,2025-04-21T09:41:08+00:00,http://arxiv.org/abs/2504.14991v1
+2504.14243v1,"Unconstrained Monotonic Calibration of Predictions in Deep Ranking
+  Systems","Yimeng Bai, Shunyu Zhang, Yang Zhang, Hu Liu, Wentian Bao, Enyun Yu, Fuli Feng, Wenwu Ou","Ranking models primarily focus on modeling the relative order of predictions
+while often neglecting the significance of the accuracy of their absolute
+values. However, accurate absolute values are essential for certain downstream
+tasks, necessitating the calibration of the original predictions. To address
+this, existing calibration approaches typically employ predefined
+transformation functions with order-preserving properties to adjust the
+original predictions. Unfortunately, these functions often adhere to fixed
+forms, such as piece-wise linear functions, which exhibit limited
+expressiveness and flexibility, thereby constraining their effectiveness in
+complex calibration scenarios. To mitigate this issue, we propose implementing
+a calibrator using an Unconstrained Monotonic Neural Network (UMNN), which can
+learn arbitrary monotonic functions with great modeling power. This approach
+significantly relaxes the constraints on the calibrator, improving its
+flexibility and expressiveness while avoiding excessively distorting the
+original predictions by requiring monotonicity. Furthermore, to optimize this
+highly flexible network for calibration, we introduce a novel additional loss
+function termed Smooth Calibration Loss (SCLoss), which aims to fulfill a
+necessary condition for achieving the ideal calibration state. Extensive
+offline experiments confirm the effectiveness of our method in achieving
+superior calibration performance. Moreover, deployment in Kuaishou's
+large-scale online video ranking system demonstrates that the method's
+calibration improvements translate into enhanced business metrics. The source
+code is available at https://github.com/baiyimeng/UMC.","cs.IR, H.3.3, H.3.5",2025-04-19T09:35:11+00:00,2025-04-19T09:35:11+00:00,http://arxiv.org/abs/2504.14243v1
+2504.12900v1,"FashionDPO:Fine-tune Fashion Outfit Generation Model using Direct
+  Preference Optimization","Mingzhe Yu, Yunshan Ma, Lei Wu, Changshuo Wang, Xue Li, Lei Meng","Personalized outfit generation aims to construct a set of compatible and
+personalized fashion items as an outfit. Recently, generative AI models have
+received widespread attention, as they can generate fashion items for users to
+complete an incomplete outfit or create a complete outfit. However, they have
+limitations in terms of lacking diversity and relying on the supervised
+learning paradigm. Recognizing this gap, we propose a novel framework
+FashionDPO, which fine-tunes the fashion outfit generation model using direct
+preference optimization. This framework aims to provide a general fine-tuning
+approach to fashion generative models, refining a pre-trained fashion outfit
+generation model using automatically generated feedback, without the need to
+design a task-specific reward function. To make sure that the feedback is
+comprehensive and objective, we design a multi-expert feedback generation
+module which covers three evaluation perspectives, \ie quality, compatibility
+and personalization. Experiments on two established datasets, \ie iFashion and
+Polyvore-U, demonstrate the effectiveness of our framework in enhancing the
+model's ability to align with users' personalized preferences while adhering to
+fashion compatibility principles. Our code and model checkpoints are available
+at https://github.com/Yzcreator/FashionDPO.","cs.MM, cs.IR",2025-04-17T12:41:41+00:00,2025-04-17T12:41:41+00:00,http://arxiv.org/abs/2504.12900v1
+2504.09935v1,Constrained Auto-Regressive Decoding Constrains Generative Retrieval,"Shiguang Wu, Zhaochun Ren, Xin Xin, Jiyuan Yang, Mengqi Zhang, Zhumin Chen, Maarten de Rijke, Pengjie Ren","Generative retrieval seeks to replace traditional search index data
+structures with a single large-scale neural network, offering the potential for
+improved efficiency and seamless integration with generative large language
+models. As an end-to-end paradigm, generative retrieval adopts a learned
+differentiable search index to conduct retrieval by directly generating
+document identifiers through corpus-specific constrained decoding. The
+generalization capabilities of generative retrieval on out-of-distribution
+corpora have gathered significant attention.
+  In this paper, we examine the inherent limitations of constrained
+auto-regressive generation from two essential perspectives: constraints and
+beam search. We begin with the Bayes-optimal setting where the generative
+retrieval model exactly captures the underlying relevance distribution of all
+possible documents. Then we apply the model to specific corpora by simply
+adding corpus-specific constraints. Our main findings are two-fold: (i) For the
+effect of constraints, we derive a lower bound of the error, in terms of the KL
+divergence between the ground-truth and the model-predicted step-wise marginal
+distributions. (ii) For the beam search algorithm used during generation, we
+reveal that the usage of marginal distributions may not be an ideal approach.
+This paper aims to improve our theoretical understanding of the generalization
+capabilities of the auto-regressive decoding retrieval paradigm, laying a
+foundation for its limitations and inspiring future advancements toward more
+robust and generalizable generative retrieval.",cs.IR,2025-04-14T06:54:49+00:00,2025-04-14T06:54:49+00:00,http://arxiv.org/abs/2504.09935v1

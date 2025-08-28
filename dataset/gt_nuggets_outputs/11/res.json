@@ -1,0 +1,241 @@
+{
+  "qid": "2506.02853v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nAction coordination in human structure is indispensable for the spatial\nconstraints of 2D joints to recover 3D pose. Usually, action coordination is\nrepresented as a long-range dependence among body parts. However, there are two\nmain challenges in modeling long-range dependencies. First, joints should not\nonly be constrained by other individual joints but also be modulated by the\nbody parts. Second, existing methods make networks deeper to learn dependencies\nbetween non-linked parts. They introduce uncorrelated noise and increase the\nmodel size. In this paper, we utilize a pyramid structure to better learn\npotential long-range dependencies. It can capture the correlation across joints\nand groups, which complements the context of the human sub-structure. In an\neffective cross-scale way, it captures the pyramid-structured long-range\ndependence. Specifically, we propose a novel Pyramid Graph Attention (PGA)\nmodule to capture long-range cross-scale dependencies. It concatenates\ninformation from various scales into a compact sequence, and then computes the\ncorrelation between scales in parallel. Combining PGA with graph convolution\nmodules, we develop a Pyramid Graph Transformer (PGFormer) for 3D human pose\nestimation, which is a lightweight multi-scale transformer architecture. It\nencapsulates human sub-structures into self-attention by pooling. Extensive\nexperiments show that our approach achieves lower error and smaller model size\nthan state-of-the-art methods on Human3.6M and MPI-INF-3DHP datasets. The code\nis available at https://github.com/MingjieWe/PGFormer.",
+  "nuggets": [
+    {
+      "text": "3D human pose estimation infers 3D body coordinates from 2D images",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Graph convolutional networks (GCNs) model spatial relations between joints",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "GCNs aggregate local information but struggle with long-range dependencies",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Long-range dependencies capture coordination among non-adjacent body parts",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Attention-based methods model long-range dependencies in pose estimation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Transformers combine attention and graph convolution for 3D HPE",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Self-attention often ignores human body structural information",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Pyramid structures provide multi-scale, hierarchical information for pose estimation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Proposed pyramid structure enables cross-scale information exchange and compact modeling",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Early methods used end-to-end regression for 3D pose from images",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "2D-to-3D lifting decouples pose estimation into two stages",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Manual graph designs limit efficiency in modeling long-range constraints",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Hierarchical human structure models body as interconnected parts at multiple levels",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Pooling enables efficient extraction of part-level features in self-attention",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Parallel frameworks compute semantic relations across scales for 3D HPE",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "3D human pose estimation infers 3D body coordinates from 2D images",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Graph convolutional networks (GCNs) model spatial relations between joints",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "GCNs aggregate local information but struggle with long-range dependencies",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Long-range dependencies capture coordination among non-adjacent body parts",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Attention-based methods model long-range dependencies in pose estimation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Transformers combine attention and graph convolution for 3D HPE",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Self-attention often ignores human body structural information",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Pyramid structures provide multi-scale, hierarchical information for pose estimation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Proposed pyramid structure enables cross-scale information exchange and compact modeling",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Early methods used end-to-end regression for 3D pose from images",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "2D-to-3D lifting decouples pose estimation into two stages",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Manual graph designs limit efficiency in modeling long-range constraints",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Hierarchical human structure models body as interconnected parts at multiple levels",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Pooling enables efficient extraction of part-level features in self-attention",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Parallel frameworks compute semantic relations across scales for 3D HPE",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "3D human pose estimation infers 3D body coordinates from 2D images",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Graph convolutional networks (GCNs) model spatial relations between joints",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "GCNs aggregate local information but struggle with long-range dependencies",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Long-range dependencies capture coordination among non-adjacent body parts",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Attention-based methods model long-range dependencies in pose estimation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Transformers combine attention and graph convolution for 3D HPE",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Self-attention often ignores human body structural information",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Pyramid structures provide multi-scale, hierarchical information for pose estimation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Proposed pyramid structure enables cross-scale information exchange and compact modeling",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Early methods used end-to-end regression for 3D pose from images",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "2D-to-3D lifting decouples pose estimation into two stages",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Manual graph designs limit efficiency in modeling long-range constraints",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Hierarchical human structure models body as interconnected parts at multiple levels",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Pooling enables efficient extraction of part-level features in self-attention",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Parallel frameworks compute semantic relations across scales for 3D HPE",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 1.0,
+    "strict_all_score": 1.0,
+    "vital_score": 1.0,
+    "all_score": 1.0
+  }
+}

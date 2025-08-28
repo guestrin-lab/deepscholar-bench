@@ -1,0 +1,191 @@
+{
+  "qid": "2506.02634v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nServing large language models (LLMs) is important for cloud providers, and\ncaching intermediate results (KV\\$) after processing each request substantially\nimproves serving throughput and latency. However, there is limited\nunderstanding of how LLM serving benefits from KV\\$ caching, where system\ndesign decisions like cache eviction policies are highly workload-dependent. In\nthis paper, we present the first systematic characterization of the KV\\$\nworkload patterns from one of the leading LLM service providers. We draw\nobservations that were not covered by previous studies focusing on synthetic\nworkloads, including: KV\\$ reuses are skewed across requests, where reuses\nbetween single-turn requests are equally important as multi-turn requests; the\nreuse time and probability are diverse considering all requests, but for a\nspecific request category, the pattern tends to be predictable; and the overall\ncache size required for an ideal cache hit ratio is moderate. Based on the\ncharacterization, we further propose a workload-aware cache eviction policy\nthat improves the serving performance under real-world traces, especially with\nlimited cache capacity.",
+  "nuggets": [
+    {
+      "text": "KV cache reuse accelerates LLM serving",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "General-purpose cache eviction policies: LRU, SLRU, LIRS, ARC, etc.",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "LLM serving workload characterization is underexplored",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Prior studies focus on synthetic LLM workloads",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Workload-aware cache eviction policies improve LLM serving performance",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Production LLM systems use prefix-match KV cache reuse",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Non-prefix KV cache reuse studied but not widely deployed",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Runtime KV cache compression and deletion reduce cache size",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "StreamingLLM, H2O, InfiniGen optimize KV cache memory usage",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "KVQuant enables 3-bit KV cache quantization with minimal accuracy loss",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Domain-specific cache policies studied for web and serverless workloads",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LLM serving optimization is an active research area",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "KV cache reuse accelerates LLM serving",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "General-purpose cache eviction policies: LRU, SLRU, LIRS, ARC, etc.",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Prior studies focus on synthetic LLM workloads",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Workload-aware cache eviction policies improve LLM serving performance",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Production LLM systems use prefix-match KV cache reuse",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Non-prefix KV cache reuse studied but not widely deployed",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Runtime KV cache compression and deletion reduce cache size",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "StreamingLLM, H2O, InfiniGen optimize KV cache memory usage",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "KVQuant enables 3-bit KV cache quantization with minimal accuracy loss",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Domain-specific cache policies studied for web and serverless workloads",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LLM serving optimization is an active research area",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "KV cache reuse accelerates LLM serving",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "General-purpose cache eviction policies: LRU, SLRU, LIRS, ARC, etc.",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "LLM serving workload characterization is underexplored",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Prior studies focus on synthetic LLM workloads",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Workload-aware cache eviction policies improve LLM serving performance",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Production LLM systems use prefix-match KV cache reuse",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Non-prefix KV cache reuse studied but not widely deployed",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Runtime KV cache compression and deletion reduce cache size",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "StreamingLLM, H2O, InfiniGen optimize KV cache memory usage",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "KVQuant enables 3-bit KV cache quantization with minimal accuracy loss",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Domain-specific cache policies studied for web and serverless workloads",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LLM serving optimization is an active research area",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 0.8,
+    "strict_all_score": 0.9166666666666666,
+    "vital_score": 0.9,
+    "all_score": 0.9583333333333334
+  }
+}

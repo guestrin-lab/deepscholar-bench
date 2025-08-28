@@ -1,0 +1,241 @@
+{
+  "qid": "2505.24835v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nFund allocation has been an increasingly important problem in the financial\ndomain. In reality, we aim to allocate the funds to buy certain assets within a\ncertain future period. Naive solutions such as prediction-only or\nPredict-then-Optimize approaches suffer from goal mismatch. Additionally, the\nintroduction of the SOTA time series forecasting model inevitably introduces\nadditional uncertainty in the predicted result. To solve both problems\nmentioned above, we introduce a Risk-aware Time-Series Predict-and-Allocate\n(RTS-PnO) framework, which holds no prior assumption on the forecasting models.\nSuch a framework contains three features: (i) end-to-end training with\nobjective alignment measurement, (ii) adaptive forecasting uncertainty\ncalibration, and (iii) agnostic towards forecasting models. The evaluation of\nRTS-PnO is conducted over both online and offline experiments. For offline\nexperiments, eight datasets from three categories of financial applications are\nused: Currency, Stock, and Cryptos. RTS-PnO consistently outperforms other\ncompetitive baselines. The online experiment is conducted on the Cross-Border\nPayment business at FiT, Tencent, and an 8.4\\% decrease in regret is witnessed\nwhen compared with the product-line approach. The code for the offline\nexperiment is available at https://github.com/fuyuanlyu/RTS-PnO.",
+  "nuggets": [
+    {
+      "text": "Uncertainty quantification is lacking in most forecasting models",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Conformal prediction enables uncertainty calibration for long time series",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Predict-then-optimize (PtO) is common in portfolio management and scheduling",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "PtO suffers from misalignment between prediction and optimization goals",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Predict-and-optimize (PnO) directly aligns prediction with optimization objectives",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Decision-focused learning trains models for optimization-aware predictions",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "RTS-PnO extends PnO to large-scale industrial fund allocation problems",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Transformer-based models improve long-term time series forecasting accuracy",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Sparse and hierarchical attention reduce computational complexity in forecasting",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Patch-wise and segment-wise attention capture complex dependencies in time series",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Temporal convolutional networks achieve competitive forecasting performance",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Linear models and MLPs challenge neural architecture dominance in forecasting",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Generative models capture uncertainty but struggle with long-term predictions",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Differentiable optimization layers require strong assumptions, limiting applicability",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Surrogate loss methods enable broader PnO applications with theoretical guarantees",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Uncertainty quantification is lacking in most forecasting models",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Conformal prediction enables uncertainty calibration for long time series",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Predict-then-optimize (PtO) is common in portfolio management and scheduling",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "PtO suffers from misalignment between prediction and optimization goals",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Predict-and-optimize (PnO) directly aligns prediction with optimization objectives",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Decision-focused learning trains models for optimization-aware predictions",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "RTS-PnO extends PnO to large-scale industrial fund allocation problems",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Transformer-based models improve long-term time series forecasting accuracy",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Sparse and hierarchical attention reduce computational complexity in forecasting",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Patch-wise and segment-wise attention capture complex dependencies in time series",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Temporal convolutional networks achieve competitive forecasting performance",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Linear models and MLPs challenge neural architecture dominance in forecasting",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Generative models capture uncertainty but struggle with long-term predictions",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Differentiable optimization layers require strong assumptions, limiting applicability",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Surrogate loss methods enable broader PnO applications with theoretical guarantees",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "Uncertainty quantification is lacking in most forecasting models",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Conformal prediction enables uncertainty calibration for long time series",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Predict-then-optimize (PtO) is common in portfolio management and scheduling",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "PtO suffers from misalignment between prediction and optimization goals",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Predict-and-optimize (PnO) directly aligns prediction with optimization objectives",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Decision-focused learning trains models for optimization-aware predictions",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "RTS-PnO extends PnO to large-scale industrial fund allocation problems",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Transformer-based models improve long-term time series forecasting accuracy",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Sparse and hierarchical attention reduce computational complexity in forecasting",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Patch-wise and segment-wise attention capture complex dependencies in time series",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Temporal convolutional networks achieve competitive forecasting performance",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Linear models and MLPs challenge neural architecture dominance in forecasting",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Generative models capture uncertainty but struggle with long-term predictions",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Differentiable optimization layers require strong assumptions, limiting applicability",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Surrogate loss methods enable broader PnO applications with theoretical guarantees",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 1.0,
+    "strict_all_score": 1.0,
+    "vital_score": 1.0,
+    "all_score": 1.0
+  }
+}

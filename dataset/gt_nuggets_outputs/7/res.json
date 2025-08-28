@@ -1,0 +1,166 @@
+{
+  "qid": "2506.00085v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nLarge Language Models (LLMs) encode behaviors such as refusal within their\nactivation space, yet identifying these behaviors remains a significant\nchallenge. Existing methods often rely on predefined refusal templates\ndetectable in output tokens or require manual analysis. We introduce\n\\textbf{COSMIC} (Cosine Similarity Metrics for Inversion of Concepts), an\nautomated framework for direction selection that identifies viable steering\ndirections and target layers using cosine similarity - entirely independent of\nmodel outputs. COSMIC achieves steering performance comparable to prior methods\nwithout requiring assumptions about a model's refusal behavior, such as the\npresence of specific refusal tokens. It reliably identifies refusal directions\nin adversarial settings and weakly aligned models, and is capable of steering\nsuch models toward safer behavior with minimal increase in false refusals,\ndemonstrating robustness across a wide range of alignment conditions.",
+  "nuggets": [
+    {
+      "text": "Refusal behaviors are encoded in LLM activation space",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Interventions can directly modulate refusal in activation space",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Similarity-based scores can target intervention layers",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Model behaviors often linearly encoded in activation space",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "LLM alignment often uses fine-tuning and RLHF",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Fine-tuning and adversarial prompts can bypass refusal mechanisms",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Contrastive data pairs extract feature directions for behavior steering",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Concept removal uses Representation Engineering and Contrastive Activation Addition",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Refusal behaviors sometimes modeled as affine functions",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Mechanistic interpretability uses sparse autoencoders, weight analysis, circuit analysis",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Refusal behaviors are encoded in LLM activation space",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Interventions can directly modulate refusal in activation space",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Similarity-based scores can target intervention layers",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Model behaviors often linearly encoded in activation space",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "LLM alignment often uses fine-tuning and RLHF",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Fine-tuning and adversarial prompts can bypass refusal mechanisms",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Contrastive data pairs extract feature directions for behavior steering",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Concept removal uses Representation Engineering and Contrastive Activation Addition",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Refusal behaviors sometimes modeled as affine functions",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Mechanistic interpretability uses sparse autoencoders, weight analysis, circuit analysis",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "Refusal behaviors are encoded in LLM activation space",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Interventions can directly modulate refusal in activation space",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Similarity-based scores can target intervention layers",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Model behaviors often linearly encoded in activation space",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "LLM alignment often uses fine-tuning and RLHF",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Fine-tuning and adversarial prompts can bypass refusal mechanisms",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Contrastive data pairs extract feature directions for behavior steering",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Concept removal uses Representation Engineering and Contrastive Activation Addition",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Refusal behaviors sometimes modeled as affine functions",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Mechanistic interpretability uses sparse autoencoders, weight analysis, circuit analysis",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 1.0,
+    "strict_all_score": 1.0,
+    "vital_score": 1.0,
+    "all_score": 1.0
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "qid": "2506.01833v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nInspired by the success of unsupervised pre-training paradigms, researchers\nhave applied these approaches to DNA pre-training. However, we argue that these\napproaches alone yield suboptimal results because pure DNA sequences lack\nsufficient information, since their functions are regulated by genomic profiles\nlike chromatin accessibility. Here, we demonstrate that supervised training for\ngenomic profile prediction serves as a more effective alternative to pure\nsequence pre-training. Furthermore, considering the multi-species and\nmulti-profile nature of genomic profile prediction, we introduce our\n$\\textbf{S}$pecies-$\\textbf{P}$rofile $\\textbf{A}$daptive\n$\\textbf{C}$ollaborative $\\textbf{E}$xperts (SPACE) that leverages Mixture of\nExperts (MoE) to better capture the relationships between DNA sequences across\ndifferent species and genomic profiles, thereby learning more effective DNA\nrepresentations. Through extensive experiments across various tasks, our model\nachieves state-of-the-art performance, establishing that DNA models trained\nwith supervised genomic profiles serve as powerful DNA representation learners.\nThe code is available at https://github.com/ZhuJiwei111/SPACE.",
+  "nuggets": [
+    {
+      "text": "Supervised genomic profile models predict functional profiles from DNA sequences",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Unsupervised DNA foundation models adapt NLP pre-training to DNA sequences",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Little systematic comparison between unsupervised and supervised DNA models",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "MoE enables dynamic learning of species-specific and shared genomic features",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "DeepSEA pioneered CNN-based multi-task genomic profile prediction",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Enformer uses hybrid Transformer-CNN for state-of-the-art genomic profile prediction",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Genomic profile models use shared encoders with independent prediction heads",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Few studies assess if intermediate representations capture biological patterns",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "DNABERT introduced BERT-style masked language modeling for DNA",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Subsequent unsupervised models use MLM or NTP objectives for DNA",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Unsupervised models optimize data, architectures, and tokenization strategies",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "MoE selectively activates expert networks via sparse routing",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "MoE improves parameter efficiency and model capacity in Transformers",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "MoE is implemented by replacing FFNs in Transformer architectures",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Supervised genomic profile models predict functional profiles from DNA sequences",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Unsupervised DNA foundation models adapt NLP pre-training to DNA sequences",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Little systematic comparison between unsupervised and supervised DNA models",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "MoE enables dynamic learning of species-specific and shared genomic features",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "DeepSEA pioneered CNN-based multi-task genomic profile prediction",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Enformer uses hybrid Transformer-CNN for state-of-the-art genomic profile prediction",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Genomic profile models use shared encoders with independent prediction heads",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Few studies assess if intermediate representations capture biological patterns",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "DNABERT introduced BERT-style masked language modeling for DNA",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Subsequent unsupervised models use MLM or NTP objectives for DNA",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Unsupervised models optimize data, architectures, and tokenization strategies",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "MoE selectively activates expert networks via sparse routing",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "MoE improves parameter efficiency and model capacity in Transformers",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "MoE is implemented by replacing FFNs in Transformer architectures",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "Supervised genomic profile models predict functional profiles from DNA sequences",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Unsupervised DNA foundation models adapt NLP pre-training to DNA sequences",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Little systematic comparison between unsupervised and supervised DNA models",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "MoE enables dynamic learning of species-specific and shared genomic features",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "DeepSEA pioneered CNN-based multi-task genomic profile prediction",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Enformer uses hybrid Transformer-CNN for state-of-the-art genomic profile prediction",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Genomic profile models use shared encoders with independent prediction heads",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Few studies assess if intermediate representations capture biological patterns",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "DNABERT introduced BERT-style masked language modeling for DNA",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Subsequent unsupervised models use MLM or NTP objectives for DNA",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Unsupervised models optimize data, architectures, and tokenization strategies",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "MoE selectively activates expert networks via sparse routing",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "MoE improves parameter efficiency and model capacity in Transformers",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "MoE is implemented by replacing FFNs in Transformer architectures",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 1.0,
+    "strict_all_score": 1.0,
+    "vital_score": 1.0,
+    "all_score": 1.0
+  }
+}

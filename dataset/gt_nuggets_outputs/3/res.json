@@ -1,0 +1,226 @@
+{
+  "qid": "2506.00832v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nRecent advances in Text-to-Speech (TTS) have significantly improved speech\nnaturalness, increasing the demand for precise prosody control and\nmispronunciation correction. Existing approaches for prosody manipulation often\ndepend on specialized modules or additional training, limiting their capacity\nfor post-hoc adjustments. Similarly, traditional mispronunciation correction\nrelies on grapheme-to-phoneme dictionaries, making it less practical in\nlow-resource settings. We introduce Counterfactual Activation Editing, a\nmodel-agnostic method that manipulates internal representations in a\npre-trained TTS model to achieve post-hoc control of prosody and pronunciation.\nExperimental results show that our method effectively adjusts prosodic features\nand corrects mispronunciations while preserving synthesis quality. This opens\nthe door to inference-time refinement of TTS outputs without retraining,\nbridging the gap between pre-trained TTS models and editable speech synthesis.",
+  "nuggets": [
+    {
+      "text": "Prosody control is vital for expressive TTS",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Traditional prosody control uses specialized modules or extra training",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Mispronunciation correction often uses grapheme-to-phoneme dictionaries",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Model-agnostic methods manipulate internal TTS representations",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Post-hoc prosody and pronunciation control is challenging",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Few methods enable inference-time TTS output refinement",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Recent TTS advances improve speech naturalness",
+      "importance": "okay",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Recent works predict prosodic features from embeddings",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Reference encoders capture nuanced prosodic variation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Embedding bias enables intermediate representation control",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Prior methods risk deviating from data manifold",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Duration control is a common focus in prosody editing",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "End-to-end TTS struggles with polyphone disambiguation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Unit selection mitigates mispronunciation but causes join artifacts",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Unit selection requires single-speaker databases",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Speech Audio Corrector (SAC) uses self-supervised speech codes",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SAC corrects mispronunciations at the word level",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Prosody control is vital for expressive TTS",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Mispronunciation correction often uses grapheme-to-phoneme dictionaries",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Recent works predict prosodic features from embeddings",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Reference encoders capture nuanced prosodic variation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Embedding bias enables intermediate representation control",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Prior methods risk deviating from data manifold",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Duration control is a common focus in prosody editing",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "End-to-end TTS struggles with polyphone disambiguation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Unit selection mitigates mispronunciation but causes join artifacts",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Unit selection requires single-speaker databases",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Speech Audio Corrector (SAC) uses self-supervised speech codes",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SAC corrects mispronunciations at the word level",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "Prosody control is vital for expressive TTS",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Mispronunciation correction often uses grapheme-to-phoneme dictionaries",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Model-agnostic methods manipulate internal TTS representations",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Recent works predict prosodic features from embeddings",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Reference encoders capture nuanced prosodic variation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Embedding bias enables intermediate representation control",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Prior methods risk deviating from data manifold",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Duration control is a common focus in prosody editing",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "End-to-end TTS struggles with polyphone disambiguation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Unit selection mitigates mispronunciation but causes join artifacts",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Unit selection requires single-speaker databases",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Speech Audio Corrector (SAC) uses self-supervised speech codes",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SAC corrects mispronunciations at the word level",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 0.3333333333333333,
+    "strict_all_score": 0.7058823529411765,
+    "vital_score": 0.4166666666666667,
+    "all_score": 0.7352941176470589
+  }
+}

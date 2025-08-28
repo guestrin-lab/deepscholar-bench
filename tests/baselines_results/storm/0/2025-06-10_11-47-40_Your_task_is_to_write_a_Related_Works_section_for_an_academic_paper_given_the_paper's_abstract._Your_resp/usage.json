@@ -1,0 +1,56 @@
+{
+    "time": {
+        "run_knowledge_curation_module": 96.59270119667053,
+        "run_outline_generation_module": 8.041818857192993,
+        "run_article_generation_module": 43.73110842704773,
+        "run_article_polishing_module": 9.14682650566101
+    },
+    "lm_cost": {
+        "run_knowledge_curation_module": {
+            "hosted_vllm/meta-llama/Llama-4-Scout-17B-16E-Instruct": {
+                "prompt_tokens": 44202,
+                "completion_tokens": 13400,
+                "total_tokens": 57602,
+                "cost": 0
+            }
+        },
+        "run_outline_generation_module": {
+            "hosted_vllm/meta-llama/Llama-4-Scout-17B-16E-Instruct": {
+                "prompt_tokens": 6936,
+                "completion_tokens": 537,
+                "total_tokens": 7473,
+                "cost": 0
+            }
+        },
+        "run_article_generation_module": {
+            "hosted_vllm/meta-llama/Llama-4-Scout-17B-16E-Instruct": {
+                "prompt_tokens": 2467,
+                "completion_tokens": 605,
+                "total_tokens": 3072,
+                "cost": 0
+            }
+        },
+        "run_article_polishing_module": {
+            "hosted_vllm/meta-llama/Llama-4-Scout-17B-16E-Instruct": {
+                "prompt_tokens": 1022,
+                "completion_tokens": 677,
+                "total_tokens": 1699,
+                "cost": 0
+            }
+        }
+    },
+    "rm_cost": {
+        "run_knowledge_curation_module": {
+            "LotusRM": 36
+        },
+        "run_outline_generation_module": {
+            "LotusRM": 36
+        },
+        "run_article_generation_module": {
+            "LotusRM": 36
+        },
+        "run_article_polishing_module": {
+            "LotusRM": 36
+        }
+    }
+}

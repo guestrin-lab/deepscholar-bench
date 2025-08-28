@@ -1,0 +1,108 @@
+paper_title,arxiv_link,total_citations,resolved_citations,resolution_rate,arxiv_citations,arxiv_citation_rate
+TaxAgent: How Large Language Model Designs Fiscal Policy,http://arxiv.org/abs/2506.02838v1,17,17,1.0,3,0.1764705882352941
+"KVCache Cache in the Wild: Characterizing and Optimizing KVCache Cache
+  at a Large Cloud Provider",http://arxiv.org/abs/2506.02634v1,44,44,1.0,15,0.3409090909090909
+"Speaking Beyond Language: A Large-Scale Multimodal Dataset for Learning
+  Nonverbal Cues from Video-Grounded Dialogues",http://arxiv.org/abs/2506.00958v1,24,24,1.0,17,0.7083333333333334
+"Counterfactual Activation Editing for Post-hoc Prosody and
+  Mispronunciation Correction in TTS Models",http://arxiv.org/abs/2506.00832v1,11,11,1.0,7,0.6363636363636364
+Dual Debiasing for Noisy In-Context Learning for Text Generation,http://arxiv.org/abs/2506.00418v1,11,11,1.0,11,1.0
+"Don't Reinvent the Wheel: Efficient Instruction-Following Text Embedding
+  based on Guided Space Transformation",http://arxiv.org/abs/2505.24754v1,19,19,1.0,15,0.7894736842105263
+NexusSum: Hierarchical LLM Agents for Long-Form Narrative Summarization,http://arxiv.org/abs/2505.24575v1,22,22,1.0,15,0.6818181818181818
+COSMIC: Generalized Refusal Direction Identification in LLM Activations,http://arxiv.org/abs/2506.00085v1,37,37,1.0,29,0.7837837837837838
+"Is Your Model Fairly Certain? Uncertainty-Aware Fairness Evaluation for
+  LLMs",http://arxiv.org/abs/2505.23996v1,52,52,1.0,40,0.7692307692307693
+"Synthetic Generation and Latent Projection Denoising of Rim Lesions in
+  Multiple Sclerosis",http://arxiv.org/abs/2505.23353v1,22,22,1.0,12,0.5454545454545454
+Pre-Training Curriculum for Multi-Token Prediction in Language Models,http://arxiv.org/abs/2505.22757v1,21,21,1.0,14,0.6666666666666666
+"Learning Pyramid-structured Long-range Dependencies for 3D Human Pose
+  Estimation",http://arxiv.org/abs/2506.02853v1,35,35,1.0,19,0.5428571428571428
+Probabilistic Online Event Downsampling,http://arxiv.org/abs/2506.02547v1,11,11,1.0,4,0.3636363636363636
+Aligned Contrastive Loss for Long-Tailed Recognition,http://arxiv.org/abs/2506.01071v1,35,35,1.0,26,0.7428571428571429
+"Self-supervised ControlNet with Spatio-Temporal Mamba for Real-world
+  Video Super-resolution",http://arxiv.org/abs/2506.01037v1,39,39,1.0,28,0.717948717948718
+"Efficient 3D Brain Tumor Segmentation with Axial-Coronal-Sagittal
+  Embedding",http://arxiv.org/abs/2506.00434v1,14,14,1.0,10,0.7142857142857143
+Test-time Vocabulary Adaptation for Language-driven Object Detection,http://arxiv.org/abs/2506.00333v1,9,9,1.0,8,0.8888888888888888
+"Diversify and Conquer: Open-set Disagreement for Robust Semi-supervised
+  Learning with Outliers",http://arxiv.org/abs/2505.24443v1,37,37,1.0,27,0.7297297297297297
+"KairosAD: A SAM-Based Model for Industrial Anomaly Detection on Embedded
+  Devices",http://arxiv.org/abs/2505.24334v1,23,23,1.0,22,0.9565217391304348
+"Wav2Sem: Plug-and-Play Audio Semantic Decoupling for 3D Speech-Driven
+  Facial Animation",http://arxiv.org/abs/2505.23290v1,27,27,1.0,21,0.7777777777777778
+"Proximal Algorithm Unrolling: Flexible and Efficient Reconstruction
+  Networks for Single-Pixel Imaging",http://arxiv.org/abs/2505.23180v1,40,40,1.0,18,0.45
+"PS4PRO: Pixel-to-pixel Supervision for Photorealistic Rendering and
+  Optimization",http://arxiv.org/abs/2505.22616v1,13,13,1.0,11,0.8461538461538461
+Universal Domain Adaptation for Semantic Segmentation,http://arxiv.org/abs/2505.22458v1,32,32,1.0,24,0.75
+RC-AutoCalib: An End-to-End Radar-Camera Automatic Calibration Network,http://arxiv.org/abs/2505.22427v1,20,20,1.0,7,0.35
+"Q-VDiT: Towards Accurate Quantization and Distillation of
+  Video-Generation Diffusion Transformers",http://arxiv.org/abs/2505.22167v1,17,17,1.0,10,0.5882352941176471
+"ClaimPKG: Enhancing Claim Verification via Pseudo-Subgraph Generation
+  with Lightweight Specialized LLM",http://arxiv.org/abs/2505.22552v1,13,13,1.0,9,0.6923076923076923
+"VDDP: Verifiable Distributed Differential Privacy under the
+  Client-Server-Verifier Setup",http://arxiv.org/abs/2504.21752v1,16,16,1.0,6,0.375
+"Birdie: Natural Language-Driven Table Discovery Using Differentiable
+  Search Index",http://arxiv.org/abs/2504.21282v1,24,24,1.0,17,0.7083333333333334
+"CHASe: Client Heterogeneity-Aware Data Selection for Effective Federated
+  Active Learning",http://arxiv.org/abs/2504.17448v1,32,32,1.0,16,0.5
+"Stitching Inner Product and Euclidean Metrics for Topology-aware Maximum
+  Inner Product Search",http://arxiv.org/abs/2504.14861v1,23,23,1.0,14,0.6086956521739131
+AWDIT: An Optimal Weak Database Isolation Tester,http://arxiv.org/abs/2504.06975v1,25,25,1.0,10,0.4
+SPACE: Your Genomic Profile Predictor is a Powerful DNA Foundation Model,http://arxiv.org/abs/2506.01833v1,19,19,1.0,6,0.3157894736842105
+"Spectral Insights into Data-Oblivious Critical Layers in Large Language
+  Models",http://arxiv.org/abs/2506.00382v1,15,15,1.0,13,0.8666666666666667
+"Unlocking the Power of Rehearsal in Continual Learning: A Theoretical
+  Perspective",http://arxiv.org/abs/2506.00205v1,27,27,1.0,23,0.8518518518518519
+"Timing is important: Risk-aware Fund Allocation based on Time-Series
+  Forecasting",http://arxiv.org/abs/2505.24835v1,28,28,1.0,20,0.7142857142857143
+Aligning Protein Conformation Ensemble Generation with Physical Feedback,http://arxiv.org/abs/2505.24203v1,21,21,1.0,16,0.7619047619047619
+"CLONE: Customizing LLMs for Efficient Latency-Aware Inference at the
+  Edge",http://arxiv.org/abs/2506.02847v1,51,51,1.0,23,0.4509803921568627
+Refining Datapath for Microscaling ViTs,http://arxiv.org/abs/2505.22194v1,37,37,1.0,21,0.5675675675675675
+"Multi-Objective Memory Bandwidth Regulation and Cache Partitioning for
+  Multicore Real-Time Systems",http://arxiv.org/abs/2505.11554v1,48,48,1.0,3,0.0625
+"NMP-PaK: Near-Memory Processing Acceleration of Scalable De Novo Genome
+  Assembly",http://arxiv.org/abs/2505.08071v1,20,20,1.0,5,0.25
+Need for zkSpeed: Accelerating HyperPlonk for Zero-Knowledge Proofs,http://arxiv.org/abs/2504.06211v1,35,35,1.0,10,0.2857142857142857
+"Efficient Serverless Cold Start: Reducing Library Loading Overhead by
+  Profile-guided Optimization",http://arxiv.org/abs/2504.19283v1,28,28,1.0,5,0.1785714285714285
+"Kubernetes in the Cloud vs. Bare Metal: A Comparative Study of Network
+  Costs",http://arxiv.org/abs/2504.11007v1,8,8,1.0,1,0.125
+"Lumos: Efficient Performance Modeling and Estimation for Large-scale LLM
+  Training",http://arxiv.org/abs/2504.09307v1,30,30,1.0,13,0.4333333333333333
+"Learning Binarized Representations with Pseudo-positive Sample
+  Enhancement for Efficient Graph Collaborative Filtering",http://arxiv.org/abs/2506.02750v1,53,53,1.0,29,0.5471698113207547
+"What About Emotions? Guiding Fine-Grained Emotion Extraction from Mobile
+  App Reviews",http://arxiv.org/abs/2505.23452v1,16,16,1.0,3,0.1875
+Revisiting Self-attention for Cross-domain Sequential Recommendation,http://arxiv.org/abs/2505.21811v1,34,34,1.0,21,0.6176470588235294
+"Measure Domain's Gap: A Similar Domain Selection Principle for
+  Multi-Domain Recommendation",http://arxiv.org/abs/2505.20227v1,32,32,1.0,19,0.59375
+"Optimized Text Embedding Models and Benchmarks for Amharic Passage
+  Retrieval",http://arxiv.org/abs/2505.19356v1,21,21,1.0,14,0.6666666666666666
+"Aligning Web Query Generation with Ranking Objectives via Direct
+  Preference Optimization",http://arxiv.org/abs/2505.19307v1,18,18,1.0,13,0.7222222222222222
+"Benchmarking Recommendation, Classification, and Tracing Based on
+  Hugging Face Knowledge Graph",http://arxiv.org/abs/2505.17507v1,9,9,1.0,3,0.3333333333333333
+"Unlearning for Federated Online Learning to Rank: A Reproducibility
+  Study",http://arxiv.org/abs/2505.12791v1,16,16,1.0,11,0.6875
+"Pre-training vs. Fine-tuning: A Reproducibility Study on Dense Retrieval
+  Knowledge Acquisition",http://arxiv.org/abs/2505.07166v1,8,8,1.0,4,0.5
+"STAR-Rec: Making Peace with Length Variance and Pattern Diversity in
+  Sequential Recommendation",http://arxiv.org/abs/2505.03484v1,33,33,1.0,23,0.696969696969697
+Graph Spectral Filtering with Chebyshev Interpolation for Recommendation,http://arxiv.org/abs/2505.00552v1,40,40,1.0,27,0.675
+"Search-Based Interaction For Conversation Recommendation via Generative
+  Reward Model Based Simulated User",http://arxiv.org/abs/2504.20458v1,14,14,1.0,7,0.5
+"Bridge the Domains: Large Language Models Enhanced Cross-domain
+  Sequential Recommendation",http://arxiv.org/abs/2504.18383v1,43,43,1.0,26,0.6046511627906976
+Replication and Exploration of Generative Retrieval over Dynamic Corpora,http://arxiv.org/abs/2504.17519v1,16,16,1.0,14,0.875
+"NLCTables: A Dataset for Marrying Natural Language Conditions with Table
+  Discovery",http://arxiv.org/abs/2504.15849v1,21,21,1.0,12,0.5714285714285714
+"Understanding Accuracy-Fairness Trade-offs in Re-ranking through
+  Elasticity in Economics",http://arxiv.org/abs/2504.14991v1,26,26,1.0,16,0.6153846153846154
+"Unconstrained Monotonic Calibration of Predictions in Deep Ranking
+  Systems",http://arxiv.org/abs/2504.14243v1,20,20,1.0,12,0.6
+"FashionDPO:Fine-tune Fashion Outfit Generation Model using Direct
+  Preference Optimization",http://arxiv.org/abs/2504.12900v1,31,31,1.0,21,0.6774193548387096
+Constrained Auto-Regressive Decoding Constrains Generative Retrieval,http://arxiv.org/abs/2504.09935v1,47,47,1.0,39,0.8297872340425532

@@ -1,0 +1,301 @@
+{
+  "qid": "2506.02750v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nLearning vectorized embeddings is fundamental to many recommender systems for\nuser-item matching. To enable efficient online inference, representation\nbinarization, which embeds latent features into compact binary sequences, has\nrecently shown significant promise in optimizing both memory usage and\ncomputational overhead. However, existing approaches primarily focus on\nnumerical quantization, neglecting the associated information loss, which often\nresults in noticeable performance degradation. To address these issues, we\nstudy the problem of graph representation binarization for efficient\ncollaborative filtering. Our findings indicate that explicitly mitigating\ninformation loss at various stages of embedding binarization has a significant\npositive impact on performance. Building on these insights, we propose an\nenhanced framework, BiGeaR++, which specifically leverages supervisory signals\nfrom pseudo-positive samples, incorporating both real item data and latent\nembedding samples. Compared to its predecessor BiGeaR, BiGeaR++ introduces a\nfine-grained inference distillation mechanism and an effective embedding sample\nsynthesis approach. Empirical evaluations across five real-world datasets\ndemonstrate that the new designs in BiGeaR++ work seamlessly well with other\nmodules, delivering substantial improvements of around 1%-10% over BiGeaR and\nthus achieving state-of-the-art performance compared to the competing methods.\nOur implementation is available at https://github.com/QueYork/BiGeaR-SS.",
+  "nuggets": [
+    {
+      "text": "Collaborative filtering learns user-item embeddings for recommendations",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Graph-based methods leverage interaction graphs for knowledge learning",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Hashing-based methods binarize embeddings for efficient ANN search",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "HashGNN integrates hashing with GNNs for recommendation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Binary codes can cause performance degradation in hashing-based models",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Quantization-based models use multi-bit and 1-bit quantization",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "BiGeaR learns 1-bit user-item quantization for Top-K recommendation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "KD in hashing reduces information discrepancy and improves efficiency",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Combining KD with hashing improves compact representation effectiveness",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Matrix factorization reconstructs interactions for embedding learning",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Neural CF and attention models improve embedding quality",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "GCNs propagate knowledge via graph topologies in recommendations",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LightGCN, NGCF, DGCF capture higher-order collaborative signals",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LSH inspires fast retrieval in various domains",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "CIGAR uses adaptive designs and full-precision re-ranking",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Bi-GCN and BGCN quantize graph-based models, mainly for classification",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Knowledge distillation transfers knowledge from large to small models",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "KD in GNNs aligns teacher and student embeddings",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Self-distilled hashing and hierarchical aggregation enhance multi-modal hashing",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Collaborative filtering learns user-item embeddings for recommendations",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Graph-based methods leverage interaction graphs for knowledge learning",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Hashing-based methods binarize embeddings for efficient ANN search",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "HashGNN integrates hashing with GNNs for recommendation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Binary codes can cause performance degradation in hashing-based models",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Quantization-based models use multi-bit and 1-bit quantization",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "BiGeaR learns 1-bit user-item quantization for Top-K recommendation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "KD in hashing reduces information discrepancy and improves efficiency",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Combining KD with hashing improves compact representation effectiveness",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Matrix factorization reconstructs interactions for embedding learning",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Neural CF and attention models improve embedding quality",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "GCNs propagate knowledge via graph topologies in recommendations",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LightGCN, NGCF, DGCF capture higher-order collaborative signals",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LSH inspires fast retrieval in various domains",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "CIGAR uses adaptive designs and full-precision re-ranking",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Bi-GCN and BGCN quantize graph-based models, mainly for classification",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Knowledge distillation transfers knowledge from large to small models",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "KD in GNNs aligns teacher and student embeddings",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Self-distilled hashing and hierarchical aggregation enhance multi-modal hashing",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "Collaborative filtering learns user-item embeddings for recommendations",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Graph-based methods leverage interaction graphs for knowledge learning",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Hashing-based methods binarize embeddings for efficient ANN search",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "HashGNN integrates hashing with GNNs for recommendation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Binary codes can cause performance degradation in hashing-based models",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Quantization-based models use multi-bit and 1-bit quantization",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "BiGeaR learns 1-bit user-item quantization for Top-K recommendation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "KD in hashing reduces information discrepancy and improves efficiency",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Combining KD with hashing improves compact representation effectiveness",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Matrix factorization reconstructs interactions for embedding learning",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Neural CF and attention models improve embedding quality",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "GCNs propagate knowledge via graph topologies in recommendations",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LightGCN, NGCF, DGCF capture higher-order collaborative signals",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LSH inspires fast retrieval in various domains",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "CIGAR uses adaptive designs and full-precision re-ranking",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Bi-GCN and BGCN quantize graph-based models, mainly for classification",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Knowledge distillation transfers knowledge from large to small models",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "KD in GNNs aligns teacher and student embeddings",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Self-distilled hashing and hierarchical aggregation enhance multi-modal hashing",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 1.0,
+    "strict_all_score": 1.0,
+    "vital_score": 1.0,
+    "all_score": 1.0
+  }
+}

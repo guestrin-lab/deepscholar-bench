@@ -1,0 +1,201 @@
+{
+  "qid": "2505.07166v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nDense retrievers utilize pre-trained backbone language models (e.g., BERT,\nLLaMA) that are fine-tuned via contrastive learning to perform the task of\nencoding text into sense representations that can be then compared via a\nshallow similarity operation, e.g. inner product. Recent research has\nquestioned the role of fine-tuning vs. that of pre-training within dense\nretrievers, specifically arguing that retrieval knowledge is primarily gained\nduring pre-training, meaning knowledge not acquired during pre-training cannot\nbe sub-sequentially acquired via fine-tuning. We revisit this idea here as the\nclaim was only studied in the context of a BERT-based encoder using DPR as\nrepresentative dense retriever. We extend the previous analysis by testing\nother representation approaches (comparing the use of CLS tokens with that of\nmean pooling), backbone architectures (encoder-only BERT vs. decoder-only\nLLaMA), and additional datasets (MSMARCO in addition to Natural Questions). Our\nstudy confirms that in DPR tuning, pre-trained knowledge underpins retrieval\nperformance, with fine-tuning primarily adjusting neuron activation rather than\nreorganizing knowledge. However, this pattern does not hold universally, such\nas in mean-pooled (Contriever) and decoder-based (LLaMA) models. We ensure full\nreproducibility and make our implementation publicly available at\nhttps://github.com/ielab/DenseRetriever-Knowledge-Acquisition.",
+  "nuggets": [
+    {
+      "text": "Dense retrievers encode text into dense vectors for retrieval",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Pre-trained language models (BERT, LLaMA) serve as retriever backbones",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Fine-tuning via contrastive learning adapts retrievers to retrieval tasks",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Retrieval knowledge is mainly acquired during pre-training, not fine-tuning",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Fine-tuning in DPR adjusts neuron activation, not knowledge organization",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Contriever and decoder-based models show different fine-tuning effects",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Encoder-based retrievers use dot product for similarity",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Mean pooling captures distributed information in long passages",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "DPR uses encoder-based BERT with [CLS] token for representation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Mean pooling (Contriever) averages token embeddings for document representation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Decoder-based retrievers (e.g., LLaMA, RePLAMA) use autoregressive decoding",
+      "importance": "okay",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "MS MARCO and Natural Questions are standard dense retrieval benchmarks",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SimCSE and Sentence-BERT enable zero-shot dense retrieval",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "PromptReps uses prompt-based learning for dense retrieval",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "RePLAMA reframes retrieval as sequence generation",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Dense retrievers encode text into dense vectors for retrieval",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Encoder-based retrievers use dot product for similarity",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Mean pooling captures distributed information in long passages",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "DPR uses encoder-based BERT with [CLS] token for representation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Mean pooling (Contriever) averages token embeddings for document representation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "MS MARCO and Natural Questions are standard dense retrieval benchmarks",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SimCSE and Sentence-BERT enable zero-shot dense retrieval",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "PromptReps uses prompt-based learning for dense retrieval",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "RePLAMA reframes retrieval as sequence generation",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "Dense retrievers encode text into dense vectors for retrieval",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Pre-trained language models (BERT, LLaMA) serve as retriever backbones",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Fine-tuning via contrastive learning adapts retrievers to retrieval tasks",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Contriever and decoder-based models show different fine-tuning effects",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Encoder-based retrievers use dot product for similarity",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Mean pooling captures distributed information in long passages",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "DPR uses encoder-based BERT with [CLS] token for representation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Mean pooling (Contriever) averages token embeddings for document representation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Decoder-based retrievers (e.g., LLaMA, RePLAMA) use autoregressive decoding",
+      "importance": "okay",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "MS MARCO and Natural Questions are standard dense retrieval benchmarks",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SimCSE and Sentence-BERT enable zero-shot dense retrieval",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "PromptReps uses prompt-based learning for dense retrieval",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "RePLAMA reframes retrieval as sequence generation",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 0.375,
+    "strict_all_score": 0.6,
+    "vital_score": 0.5625,
+    "all_score": 0.7333333333333333
+  }
+}

@@ -1,0 +1,271 @@
+{
+  "qid": "2505.22427v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nThis paper presents a groundbreaking approach - the first online automatic\ngeometric calibration method for radar and camera systems. Given the\nsignificant data sparsity and measurement uncertainty in radar height data,\nachieving automatic calibration during system operation has long been a\nchallenge. To address the sparsity issue, we propose a Dual-Perspective\nrepresentation that gathers features from both frontal and bird's-eye views.\nThe frontal view contains rich but sensitive height information, whereas the\nbird's-eye view provides robust features against height uncertainty. We thereby\npropose a novel Selective Fusion Mechanism to identify and fuse reliable\nfeatures from both perspectives, reducing the effect of height uncertainty.\nMoreover, for each view, we incorporate a Multi-Modal Cross-Attention Mechanism\nto explicitly find location correspondences through cross-modal matching.\nDuring the training phase, we also design a Noise-Resistant Matcher to provide\nbetter supervision and enhance the robustness of the matching mechanism against\nsparsity and height uncertainty. Our experimental results, tested on the\nnuScenes dataset, demonstrate that our method significantly outperforms\nprevious radar-camera auto-calibration methods, as well as existing\nstate-of-the-art LiDAR-camera calibration techniques, establishing a new\nbenchmark for future research. The code is available at\nhttps://github.com/nycu-acm/RC-AutoCalib.",
+  "nuggets": [
+    {
+      "text": "Offline calibration relies on targets, manual effort, unsuitable for dynamic scenes",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Recent radar calibration minimizes reprojection error, still needs targets and manual input",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Online calibration extracts features from natural scenes, adapts to dynamic scenarios",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Deep learning enables powerful feature extraction for online calibration",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Radar-camera online calibration: moving object tracking, rotational calibration (Peršić et al.)",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing radar-camera methods rely on radar speed, less robust to noise",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Prior radar-camera methods do not leverage deep learning or explicit correspondence learning",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "This paper: first online automatic geometric calibration for radar-camera systems",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Dual-Perspective representation: frontal and bird's-eye views for feature extraction",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Selective Fusion Mechanism fuses reliable features, reduces height uncertainty",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Multi-Modal Cross-Attention Mechanism for explicit cross-modal location matching",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Noise-Resistant Matcher enhances supervision, robustness to sparsity and uncertainty",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Outperforms previous radar-camera and state-of-the-art LiDAR-camera calibration methods",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Early radar-camera calibration used homography, required reflectors, limited by radar elevation accuracy",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LiDAR-camera calibration: information theory, feature-based, ego-motion, learning-based methods",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Mutual information, ego-motion, edge features, deep learning used in LiDAR-camera calibration",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Regnet, CalibNet, CalibRCNN, LCCNet: deep learning for LiDAR-camera calibration",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LiDAR-camera methods lack explicit point cloud-image correspondence learning",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Deep learning for radar-camera rotational calibration, stationary radars (Schöller et al.)",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Targetless radar-camera calibration using radar velocity, motion-based camera pose (Wisec et al.)",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Spatiotemporal radar-camera calibration with ego-velocity, unscaled camera pose (Wisec et al.)",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Offline calibration relies on targets, manual effort, unsuitable for dynamic scenes",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Recent radar calibration minimizes reprojection error, still needs targets and manual input",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Online calibration extracts features from natural scenes, adapts to dynamic scenarios",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Deep learning enables powerful feature extraction for online calibration",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Radar-camera online calibration: moving object tracking, rotational calibration (Peršić et al.)",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing radar-camera methods rely on radar speed, less robust to noise",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Prior radar-camera methods do not leverage deep learning or explicit correspondence learning",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Early radar-camera calibration used homography, required reflectors, limited by radar elevation accuracy",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LiDAR-camera calibration: information theory, feature-based, ego-motion, learning-based methods",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Mutual information, ego-motion, edge features, deep learning used in LiDAR-camera calibration",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Regnet, CalibNet, CalibRCNN, LCCNet: deep learning for LiDAR-camera calibration",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LiDAR-camera methods lack explicit point cloud-image correspondence learning",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Deep learning for radar-camera rotational calibration, stationary radars (Schöller et al.)",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Targetless radar-camera calibration using radar velocity, motion-based camera pose (Wisec et al.)",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Spatiotemporal radar-camera calibration with ego-velocity, unscaled camera pose (Wisec et al.)",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "Offline calibration relies on targets, manual effort, unsuitable for dynamic scenes",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Recent radar calibration minimizes reprojection error, still needs targets and manual input",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Online calibration extracts features from natural scenes, adapts to dynamic scenarios",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Deep learning enables powerful feature extraction for online calibration",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Radar-camera online calibration: moving object tracking, rotational calibration (Peršić et al.)",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing radar-camera methods rely on radar speed, less robust to noise",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Prior radar-camera methods do not leverage deep learning or explicit correspondence learning",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Early radar-camera calibration used homography, required reflectors, limited by radar elevation accuracy",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LiDAR-camera calibration: information theory, feature-based, ego-motion, learning-based methods",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Mutual information, ego-motion, edge features, deep learning used in LiDAR-camera calibration",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Regnet, CalibNet, CalibRCNN, LCCNet: deep learning for LiDAR-camera calibration",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LiDAR-camera methods lack explicit point cloud-image correspondence learning",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Deep learning for radar-camera rotational calibration, stationary radars (Schöller et al.)",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Targetless radar-camera calibration using radar velocity, motion-based camera pose (Wisec et al.)",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Spatiotemporal radar-camera calibration with ego-velocity, unscaled camera pose (Wisec et al.)",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 0.5384615384615384,
+    "strict_all_score": 0.7142857142857143,
+    "vital_score": 0.5384615384615384,
+    "all_score": 0.7142857142857143
+  }
+}

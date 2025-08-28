@@ -1,0 +1,226 @@
+{
+  "qid": "2505.23180v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nDeep-unrolling and plug-and-play (PnP) approaches have become the de-facto\nstandard solvers for single-pixel imaging (SPI) inverse problem. PnP\napproaches, a class of iterative algorithms where regularization is implicitly\nperformed by an off-the-shelf deep denoiser, are flexible for varying\ncompression ratios (CRs) but are limited in reconstruction accuracy and speed.\nConversely, unrolling approaches, a class of multi-stage neural networks where\na truncated iterative optimization process is transformed into an end-to-end\ntrainable network, typically achieve better accuracy with faster inference but\nrequire fine-tuning or even retraining when CR changes. In this paper, we\naddress the challenge of integrating the strengths of both classes of solvers.\nTo this end, we design an efficient deep image restorer (DIR) for the unrolling\nof HQS (half quadratic splitting) and ADMM (alternating direction method of\nmultipliers). More importantly, a general proximal trajectory (PT) loss\nfunction is proposed to train HQS/ADMM-unrolling networks such that learned DIR\napproximates the proximal operator of an ideal explicit restoration\nregularizer. Extensive experiments demonstrate that, the resulting proximal\nunrolling networks can not only flexibly handle varying CRs with a single model\nlike PnP algorithms, but also outperform previous CR-specific unrolling\nnetworks in both reconstruction accuracy and speed. Source codes and models are\navailable at https://github.com/pwangcs/ProxUnroll.",
+  "nuggets": [
+    {
+      "text": "Mainstream SPI solvers: iterative optimization, PnP, single-stage, unrolling networks",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "PnP algorithms use deep denoisers for implicit regularization",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "PnP is flexible for varying compression ratios but limited in accuracy and speed",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Unrolling networks transform optimization into end-to-end trainable multi-stage networks",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Unrolling achieves better accuracy and speed but needs retraining for CR changes",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "PnP and unrolling are de-facto standard tools for SPI reconstruction",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Proximal learning trains neural networks as proximal operators of explicit regularizers",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Deep denoisers rarely meet theoretical conditions for convexity and nonexpansiveness",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Gradient denoisers train as explicit gradient steps on deep parameterized functionals",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Proximal learning without constraints remains an open challenge",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "SPI reconstruction is a classical inverse problem in compressive imaging",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Iterative algorithms use hand-crafted regularizers and proximal algorithms (ISTA, AMP, HQS, ADMM)",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Single-stage networks underperform due to limited imaging model utilization",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Regularization by denoising links denoisers to gradient steps on convex functions",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Contractive gradient or ICNN constraints limit denoiser expressivity",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Mainstream SPI solvers: iterative optimization, PnP, single-stage, unrolling networks",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Unrolling networks transform optimization into end-to-end trainable multi-stage networks",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "PnP and unrolling are de-facto standard tools for SPI reconstruction",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Proximal learning trains neural networks as proximal operators of explicit regularizers",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Deep denoisers rarely meet theoretical conditions for convexity and nonexpansiveness",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Gradient denoisers train as explicit gradient steps on deep parameterized functionals",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Proximal learning without constraints remains an open challenge",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "SPI reconstruction is a classical inverse problem in compressive imaging",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Iterative algorithms use hand-crafted regularizers and proximal algorithms (ISTA, AMP, HQS, ADMM)",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Single-stage networks underperform due to limited imaging model utilization",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Regularization by denoising links denoisers to gradient steps on convex functions",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Contractive gradient or ICNN constraints limit denoiser expressivity",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "Mainstream SPI solvers: iterative optimization, PnP, single-stage, unrolling networks",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "PnP algorithms use deep denoisers for implicit regularization",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "PnP is flexible for varying compression ratios but limited in accuracy and speed",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Unrolling networks transform optimization into end-to-end trainable multi-stage networks",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Unrolling achieves better accuracy and speed but needs retraining for CR changes",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "PnP and unrolling are de-facto standard tools for SPI reconstruction",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Proximal learning trains neural networks as proximal operators of explicit regularizers",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Deep denoisers rarely meet theoretical conditions for convexity and nonexpansiveness",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Gradient denoisers train as explicit gradient steps on deep parameterized functionals",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Proximal learning without constraints remains an open challenge",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "SPI reconstruction is a classical inverse problem in compressive imaging",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Iterative algorithms use hand-crafted regularizers and proximal algorithms (ISTA, AMP, HQS, ADMM)",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Single-stage networks underperform due to limited imaging model utilization",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Regularization by denoising links denoisers to gradient steps on convex functions",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Contractive gradient or ICNN constraints limit denoiser expressivity",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 0.7,
+    "strict_all_score": 0.8,
+    "vital_score": 0.85,
+    "all_score": 0.9
+  }
+}

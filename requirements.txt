@@ -1,0 +1,13 @@
+arxiv==2.2.0
+beautifulsoup4==4.13.5
+datasets==2.19.1
+lotus_ai==1.1.3
+nltk==3.9.1
+pandas==2.3.2
+PyPDF2==3.0.1
+pytest==8.4.1
+Requests==2.32.5
+tabulate==0.9.0
+tenacity==9.0.0
+tavily-python==0.7.11
+-e eval/nuggetizer

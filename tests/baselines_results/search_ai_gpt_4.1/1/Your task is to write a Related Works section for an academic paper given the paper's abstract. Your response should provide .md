@@ -1,0 +1,20 @@
+Related Works
+
+Serving large language models (LLMs) efficiently has been a focal point of research, particularly as the demand for scalable, low-latency inference grows. A crucial component of LLM serving is the use of key-value (KV) caching to store intermediate results, which enables improved throughput and reduced latency. Recent studies have systematically examined both the mechanics and policies of KV caching to better align cache utilization with real-world workload demands.
+
+Early approaches considered static cache eviction or uniform allocation strategies, which generally provided either simplicity or a limited improvement in storage efficiency. More recent work introduces adaptive and learning-based methods to optimize cache management. For instance, SAGE-KV leverages self-attention dynamics to identify and drop the least important KV pairs at both the token and head level, leading to substantial memory savings with minimal impact on accuracy [7]. In a similar direction, CAKE proposes a cascading and adaptive eviction policy that dynamically adjusts cache allocation across layers based on attention patterns, yielding significant speed gains and efficient cache utilization [6].
+
+Importance-aware approaches have proven particularly effective. The MiKV system compresses KV caches using mixed precision, retaining evicted pairs in lower precision to balance memory usage with generation quality [2]. BaKlaVa further advances this concept by budgeted allocation of memory to different KV-caches based on their contextual importance, resulting in high compression ratios and competitive accuracy [4]. Ada-KV applies adaptive budget allocation at a head-wise granularity, demonstrating that such fine-grained control can outperform uniform allocation while remaining compatible with other strategies [3].
+
+Practical deployment of LLMs also motivates novel architectural solutions. SpeCache, for example, speculatively offloads less critical portions of the KV cache to CPU memory while prefetching key pairs deemed likely to be reused, thereby reducing reliance on expensive VRAM and enabling efficient long-sequence inference [5]. Similarly, Attention-Gate equips LLMs with an in-context gating mechanism to determine in real-time which KV states to retain or discard, improving cache hit rates and maintaining overall model efficiency [1].
+
+A common thread across these studies is the observation that KV cache accesses and reuses are highly skewed, and workload characteristics significantly impact the optimality of cache policies. Despite synthetic benchmarks helping to establish baselines, multiple works—including those using real-world traces—have highlighted the need for workload-aware, dynamic eviction mechanisms to address practical serving scenarios. These studies underscore both the diversity and predictability of reuse patterns across different request categories, supporting the case for fine-grained and contextually adaptive cache management.
+
+References:
+1. In-context KV-Cache Eviction for LLMs via Attention-Gate (Oct 2024), http://arxiv.org/abs/2410.12876v3
+2. No Token Left Behind: Reliable KV Cache Compression via Importance-Aware Mixed Precision Quantization (Feb 2024), http://arxiv.org/abs/2402.18096v1
+3. Ada-KV: Optimizing KV Cache Eviction by Adaptive Budget Allocation for Efficient LLM Inference (July 2024), http://arxiv.org/abs/2407.11550v4
+4. BaKlaVa -- Budgeted Allocation of KV cache for Long-context Inference (Feb 2025), http://arxiv.org/abs/2502.13176v2
+5. SpeCache: Speculative Key-Value Caching for Efficient Generation of LLMs (Mar 2025), http://arxiv.org/abs/2503.16163v1
+6. CAKE: Cascading and Adaptive KV Cache Eviction with Layer Preferences (Mar 2025), http://arxiv.org/abs/2503.12491v1
+7. LLMs Know What to Drop: Self-Attention Guided KV Cache Eviction for Efficient Long-Context Inference (Mar 2025), http://arxiv.org/abs/2503.08879v1

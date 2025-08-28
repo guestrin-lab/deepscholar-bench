@@ -1,0 +1,196 @@
+{
+  "qid": "2504.17519v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nGenerative retrieval (GR) has emerged as a promising paradigm in information\nretrieval (IR). However, most existing GR models are developed and evaluated\nusing a static document collection, and their performance in dynamic corpora\nwhere document collections evolve continuously is rarely studied. In this\npaper, we first reproduce and systematically evaluate various representative GR\napproaches over dynamic corpora. Through extensive experiments, we reveal that\nexisting GR models with \\textit{text-based} docids show superior generalization\nto unseen documents. We observe that the more fine-grained the docid design in\nthe GR model, the better its performance over dynamic corpora, surpassing BM25\nand even being comparable to dense retrieval methods. While GR models with\n\\textit{numeric-based} docids show high efficiency, their performance drops\nsignificantly over dynamic corpora. Furthermore, our experiments find that the\nunderperformance of numeric-based docids is partly due to their excessive\ntendency toward the initial document set, which likely results from overfitting\non the training set. We then conduct an in-depth analysis of the\nbest-performing GR methods. We identify three critical advantages of text-based\ndocids in dynamic corpora: (i) Semantic alignment with language models'\npretrained knowledge, (ii) Fine-grained docid design, and (iii) High lexical\ndiversity. Building on these insights, we finally propose a novel multi-docid\ndesign that leverages both the efficiency of numeric-based docids and the\neffectiveness of text-based docids, achieving improved performance in dynamic\ncorpus without requiring additional retraining. Our work offers empirical\nevidence for advancing GR methods over dynamic corpora and paves the way for\ndeveloping more generalized yet efficient GR models in real-world search\nengines.",
+  "nuggets": [
+    {
+      "text": "Generative retrieval (GR) reformulates retrieval as a text generation task",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "GR methods use either numeric-based or text-based document identifiers (docids)",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Text-based docids align with pretrained language models' semantic knowledge",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Fine-grained docid design improves GR performance on dynamic corpora",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Text-based docids offer high lexical diversity and generalization to new documents",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Numeric-based docids are efficient but overfit to initial document sets",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "GR models with text-based docids outperform BM25 and rival dense retrieval",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Dynamic corpora require GR models to adapt to evolving document collections",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Multi-docid designs combine numeric-based efficiency and text-based effectiveness",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Prior GR work often requires retraining or complex docid modifications for dynamics",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Recent studies evaluate GR on dynamic corpora, showing strengths and limitations",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Numeric-based docids use quantization strategies like k-means, PQ, RQ",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Text-based docids leverage meta-information such as titles, URLs, or queries",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Incremental training and adapters help GR models handle dynamic corpora",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FM-index and n-grams improve efficiency and retrieval in text-based GR",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Generative retrieval (GR) reformulates retrieval as a text generation task",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "GR methods use either numeric-based or text-based document identifiers (docids)",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Dynamic corpora require GR models to adapt to evolving document collections",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Prior GR work often requires retraining or complex docid modifications for dynamics",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Recent studies evaluate GR on dynamic corpora, showing strengths and limitations",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Numeric-based docids use quantization strategies like k-means, PQ, RQ",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Text-based docids leverage meta-information such as titles, URLs, or queries",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Incremental training and adapters help GR models handle dynamic corpora",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FM-index and n-grams improve efficiency and retrieval in text-based GR",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "Generative retrieval (GR) reformulates retrieval as a text generation task",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "GR methods use either numeric-based or text-based document identifiers (docids)",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Text-based docids align with pretrained language models' semantic knowledge",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Text-based docids offer high lexical diversity and generalization to new documents",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Numeric-based docids are efficient but overfit to initial document sets",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Dynamic corpora require GR models to adapt to evolving document collections",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Prior GR work often requires retraining or complex docid modifications for dynamics",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Recent studies evaluate GR on dynamic corpora, showing strengths and limitations",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Numeric-based docids use quantization strategies like k-means, PQ, RQ",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Text-based docids leverage meta-information such as titles, URLs, or queries",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Incremental training and adapters help GR models handle dynamic corpora",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FM-index and n-grams improve efficiency and retrieval in text-based GR",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 0.45454545454545453,
+    "strict_all_score": 0.6,
+    "vital_score": 0.5909090909090909,
+    "all_score": 0.7
+  }
+}

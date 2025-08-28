@@ -1,0 +1,326 @@
+{
+  "qid": "2505.23290v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nIn 3D speech-driven facial animation generation, existing methods commonly\nemploy pre-trained self-supervised audio models as encoders. However, due to\nthe prevalence of phonetically similar syllables with distinct lip shapes in\nlanguage, these near-homophone syllables tend to exhibit significant coupling\nin self-supervised audio feature spaces, leading to the averaging effect in\nsubsequent lip motion generation. To address this issue, this paper proposes a\nplug-and-play semantic decorrelation module-Wav2Sem. This module extracts\nsemantic features corresponding to the entire audio sequence, leveraging the\nadded semantic information to decorrelate audio encodings within the feature\nspace, thereby achieving more expressive audio features. Extensive experiments\nacross multiple Speech-driven models indicate that the Wav2Sem module\neffectively decouples audio features, significantly alleviating the averaging\neffect of phonetically similar syllables in lip shape generation, thereby\nenhancing the precision and naturalness of facial animations. Our source code\nis available at https://github.com/wslh852/Wav2Sem.git.",
+  "nuggets": [
+    {
+      "text": "Deep learning enables data-driven speech-to-facial animation mapping",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Pre-trained self-supervised audio models widely used as encoders",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Phonetically similar syllables cause feature coupling in audio space",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Averaging effect reduces lip motion precision and expressiveness",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Wav2Vec 2.0 and HuBERT enable self-supervised audio feature learning",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Self-supervised models focus on phonemes, lack semantic modeling",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Wav2Sem module extracts semantic features from entire audio sequence",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Wav2Sem decorrelates audio encodings, improving expressiveness",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Wav2Sem alleviates averaging effect for near-homophone syllables",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Wav2Sem enhances precision and naturalness of facial animation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Traditional methods use phoneme-to-facial mapping, often rigid",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "VOCA enables cross-identity speech-driven facial animation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FaceFormer uses autoregressive transformer with self-supervised audio encoder",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "CodeTalker frames animation as code-query task for better synthesis",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FaceDiffuser and LG-LDM use diffusion models for accurate lip sync",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Mimic disentangles speech style for realistic facial animation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Earlier audio encoders used MFCC, losing high-frequency information",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "DeepSpeech captures temporal and frequency audio features, needs labeled data",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Multimodal approaches add text to supplement missing audio semantics",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "EMAGE generates facial and body motion from text and speech",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Wav2Sem is plug-and-play and integrates into existing pipelines",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Deep learning enables data-driven speech-to-facial animation mapping",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Pre-trained self-supervised audio models widely used as encoders",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Phonetically similar syllables cause feature coupling in audio space",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Wav2Vec 2.0 and HuBERT enable self-supervised audio feature learning",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Self-supervised models focus on phonemes, lack semantic modeling",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Wav2Sem module extracts semantic features from entire audio sequence",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Wav2Sem decorrelates audio encodings, improving expressiveness",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Wav2Sem alleviates averaging effect for near-homophone syllables",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Wav2Sem enhances precision and naturalness of facial animation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Traditional methods use phoneme-to-facial mapping, often rigid",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "VOCA enables cross-identity speech-driven facial animation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FaceFormer uses autoregressive transformer with self-supervised audio encoder",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "CodeTalker frames animation as code-query task for better synthesis",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FaceDiffuser and LG-LDM use diffusion models for accurate lip sync",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Mimic disentangles speech style for realistic facial animation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Earlier audio encoders used MFCC, losing high-frequency information",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "DeepSpeech captures temporal and frequency audio features, needs labeled data",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Multimodal approaches add text to supplement missing audio semantics",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "EMAGE generates facial and body motion from text and speech",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Wav2Sem is plug-and-play and integrates into existing pipelines",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "Deep learning enables data-driven speech-to-facial animation mapping",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Pre-trained self-supervised audio models widely used as encoders",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Phonetically similar syllables cause feature coupling in audio space",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Averaging effect reduces lip motion precision and expressiveness",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Wav2Vec 2.0 and HuBERT enable self-supervised audio feature learning",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Self-supervised models focus on phonemes, lack semantic modeling",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Wav2Sem module extracts semantic features from entire audio sequence",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Wav2Sem decorrelates audio encodings, improving expressiveness",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Wav2Sem alleviates averaging effect for near-homophone syllables",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Wav2Sem enhances precision and naturalness of facial animation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Traditional methods use phoneme-to-facial mapping, often rigid",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "VOCA enables cross-identity speech-driven facial animation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FaceFormer uses autoregressive transformer with self-supervised audio encoder",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "CodeTalker frames animation as code-query task for better synthesis",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FaceDiffuser and LG-LDM use diffusion models for accurate lip sync",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Mimic disentangles speech style for realistic facial animation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Earlier audio encoders used MFCC, losing high-frequency information",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "DeepSpeech captures temporal and frequency audio features, needs labeled data",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Multimodal approaches add text to supplement missing audio semantics",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "EMAGE generates facial and body motion from text and speech",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Wav2Sem is plug-and-play and integrates into existing pipelines",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 0.9,
+    "strict_all_score": 0.9523809523809523,
+    "vital_score": 0.95,
+    "all_score": 0.9761904761904762
+  }
+}

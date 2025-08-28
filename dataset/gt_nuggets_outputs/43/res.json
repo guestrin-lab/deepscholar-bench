@@ -1,0 +1,211 @@
+{
+  "qid": "2504.09307v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nTraining LLMs in distributed environments presents significant challenges due\nto the complexity of model execution, deployment systems, and the vast space of\nconfigurable strategies. Although various optimization techniques exist,\nachieving high efficiency in practice remains difficult. Accurate performance\nmodels that effectively characterize and predict a model's behavior are\nessential for guiding optimization efforts and system-level studies. We propose\nLumos, a trace-driven performance modeling and estimation toolkit for\nlarge-scale LLM training, designed to accurately capture and predict the\nexecution behaviors of modern LLMs. We evaluate Lumos on a production ML\ncluster with up to 512 NVIDIA H100 GPUs using various GPT-3 variants,\ndemonstrating that it can replay execution time with an average error of just\n3.3%, along with other runtime details, across different models and\nconfigurations. Additionally, we validate its ability to estimate performance\nfor new setups from existing traces, facilitating efficient exploration of\nmodel and deployment configurations.",
+  "nuggets": [
+    {
+      "text": "Transformer-based LLMs require 3D parallelism: data, tensor, pipeline",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "3D parallelism enables efficient large-scale LLM training",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Configuring parallelism strategies is complex and error-prone",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Analytical models (AmPeD, Calculon) estimate LLM training performance",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Analytical models often lack generality and fine-grained accuracy",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Trace-based models (ASTRA-sim, Daydream, dPRO) simulate distributed training",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing trace-based models struggle with LLM execution complexity",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Lumos is the first to accurately model LLMs using detailed traces",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Profiling tools like NVProf, CUPTI, Nsight expose hardware performance counters",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "PyTorch Kineto integrates hardware-level traces for operator-level statistics",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "GSPMD, Alpa, Galvatron automate parallelism configuration and optimization",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Sequence parallelism reduces memory and communication for long sequences",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Trace-based models predict runtime using profiled execution traces",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Transformer-based LLMs require 3D parallelism: data, tensor, pipeline",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "3D parallelism enables efficient large-scale LLM training",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Configuring parallelism strategies is complex and error-prone",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Analytical models (AmPeD, Calculon) estimate LLM training performance",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Analytical models often lack generality and fine-grained accuracy",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Trace-based models (ASTRA-sim, Daydream, dPRO) simulate distributed training",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing trace-based models struggle with LLM execution complexity",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Lumos is the first to accurately model LLMs using detailed traces",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Profiling tools like NVProf, CUPTI, Nsight expose hardware performance counters",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "PyTorch Kineto integrates hardware-level traces for operator-level statistics",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "GSPMD, Alpa, Galvatron automate parallelism configuration and optimization",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Sequence parallelism reduces memory and communication for long sequences",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Trace-based models predict runtime using profiled execution traces",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "Transformer-based LLMs require 3D parallelism: data, tensor, pipeline",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "3D parallelism enables efficient large-scale LLM training",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Configuring parallelism strategies is complex and error-prone",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Analytical models (AmPeD, Calculon) estimate LLM training performance",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Analytical models often lack generality and fine-grained accuracy",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Trace-based models (ASTRA-sim, Daydream, dPRO) simulate distributed training",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing trace-based models struggle with LLM execution complexity",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Lumos is the first to accurately model LLMs using detailed traces",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Profiling tools like NVProf, CUPTI, Nsight expose hardware performance counters",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "PyTorch Kineto integrates hardware-level traces for operator-level statistics",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "GSPMD, Alpa, Galvatron automate parallelism configuration and optimization",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Sequence parallelism reduces memory and communication for long sequences",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Trace-based models predict runtime using profiled execution traces",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 1.0,
+    "strict_all_score": 1.0,
+    "vital_score": 1.0,
+    "all_score": 1.0
+  }
+}

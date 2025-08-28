@@ -1,0 +1,8 @@
+{
+    "id": "4138a6b2-9922-4ea8-abfe-57a68d35f495",
+    "topic": "\nYour task is to write a Related Works section for an academic paper given the paper's abstract. Your response should provide the Related Works section and references. Only include references that are published before 2025-06-03T13:06:19+00:00. Mention them in a separate reference list at the end and cite them properly in the Related Works section. Here is the paper abstract:\nEconomic inequality is a global challenge, intensifying disparities in\neducation, healthcare, and social stability. Traditional systems like the U.S.\nfederal income tax reduce inequality but lack adaptability. Although models\nlike the Saez Optimal Taxation adjust dynamically, they fail to address\ntaxpayer heterogeneity and irrational behavior. This study introduces TaxAgent,\na novel integration of large language models (LLMs) with agent-based modeling\n(ABM) to design adaptive tax policies. In our macroeconomic simulation,\nheterogeneous H-Agents (households) simulate real-world taxpayer behaviors\nwhile the TaxAgent (government) utilizes LLMs to iteratively optimize tax\nrates, balancing equity and productivity. Benchmarked against Saez Optimal\nTaxation, U.S. federal income taxes, and free markets, TaxAgent achieves\nsuperior equity-efficiency trade-offs. This research offers a novel taxation\nsolution and a scalable, data-driven framework for fiscal policy evaluation..\n\nNote that today's date is 06/09/25.",
+    "date": "06/09/25",
+    "intro_section": "",
+    "num_papers": 70,
+    "num_categories": 0
+}

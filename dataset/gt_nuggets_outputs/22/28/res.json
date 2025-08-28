@@ -1,0 +1,196 @@
+{
+  "qid": "2505.22552v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nIntegrating knowledge graphs (KGs) to enhance the reasoning capabilities of\nlarge language models (LLMs) is an emerging research challenge in claim\nverification. While KGs provide structured, semantically rich representations\nwell-suited for reasoning, most existing verification methods rely on\nunstructured text corpora, limiting their ability to effectively leverage KGs.\nAdditionally, despite possessing strong reasoning abilities, modern LLMs\nstruggle with multi-step modular pipelines and reasoning over KGs without\nadaptation. To address these challenges, we propose ClaimPKG, an end-to-end\nframework that seamlessly integrates LLM reasoning with structured knowledge\nfrom KGs. Specifically, the main idea of ClaimPKG is to employ a lightweight,\nspecialized LLM to represent the input claim as pseudo-subgraphs, guiding a\ndedicated subgraph retrieval module to identify relevant KG subgraphs. These\nretrieved subgraphs are then processed by a general-purpose LLM to produce the\nfinal verdict and justification. Extensive experiments on the FactKG dataset\ndemonstrate that ClaimPKG achieves state-of-the-art performance, outperforming\nstrong baselines in this research field by 9%-12% accuracy points across\nmultiple categories. Furthermore, ClaimPKG exhibits zero-shot generalizability\nto unstructured datasets such as HoVer and FEVEROUS, effectively combining\nstructured knowledge from KGs with LLM reasoning across various LLM backbones.",
+  "nuggets": [
+    {
+      "text": "Claim verification uses unstructured and structured knowledge bases",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Text-based claim verification methods dominate, e.g., FEVER dataset",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Structured verification uses tables and graphs for robust results",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "FactKG introduced a comprehensive KG-based claim verification dataset",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Knowledge graphs enable explicit logical reasoning over nodes and edges",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "StructGPT and RoG use subgraph retrieval and LLMs for complex reasoning",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "ClaimPKG integrates LLM reasoning with KG subgraph retrieval",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "ClaimPKG outperforms baselines on FactKG by 9%-12% accuracy",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "ClaimPKG generalizes to unstructured datasets like HoVer and FEVEROUS",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Recent advances address ambiguous QA, factual changes, multi-document verification",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Graph neural networks process KGs; table transformers for tables",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "KG-GPT pipeline: sentence decomposition, subgraph retrieval, logical inference",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LLMs simplify reasoning over text, e.g., ProgramFC, FOLK",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "ClaimPKG uses a specialized LLM to generate pseudo-subgraphs from claims",
+      "importance": "okay",
+      "assignment": "not_support"
+    },
+    {
+      "text": "ClaimPKG retrieves relevant KG subgraphs for verification",
+      "importance": "okay",
+      "assignment": "not_support"
+    },
+    {
+      "text": "General-purpose LLM processes subgraphs for verdict and justification",
+      "importance": "okay",
+      "assignment": "not_support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Claim verification uses unstructured and structured knowledge bases",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Text-based claim verification methods dominate, e.g., FEVER dataset",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Structured verification uses tables and graphs for robust results",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "FactKG introduced a comprehensive KG-based claim verification dataset",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Knowledge graphs enable explicit logical reasoning over nodes and edges",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "StructGPT and RoG use subgraph retrieval and LLMs for complex reasoning",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Recent advances address ambiguous QA, factual changes, multi-document verification",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Graph neural networks process KGs; table transformers for tables",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "KG-GPT pipeline: sentence decomposition, subgraph retrieval, logical inference",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LLMs simplify reasoning over text, e.g., ProgramFC, FOLK",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "Claim verification uses unstructured and structured knowledge bases",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Text-based claim verification methods dominate, e.g., FEVER dataset",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Structured verification uses tables and graphs for robust results",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "FactKG introduced a comprehensive KG-based claim verification dataset",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Knowledge graphs enable explicit logical reasoning over nodes and edges",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "StructGPT and RoG use subgraph retrieval and LLMs for complex reasoning",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Recent advances address ambiguous QA, factual changes, multi-document verification",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Graph neural networks process KGs; table transformers for tables",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "KG-GPT pipeline: sentence decomposition, subgraph retrieval, logical inference",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LLMs simplify reasoning over text, e.g., ProgramFC, FOLK",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 0.6666666666666666,
+    "strict_all_score": 0.625,
+    "vital_score": 0.6666666666666666,
+    "all_score": 0.625
+  }
+}

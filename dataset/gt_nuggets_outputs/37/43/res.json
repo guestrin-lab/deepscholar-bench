@@ -1,0 +1,241 @@
+{
+  "qid": "2504.06211v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nZero-Knowledge Proofs (ZKPs) are rapidly gaining importance in\nprivacy-preserving and verifiable computing. ZKPs enable a proving party to\nprove the truth of a statement to a verifying party without revealing anything\nelse. ZKPs have applications in blockchain technologies, verifiable machine\nlearning, and electronic voting, but have yet to see widespread adoption due to\nthe computational complexity of the proving process. Recent works have\naccelerated the key primitives of state-of-the-art ZKP protocols on GPU and\nASIC. However, the protocols accelerated thus far face one of two challenges:\nthey either require a trusted setup for each application, or they generate\nlarger proof sizes with higher verification costs, limiting their applicability\nin scenarios with numerous verifiers or strict verification time constraints.\nThis work presents an accelerator, zkSpeed, for HyperPlonk, a state-of-the-art\nZKP protocol that supports both one-time, universal setup and small proof sizes\nfor typical ZKP applications in publicly verifiable, consensus-based systems.\nWe accelerate the entire protocol, including two major primitives: SumCheck and\nMulti-scalar Multiplications (MSMs). We develop a full-chip architecture using\n366.46 mm$^2$ and 2 TB/s of bandwidth to accelerate the entire proof generation\nprocess, achieving geometric mean speedups of 801$\\times$ over CPU baselines.",
+  "nuggets": [
+    {
+      "text": "ZKP hardware research focuses on accelerating NTTs, MSMs, and SumChecks",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Groth16 requires a trusted setup for each application",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "HyperPlonk supports universal setup and small proof sizes",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "zkSpeed accelerates HyperPlonk, supporting consensus-based, many-verifier systems",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "zkSpeed achieves 801x speedup over CPU for HyperPlonk proofs",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Prior ZKP accelerators focus on Groth16 or Spartan, not HyperPlonk",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "SZKP is the state-of-the-art ASIC for Groth16 ZKP acceleration",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SZKP achieves 493x speedup over CPU for Groth16 proofs",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "NoCap accelerates Spartan+Orion proofs, focusing on SumCheck and NTTs",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "NoCap achieves 41x speedup over PipeZK for Spartan proofs",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "NoCap is suited for few verifiers and non-critical proof size scenarios",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "zkSpeed supports 255-bit and 381-bit primes for MLEs and elliptic curves",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "zkSpeed incurs higher area cost for much smaller proof sizes than NoCap",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SZKP+ (iso-area) achieves 6x faster proving than zkSpeed but needs circuit-specific setup",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Jellyfish is a HyperPlonk variant supporting high-arity gates and high-degree constraints",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "zkSpeed could be extended to support Jellyfish for improved runtime",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "ZKP hardware research focuses on accelerating NTTs, MSMs, and SumChecks",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Groth16 requires a trusted setup for each application",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "zkSpeed accelerates HyperPlonk, supporting consensus-based, many-verifier systems",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Prior ZKP accelerators focus on Groth16 or Spartan, not HyperPlonk",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "SZKP is the state-of-the-art ASIC for Groth16 ZKP acceleration",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SZKP achieves 493x speedup over CPU for Groth16 proofs",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "NoCap accelerates Spartan+Orion proofs, focusing on SumCheck and NTTs",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "NoCap achieves 41x speedup over PipeZK for Spartan proofs",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "NoCap is suited for few verifiers and non-critical proof size scenarios",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "zkSpeed supports 255-bit and 381-bit primes for MLEs and elliptic curves",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "zkSpeed incurs higher area cost for much smaller proof sizes than NoCap",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SZKP+ (iso-area) achieves 6x faster proving than zkSpeed but needs circuit-specific setup",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Jellyfish is a HyperPlonk variant supporting high-arity gates and high-degree constraints",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "zkSpeed could be extended to support Jellyfish for improved runtime",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "ZKP hardware research focuses on accelerating NTTs, MSMs, and SumChecks",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Groth16 requires a trusted setup for each application",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "HyperPlonk supports universal setup and small proof sizes",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "zkSpeed accelerates HyperPlonk, supporting consensus-based, many-verifier systems",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Prior ZKP accelerators focus on Groth16 or Spartan, not HyperPlonk",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "SZKP is the state-of-the-art ASIC for Groth16 ZKP acceleration",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SZKP achieves 493x speedup over CPU for Groth16 proofs",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "NoCap accelerates Spartan+Orion proofs, focusing on SumCheck and NTTs",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "NoCap achieves 41x speedup over PipeZK for Spartan proofs",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "NoCap is suited for few verifiers and non-critical proof size scenarios",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "zkSpeed supports 255-bit and 381-bit primes for MLEs and elliptic curves",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "zkSpeed incurs higher area cost for much smaller proof sizes than NoCap",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SZKP+ (iso-area) achieves 6x faster proving than zkSpeed but needs circuit-specific setup",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Jellyfish is a HyperPlonk variant supporting high-arity gates and high-degree constraints",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "zkSpeed could be extended to support Jellyfish for improved runtime",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 0.6666666666666666,
+    "strict_all_score": 0.875,
+    "vital_score": 0.75,
+    "all_score": 0.90625
+  }
+}

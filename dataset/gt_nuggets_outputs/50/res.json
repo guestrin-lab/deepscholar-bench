@@ -1,0 +1,256 @@
+{
+  "qid": "2505.17507v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nThe rapid growth of open source machine learning (ML) resources, such as\nmodels and datasets, has accelerated IR research. However, existing platforms\nlike Hugging Face do not explicitly utilize structured representations,\nlimiting advanced queries and analyses such as tracing model evolution and\nrecommending relevant datasets. To fill the gap, we construct HuggingKG, the\nfirst large-scale knowledge graph built from the Hugging Face community for ML\nresource management. With 2.6 million nodes and 6.2 million edges, HuggingKG\ncaptures domain-specific relations and rich textual attributes. It enables us\nto further present HuggingBench, a multi-task benchmark with three novel test\ncollections for IR tasks including resource recommendation, classification, and\ntracing. Our experiments reveal unique characteristics of HuggingKG and the\nderived tasks. Both resources are publicly available, expected to advance\nresearch in open source resource sharing and management.",
+  "nuggets": [
+    {
+      "text": "HuggingKG is the first large-scale KG from Hugging Face for ML resources",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "HuggingKG supports advanced queries: model evolution, dataset recommendation",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "HuggingBench is a multi-task benchmark built on HuggingKG",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "HuggingBench provides datasets for recommendation, classification, tracing",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "DEKR and MLTaskKG are prior KGs for ML resource recommendation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "HuggingKG integrates richer metadata and fine-grained relationships",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "HuggingBench enables model tracing, pioneering inter-Model relation analysis",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "HuggingKG and HuggingBench are publicly available for research",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "HuggingKG contains 2.6M nodes, 6.2M edges, 8 types, 30 relations",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "HuggingKG captures inter-Model relations: Adapter, Finetune, Merge, Quantize",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "HuggingKG includes user interaction signals: Publish, Like, Follow",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "DEKR focuses on description enhancement, lacks dynamic/user relations",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "MLTaskKG integrates static data, supports task-oriented library recommendation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "paper2repo matches papers to code, limited entity types, no KG structure",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Xu et al. use multi-modal features for repo recommendation, no explicit KG",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "GRETA builds an Entity Tag Graph for repository tag assignment",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Bai et al. predict Issue-PR links on GitHub, not model evolution",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "HuggingKG is the first large-scale KG from Hugging Face for ML resources",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "HuggingBench is a multi-task benchmark built on HuggingKG",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "HuggingBench provides datasets for recommendation, classification, tracing",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "DEKR and MLTaskKG are prior KGs for ML resource recommendation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "HuggingKG integrates richer metadata and fine-grained relationships",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "HuggingBench enables model tracing, pioneering inter-Model relation analysis",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "HuggingKG contains 2.6M nodes, 6.2M edges, 8 types, 30 relations",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "HuggingKG captures inter-Model relations: Adapter, Finetune, Merge, Quantize",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "HuggingKG includes user interaction signals: Publish, Like, Follow",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "DEKR focuses on description enhancement, lacks dynamic/user relations",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "MLTaskKG integrates static data, supports task-oriented library recommendation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "paper2repo matches papers to code, limited entity types, no KG structure",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Xu et al. use multi-modal features for repo recommendation, no explicit KG",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "GRETA builds an Entity Tag Graph for repository tag assignment",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Bai et al. predict Issue-PR links on GitHub, not model evolution",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "HuggingKG is the first large-scale KG from Hugging Face for ML resources",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "HuggingKG supports advanced queries: model evolution, dataset recommendation",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "HuggingBench is a multi-task benchmark built on HuggingKG",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "HuggingBench provides datasets for recommendation, classification, tracing",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "DEKR and MLTaskKG are prior KGs for ML resource recommendation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "HuggingKG integrates richer metadata and fine-grained relationships",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "HuggingBench enables model tracing, pioneering inter-Model relation analysis",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "HuggingKG contains 2.6M nodes, 6.2M edges, 8 types, 30 relations",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "HuggingKG captures inter-Model relations: Adapter, Finetune, Merge, Quantize",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "HuggingKG includes user interaction signals: Publish, Like, Follow",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "DEKR focuses on description enhancement, lacks dynamic/user relations",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "MLTaskKG integrates static data, supports task-oriented library recommendation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "paper2repo matches papers to code, limited entity types, no KG structure",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Xu et al. use multi-modal features for repo recommendation, no explicit KG",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "GRETA builds an Entity Tag Graph for repository tag assignment",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Bai et al. predict Issue-PR links on GitHub, not model evolution",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 0.75,
+    "strict_all_score": 0.8823529411764706,
+    "vital_score": 0.8125,
+    "all_score": 0.9117647058823529
+  }
+}

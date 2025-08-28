@@ -1,0 +1,271 @@
+{
+  "qid": "2505.23452v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nOpinion mining plays a vital role in analysing user feedback and extracting\ninsights from textual data. While most research focuses on sentiment polarity\n(e.g., positive, negative, neutral), fine-grained emotion classification in app\nreviews remains underexplored. This paper addresses this gap by identifying and\naddressing the challenges and limitations in fine-grained emotion analysis in\nthe context of app reviews. Our study adapts Plutchik's emotion taxonomy to app\nreviews by developing a structured annotation framework and dataset. Through an\niterative human annotation process, we define clear annotation guidelines and\ndocument key challenges in emotion classification. Additionally, we evaluate\nthe feasibility of automating emotion annotation using large language models,\nassessing their cost-effectiveness and agreement with human-labelled data. Our\nfindings reveal that while large language models significantly reduce manual\neffort and maintain substantial agreement with human annotators, full\nautomation remains challenging due to the complexity of emotional\ninterpretation. This work contributes to opinion mining by providing structured\nguidelines, an annotated dataset, and insights for developing automated\npipelines to capture the complexity of emotions in app reviews.",
+  "nuggets": [
+    {
+      "text": "Fine-grained emotion classification in app reviews is underexplored",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Most prior work focuses on sentiment polarity, not detailed emotions",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing datasets often lack English data and detailed annotation guidelines",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Singh et al. manually annotated reviews using Plutchik’s taxonomy",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Few datasets provide empirical evaluation of emotion extraction methods",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "LLMs explored for automating emotion annotation in text",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Full automation of emotion annotation remains challenging, needs human oversight",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Riccosan published an Indonesian app review dataset using Parrott's taxonomy",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Lexicon-based methods used for emotion extraction in app reviews",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Malgaonkar et al. used WordNet-based lexicon for Ekman's emotions",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Keertipati et al. applied LIWC for negative emotions in app reviews",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "IBM Watson’s Tone Analyzer used for emotion extraction in app reviews",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Most datasets are proprietary or lack public availability",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LLM annotation achieves high accuracy for simple tasks, struggles with subjectivity",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Human-LLM collaboration frameworks like MEGAnno+ improve annotation reliability",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Hybrid expert-LLM approaches may balance efficiency and reliability",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Cost-effectiveness and explainability are key concerns in LLM annotation",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Fine-grained emotion classification in app reviews is underexplored",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Most prior work focuses on sentiment polarity, not detailed emotions",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing datasets often lack English data and detailed annotation guidelines",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Singh et al. manually annotated reviews using Plutchik’s taxonomy",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Few datasets provide empirical evaluation of emotion extraction methods",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "LLMs explored for automating emotion annotation in text",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Full automation of emotion annotation remains challenging, needs human oversight",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Riccosan published an Indonesian app review dataset using Parrott's taxonomy",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Lexicon-based methods used for emotion extraction in app reviews",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Malgaonkar et al. used WordNet-based lexicon for Ekman's emotions",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Keertipati et al. applied LIWC for negative emotions in app reviews",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "IBM Watson’s Tone Analyzer used for emotion extraction in app reviews",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Most datasets are proprietary or lack public availability",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LLM annotation achieves high accuracy for simple tasks, struggles with subjectivity",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Human-LLM collaboration frameworks like MEGAnno+ improve annotation reliability",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Hybrid expert-LLM approaches may balance efficiency and reliability",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Cost-effectiveness and explainability are key concerns in LLM annotation",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "Fine-grained emotion classification in app reviews is underexplored",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Most prior work focuses on sentiment polarity, not detailed emotions",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing datasets often lack English data and detailed annotation guidelines",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Singh et al. manually annotated reviews using Plutchik’s taxonomy",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Few datasets provide empirical evaluation of emotion extraction methods",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "LLMs explored for automating emotion annotation in text",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Full automation of emotion annotation remains challenging, needs human oversight",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Riccosan published an Indonesian app review dataset using Parrott's taxonomy",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Lexicon-based methods used for emotion extraction in app reviews",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Malgaonkar et al. used WordNet-based lexicon for Ekman's emotions",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Keertipati et al. applied LIWC for negative emotions in app reviews",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "IBM Watson’s Tone Analyzer used for emotion extraction in app reviews",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Most datasets are proprietary or lack public availability",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LLM annotation achieves high accuracy for simple tasks, struggles with subjectivity",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Human-LLM collaboration frameworks like MEGAnno+ improve annotation reliability",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Hybrid expert-LLM approaches may balance efficiency and reliability",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Cost-effectiveness and explainability are key concerns in LLM annotation",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 1.0,
+    "strict_all_score": 1.0,
+    "vital_score": 1.0,
+    "all_score": 1.0
+  }
+}

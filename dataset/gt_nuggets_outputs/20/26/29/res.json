@@ -1,0 +1,151 @@
+{
+  "qid": "2504.21752v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nDespite differential privacy (DP) often being considered the de facto\nstandard for data privacy, its realization is vulnerable to unfaithful\nexecution of its mechanisms by servers, especially in distributed settings.\nSpecifically, servers may sample noise from incorrect distributions or generate\ncorrelated noise while appearing to follow established protocols. This work\nanalyzes these malicious behaviors in a general differential privacy framework\nwithin a distributed client-server-verifier setup. To address these adversarial\nproblems, we propose a novel definition called Verifiable Distributed\nDifferential Privacy (VDDP) by incorporating additional verification\nmechanisms. We also explore the relationship between zero-knowledge proofs\n(ZKP) and DP, demonstrating that while ZKPs are sufficient for achieving DP\nunder verifiability requirements, they are not necessary. Furthermore, we\ndevelop two novel and efficient mechanisms that satisfy VDDP: (1) the\nVerifiable Distributed Discrete Laplacian Mechanism (VDDLM), which offers up to\na $4 \\times 10^5$x improvement in proof generation efficiency with only\n0.1-0.2x error compared to the previous state-of-the-art verifiable\ndifferentially private mechanism; (2) an improved solution to Verifiable\nRandomized Response (VRR) under local DP, a special case of VDDP, achieving up\na reduction of up to 5000x in communication costs and the verifier's overhead.",
+  "nuggets": [
+    {
+      "text": "MPC-based DP mechanisms lack external verifiability of randomness and computation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Prior work does not address external analyst verification in distributed DP",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "VDDP enables verifiable DP in client-server-verifier distributed settings",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "VDDLM achieves 4x10^5x faster proofs with minimal error over prior art",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Improved Verifiable Randomized Response reduces communication and verifier overhead by 5000x",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "ZKPs are sufficient but not necessary for verifiable DP",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "VDDP uniquely provides authenticity, correct computation, and verifiable randomness",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Comparison with prior work shows VDDP's broader verifiability and end-to-end DP",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Verifiable executions of DP mechanisms use cryptographic proofs for correctness",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "VFuzz and DPrio pioneered verifiable DP computation in database systems",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Recent work verifies correct noise sampling in DP: KCY21, STC+24, VDBM",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Secure randomness generation and DP via secure computation, including MPC",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "MPC-based DP mechanisms lack external verifiability of randomness and computation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Prior work does not address external analyst verification in distributed DP",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Verifiable executions of DP mechanisms use cryptographic proofs for correctness",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "VFuzz and DPrio pioneered verifiable DP computation in database systems",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Recent work verifies correct noise sampling in DP: KCY21, STC+24, VDBM",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Secure randomness generation and DP via secure computation, including MPC",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "MPC-based DP mechanisms lack external verifiability of randomness and computation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Prior work does not address external analyst verification in distributed DP",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "VDDP enables verifiable DP in client-server-verifier distributed settings",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "VDDP uniquely provides authenticity, correct computation, and verifiable randomness",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Comparison with prior work shows VDDP's broader verifiability and end-to-end DP",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Verifiable executions of DP mechanisms use cryptographic proofs for correctness",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "VFuzz and DPrio pioneered verifiable DP computation in database systems",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Recent work verifies correct noise sampling in DP: KCY21, STC+24, VDBM",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Secure randomness generation and DP via secure computation, including MPC",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 0.25,
+    "strict_all_score": 0.5,
+    "vital_score": 0.4375,
+    "all_score": 0.625
+  }
+}

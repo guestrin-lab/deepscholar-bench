@@ -1,0 +1,241 @@
+{
+  "qid": "2505.24443v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nConventional semi-supervised learning (SSL) ideally assumes that labeled and\nunlabeled data share an identical class distribution, however in practice, this\nassumption is easily violated, as unlabeled data often includes unknown class\ndata, i.e., outliers. The outliers are treated as noise, considerably degrading\nthe performance of SSL models. To address this drawback, we propose a novel\nframework, Diversify and Conquer (DAC), to enhance SSL robustness in the\ncontext of open-set semi-supervised learning. In particular, we note that\nexisting open-set SSL methods rely on prediction discrepancies between inliers\nand outliers from a single model trained on labeled data. This approach can be\neasily failed when the labeled data is insufficient, leading to performance\ndegradation that is worse than naive SSL that do not account for outliers. In\ncontrast, our approach exploits prediction disagreements among multiple models\nthat are differently biased towards the unlabeled distribution. By leveraging\nthe discrepancies arising from training on unlabeled data, our method enables\nrobust outlier detection even when the labeled data is underspecified. Our key\ncontribution is constructing a collection of differently biased models through\na single training process. By encouraging divergent heads to be differently\nbiased towards outliers while making consistent predictions for inliers, we\nexploit the disagreement among these heads as a measure to identify unknown\nconcepts. Our code is available at https://github.com/heejokong/DivCon.",
+  "nuggets": [
+    {
+      "text": "Conventional SSL assumes identical class distributions in labeled and unlabeled data",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Outliers in unlabeled data degrade SSL performance",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Open-set SSL addresses unknown class samples in unlabeled data",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Over-rejection is a challenge when labeled data is scarce",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Most open-set SSL methods rely on a single model's prediction uncertainty",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "DAC leverages prediction disagreements among multiple differently biased models",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "DAC enables robust outlier detection with underspecified labeled data",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "DAC constructs multiple biased models in a single training process",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Detect-and-filter is a major open-set SSL strategy",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Outlier detection often uses prediction confidence, sample similarity, or energy discrepancy",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Learnable detectors and binary classifiers are used for outlier detection",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "OpenMatch introduced one-vs-all binary classifiers for outlier detection",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Some methods use curriculum, self-training, or contrastive learning for outlier detection",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Bi-level optimization and binary decomposition can reduce outlier impact",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Few works address over-rejection explicitly in open-set SSL",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Conventional SSL assumes identical class distributions in labeled and unlabeled data",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Outliers in unlabeled data degrade SSL performance",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Open-set SSL addresses unknown class samples in unlabeled data",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Over-rejection is a challenge when labeled data is scarce",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Most open-set SSL methods rely on a single model's prediction uncertainty",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "DAC leverages prediction disagreements among multiple differently biased models",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "DAC enables robust outlier detection with underspecified labeled data",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "DAC constructs multiple biased models in a single training process",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Detect-and-filter is a major open-set SSL strategy",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Outlier detection often uses prediction confidence, sample similarity, or energy discrepancy",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Learnable detectors and binary classifiers are used for outlier detection",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "OpenMatch introduced one-vs-all binary classifiers for outlier detection",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Some methods use curriculum, self-training, or contrastive learning for outlier detection",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Bi-level optimization and binary decomposition can reduce outlier impact",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Few works address over-rejection explicitly in open-set SSL",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "Conventional SSL assumes identical class distributions in labeled and unlabeled data",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Outliers in unlabeled data degrade SSL performance",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Open-set SSL addresses unknown class samples in unlabeled data",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Over-rejection is a challenge when labeled data is scarce",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Most open-set SSL methods rely on a single model's prediction uncertainty",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "DAC leverages prediction disagreements among multiple differently biased models",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "DAC enables robust outlier detection with underspecified labeled data",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "DAC constructs multiple biased models in a single training process",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Detect-and-filter is a major open-set SSL strategy",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Outlier detection often uses prediction confidence, sample similarity, or energy discrepancy",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Learnable detectors and binary classifiers are used for outlier detection",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "OpenMatch introduced one-vs-all binary classifiers for outlier detection",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Some methods use curriculum, self-training, or contrastive learning for outlier detection",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Bi-level optimization and binary decomposition can reduce outlier impact",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Few works address over-rejection explicitly in open-set SSL",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 1.0,
+    "strict_all_score": 1.0,
+    "vital_score": 1.0,
+    "all_score": 1.0
+  }
+}

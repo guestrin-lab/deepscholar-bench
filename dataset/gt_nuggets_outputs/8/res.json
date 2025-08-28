@@ -1,0 +1,251 @@
+{
+  "qid": "2505.23996v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nThe recent rapid adoption of large language models (LLMs) highlights the\ncritical need for benchmarking their fairness. Conventional fairness metrics,\nwhich focus on discrete accuracy-based evaluations (i.e., prediction\ncorrectness), fail to capture the implicit impact of model uncertainty (e.g.,\nhigher model confidence about one group over another despite similar accuracy).\nTo address this limitation, we propose an uncertainty-aware fairness metric,\nUCerF, to enable a fine-grained evaluation of model fairness that is more\nreflective of the internal bias in model decisions compared to conventional\nfairness measures. Furthermore, observing data size, diversity, and clarity\nissues in current datasets, we introduce a new gender-occupation fairness\nevaluation dataset with 31,756 samples for co-reference resolution, offering a\nmore diverse and suitable dataset for evaluating modern LLMs. We establish a\nbenchmark, using our metric and dataset, and apply it to evaluate the behavior\nof ten open-source LLMs. For example, Mistral-7B exhibits suboptimal fairness\ndue to high confidence in incorrect predictions, a detail overlooked by\nEqualized Odds but captured by UCerF. Overall, our proposed LLM benchmark,\nwhich evaluates fairness with uncertainty awareness, paves the way for\ndeveloping more transparent and accountable AI systems.",
+  "nuggets": [
+    {
+      "text": "LLM fairness evaluation is a critical research area",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Conventional fairness metrics focus on prediction correctness, not uncertainty",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing metrics often ignore model uncertainty in fairness estimation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Few works combine fairness and uncertainty in LLM evaluation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Only one prior LLM work considers group uncertainty, not correctness-uncertainty interplay",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing gender-occupation fairness datasets have size, diversity, and clarity limitations",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Uncertainty-aware fairness metrics provide finer-grained bias evaluation",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "UCerF jointly considers correctness and uncertainty for LLM fairness",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Uncertainty analysis uncovers subtle fairness differences missed by conventional metrics",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Demographic parity and equalized odds are common fairness metrics",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Model uncertainty reveals internal decision-making and bias",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Uncertainty estimation methods: confidence-based, sampling-based, distribution-based",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Perplexity is a simple, interpretable uncertainty estimator for LLMs",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Prior uncertainty-aware fairness methods target tabular or vision data",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "WinoBias, WinoGender, BOLD, BBQ, GAP, and BUG have dataset limitations",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SynthBias: a large, diverse, synthetic gender-occupation dataset for LLM fairness",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Benchmarking LLMs with uncertainty-aware fairness enables more transparent AI",
+      "importance": "okay",
+      "assignment": "partial_support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "LLM fairness evaluation is a critical research area",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Conventional fairness metrics focus on prediction correctness, not uncertainty",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing metrics often ignore model uncertainty in fairness estimation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Few works combine fairness and uncertainty in LLM evaluation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Only one prior LLM work considers group uncertainty, not correctness-uncertainty interplay",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing gender-occupation fairness datasets have size, diversity, and clarity limitations",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Uncertainty analysis uncovers subtle fairness differences missed by conventional metrics",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Demographic parity and equalized odds are common fairness metrics",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Model uncertainty reveals internal decision-making and bias",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Uncertainty estimation methods: confidence-based, sampling-based, distribution-based",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Perplexity is a simple, interpretable uncertainty estimator for LLMs",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Prior uncertainty-aware fairness methods target tabular or vision data",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "WinoBias, WinoGender, BOLD, BBQ, GAP, and BUG have dataset limitations",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SynthBias: a large, diverse, synthetic gender-occupation dataset for LLM fairness",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "LLM fairness evaluation is a critical research area",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Conventional fairness metrics focus on prediction correctness, not uncertainty",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing metrics often ignore model uncertainty in fairness estimation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Few works combine fairness and uncertainty in LLM evaluation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Only one prior LLM work considers group uncertainty, not correctness-uncertainty interplay",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing gender-occupation fairness datasets have size, diversity, and clarity limitations",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Uncertainty-aware fairness metrics provide finer-grained bias evaluation",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Uncertainty analysis uncovers subtle fairness differences missed by conventional metrics",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Demographic parity and equalized odds are common fairness metrics",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Model uncertainty reveals internal decision-making and bias",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Uncertainty estimation methods: confidence-based, sampling-based, distribution-based",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Perplexity is a simple, interpretable uncertainty estimator for LLMs",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Prior uncertainty-aware fairness methods target tabular or vision data",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "WinoBias, WinoGender, BOLD, BBQ, GAP, and BUG have dataset limitations",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SynthBias: a large, diverse, synthetic gender-occupation dataset for LLM fairness",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Benchmarking LLMs with uncertainty-aware fairness enables more transparent AI",
+      "importance": "okay",
+      "assignment": "partial_support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 0.7777777777777778,
+    "strict_all_score": 0.8235294117647058,
+    "vital_score": 0.8333333333333334,
+    "all_score": 0.8823529411764706
+  }
+}

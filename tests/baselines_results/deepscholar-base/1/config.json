@@ -1,0 +1,24 @@
+{
+    "num_search_queries": 2,
+    "num_expansion_queries": 3,
+    "search_K": 50,
+    "final_K": 30,
+    "filtered_K": 30,
+    "max_search_depth": 2,
+    "max_k": 20,
+    "min_k": 5,
+    "title_only": true,
+    "frac_representatives": 0.5,
+    "method": "centroid",
+    "max_categories": 10,
+    "single_call": true,
+    "merge_clusters": true,
+    "map_to_cluster_categories": false,
+    "corpuses": [
+        "arxiv"
+    ],
+    "lotus_lm": "hosted_vllm/meta-llama/Llama-4-Scout-17B-16E-Instruct",
+    "helper_lm": "hosted_vllm/meta-llama/Llama-4-Scout-17B-16E-Instruct",
+    "rm": "intfloat/e5-base-v2",
+    "map_function": "match_docs_to_category_map"
+}

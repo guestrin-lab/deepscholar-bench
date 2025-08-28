@@ -1,0 +1,196 @@
+{
+  "qid": "2506.02547v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nEvent cameras capture scene changes asynchronously on a per-pixel basis,\nenabling extremely high temporal resolution. However, this advantage comes at\nthe cost of high bandwidth, memory, and computational demands. To address this,\nprior work has explored event downsampling, but most approaches rely on fixed\nheuristics or threshold-based strategies, limiting their adaptability. Instead,\nwe propose a probabilistic framework, POLED, that models event importance\nthrough an event-importance probability density function (ePDF), which can be\narbitrarily defined and adapted to different applications. Our approach\noperates in a purely online setting, estimating event importance on-the-fly\nfrom raw event streams, enabling scene-specific adaptation. Additionally, we\nintroduce zero-shot event downsampling, where downsampled events must remain\nusable for models trained on the original event stream, without task-specific\nadaptation. We design a contour-preserving ePDF that prioritizes structurally\nimportant events and evaluate our method across four datasets and tasks--object\nclassification, image interpolation, surface normal estimation, and object\ndetection--demonstrating that intelligent sampling is crucial for maintaining\nperformance under event-budget constraints.",
+  "nuggets": [
+    {
+      "text": "Event cameras generate high-bandwidth, high-frequency asynchronous data",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Event downsampling reduces bandwidth, memory, and computational demands",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Most prior methods rely on fixed heuristics or task-specific optimizations",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Closest prior work: uniform sampling for CNN training, ignores event importance",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Early methods used spatial and temporal scaling for event downsampling",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Counting strategies with refractory periods improved event integration",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Biologically inspired methods use multi-layer sensory unit activation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Spiking Neural Networks (SNNs) enable neuromorphic event downsampling",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Adaptive compression includes dynamic Huffman encoding for bandwidth control",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Non-uniform spatial sampling via 3D grids for pre-processing",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Human perception studies compare filtering and SNN-based sparsification",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Prior evaluations focus mainly on classification tasks and metrics",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Event cameras generate high-bandwidth, high-frequency asynchronous data",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Event downsampling reduces bandwidth, memory, and computational demands",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Most prior methods rely on fixed heuristics or task-specific optimizations",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Closest prior work: uniform sampling for CNN training, ignores event importance",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Early methods used spatial and temporal scaling for event downsampling",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Counting strategies with refractory periods improved event integration",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Biologically inspired methods use multi-layer sensory unit activation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Spiking Neural Networks (SNNs) enable neuromorphic event downsampling",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Adaptive compression includes dynamic Huffman encoding for bandwidth control",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Non-uniform spatial sampling via 3D grids for pre-processing",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Human perception studies compare filtering and SNN-based sparsification",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Prior evaluations focus mainly on classification tasks and metrics",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "Event cameras generate high-bandwidth, high-frequency asynchronous data",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Event downsampling reduces bandwidth, memory, and computational demands",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Most prior methods rely on fixed heuristics or task-specific optimizations",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Closest prior work: uniform sampling for CNN training, ignores event importance",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Early methods used spatial and temporal scaling for event downsampling",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Counting strategies with refractory periods improved event integration",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Biologically inspired methods use multi-layer sensory unit activation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Spiking Neural Networks (SNNs) enable neuromorphic event downsampling",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Adaptive compression includes dynamic Huffman encoding for bandwidth control",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Non-uniform spatial sampling via 3D grids for pre-processing",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Human perception studies compare filtering and SNN-based sparsification",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Prior evaluations focus mainly on classification tasks and metrics",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 1.0,
+    "strict_all_score": 1.0,
+    "vital_score": 1.0,
+    "all_score": 1.0
+  }
+}

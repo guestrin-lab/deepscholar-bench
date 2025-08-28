@@ -1,0 +1,236 @@
+{
+  "qid": "2506.00333v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nOpen-vocabulary object detection models allow users to freely specify a class\nvocabulary in natural language at test time, guiding the detection of desired\nobjects. However, vocabularies can be overly broad or even mis-specified,\nhampering the overall performance of the detector. In this work, we propose a\nplug-and-play Vocabulary Adapter (VocAda) to refine the user-defined\nvocabulary, automatically tailoring it to categories that are relevant for a\ngiven image. VocAda does not require any training, it operates at inference\ntime in three steps: i) it uses an image captionner to describe visible\nobjects, ii) it parses nouns from those captions, and iii) it selects relevant\nclasses from the user-defined vocabulary, discarding irrelevant ones.\nExperiments on COCO and Objects365 with three state-of-the-art detectors show\nthat VocAda consistently improves performance, proving its versatility. The\ncode is open source.",
+  "nuggets": [
+    {
+      "text": "Open-vocabulary object detection maps regions to vision-language embedding spaces",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "CLIP and similar models provide frozen embedding spaces for OVOD",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "OVOD detectors train on box-labeled data with limited categories",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Most prior work focuses on training-time improvements",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "SHiNe augments vocabularies via prompt engineering and semantic hierarchies",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "VocAda adapts the vocabulary per image at test time",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "VocAda operates at inference, not requiring training or fine-tuning",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "VocAda uses image captioning and noun parsing to refine vocabularies",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "VocAda discards irrelevant user-specified classes per image",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "VocAda improves off-the-shelf OVOD detectors without fine-tuning",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Image-level annotated datasets expand class coverage for OVOD",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Pseudo-labeling improves alignment training in OVOD",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Transfer learning enhances OVOD performance",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Weak supervision methods boost OVOD training",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SHiNe produces a single improved vocabulary for all images",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Prompt engineering can further augment VocAda's refined vocabulary",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Open-vocabulary object detection maps regions to vision-language embedding spaces",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "CLIP and similar models provide frozen embedding spaces for OVOD",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "OVOD detectors train on box-labeled data with limited categories",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Most prior work focuses on training-time improvements",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "SHiNe augments vocabularies via prompt engineering and semantic hierarchies",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "VocAda adapts the vocabulary per image at test time",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "VocAda improves off-the-shelf OVOD detectors without fine-tuning",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Image-level annotated datasets expand class coverage for OVOD",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Pseudo-labeling improves alignment training in OVOD",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Transfer learning enhances OVOD performance",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Weak supervision methods boost OVOD training",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SHiNe produces a single improved vocabulary for all images",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Prompt engineering can further augment VocAda's refined vocabulary",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "Open-vocabulary object detection maps regions to vision-language embedding spaces",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "CLIP and similar models provide frozen embedding spaces for OVOD",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "OVOD detectors train on box-labeled data with limited categories",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Most prior work focuses on training-time improvements",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "SHiNe augments vocabularies via prompt engineering and semantic hierarchies",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "VocAda adapts the vocabulary per image at test time",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "VocAda operates at inference, not requiring training or fine-tuning",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "VocAda discards irrelevant user-specified classes per image",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "VocAda improves off-the-shelf OVOD detectors without fine-tuning",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Image-level annotated datasets expand class coverage for OVOD",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Pseudo-labeling improves alignment training in OVOD",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Transfer learning enhances OVOD performance",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Weak supervision methods boost OVOD training",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SHiNe produces a single improved vocabulary for all images",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Prompt engineering can further augment VocAda's refined vocabulary",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 0.7,
+    "strict_all_score": 0.8125,
+    "vital_score": 0.8,
+    "all_score": 0.875
+  }
+}

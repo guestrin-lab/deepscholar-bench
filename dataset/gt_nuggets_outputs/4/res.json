@@ -1,0 +1,191 @@
+{
+  "qid": "2506.00418v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nIn context learning (ICL) relies heavily on high quality demonstrations drawn\nfrom large annotated corpora. Existing approaches detect noisy annotations by\nranking local perplexities, presuming that noisy samples yield higher\nperplexities than their clean counterparts. However, this assumption breaks\ndown when the noise ratio is high and many demonstrations are flawed. We\nreexamine the perplexity based paradigm for text generation under noisy\nannotations, highlighting two sources of bias in perplexity: the annotation\nitself and the domain specific knowledge inherent in large language models\n(LLMs). To overcome these biases, we introduce a dual debiasing framework that\nuses synthesized neighbors to explicitly correct perplexity estimates, yielding\na robust Sample Cleanliness Score. This metric uncovers absolute sample\ncleanliness regardless of the overall corpus noise level. Extensive experiments\ndemonstrate our method's superior noise detection capabilities and show that\nits final ICL performance is comparable to that of a fully clean demonstration\ncorpus. Moreover, our approach remains robust even when noise ratios are\nextremely high.",
+  "nuggets": [
+    {
+      "text": "In-context learning (ICL) uses LLMs for downstream NLP tasks",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "ICL typically assumes clean, high-quality demonstrations",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Noisy annotations in ICL can degrade performance",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Perplexity-based noise detection assumes noisy samples have higher perplexity",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "This assumption fails under high noise ratios",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "LLMs exhibit biases from pre-training corpora affecting task performance",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Other methods address context and label bias in LLM classification tasks",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Recent work explores ICL with random or noisy labels",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Min et al. found limited impact of random retrievers in some settings",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Yoo et al. showed significant degradation with noisy demonstrations",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Kang et al. proposed Rectification for noisy ICL classification, requiring fine-tuning",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Gao et al. introduced a noise-robust ICL method for generation, limited under high noise",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Contrastive Decoding debiases LLM outputs using smaller models",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "In-context learning (ICL) uses LLMs for downstream NLP tasks",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "ICL typically assumes clean, high-quality demonstrations",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Noisy annotations in ICL can degrade performance",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "LLMs exhibit biases from pre-training corpora affecting task performance",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Other methods address context and label bias in LLM classification tasks",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Recent work explores ICL with random or noisy labels",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Min et al. found limited impact of random retrievers in some settings",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Yoo et al. showed significant degradation with noisy demonstrations",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Kang et al. proposed Rectification for noisy ICL classification, requiring fine-tuning",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Gao et al. introduced a noise-robust ICL method for generation, limited under high noise",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Contrastive Decoding debiases LLM outputs using smaller models",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "In-context learning (ICL) uses LLMs for downstream NLP tasks",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "ICL typically assumes clean, high-quality demonstrations",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Noisy annotations in ICL can degrade performance",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "LLMs exhibit biases from pre-training corpora affecting task performance",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Other methods address context and label bias in LLM classification tasks",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Recent work explores ICL with random or noisy labels",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Min et al. found limited impact of random retrievers in some settings",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Yoo et al. showed significant degradation with noisy demonstrations",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Kang et al. proposed Rectification for noisy ICL classification, requiring fine-tuning",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Gao et al. introduced a noise-robust ICL method for generation, limited under high noise",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Contrastive Decoding debiases LLM outputs using smaller models",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 0.7142857142857143,
+    "strict_all_score": 0.8461538461538461,
+    "vital_score": 0.7142857142857143,
+    "all_score": 0.8461538461538461
+  }
+}

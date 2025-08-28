@@ -1,0 +1,191 @@
+{
+  "qid": "2504.20458v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nConversational recommendation systems (CRSs) use multi-turn interaction to\ncapture user preferences and provide personalized recommendations. A\nfundamental challenge in CRSs lies in effectively understanding user\npreferences from conversations. User preferences can be multifaceted and\ncomplex, posing significant challenges for accurate recommendations even with\naccess to abundant external knowledge. While interaction with users can clarify\ntheir true preferences, frequent user involvement can lead to a degraded user\nexperience.\n  To address this problem, we propose a generative reward model based simulated\nuser, named GRSU, for automatic interaction with CRSs. The simulated user\nprovides feedback to the items recommended by CRSs, enabling them to better\ncapture intricate user preferences through multi-turn interaction. Inspired by\ngenerative reward models, we design two types of feedback actions for the\nsimulated user: i.e., generative item scoring, which offers coarse-grained\nfeedback, and attribute-based item critique, which provides fine-grained\nfeedback. To ensure seamless integration, these feedback actions are unified\ninto an instruction-based format, allowing the development of a unified\nsimulated user via instruction tuning on synthesized data. With this simulated\nuser, automatic multi-turn interaction with CRSs can be effectively conducted.\nFurthermore, to strike a balance between effectiveness and efficiency, we draw\ninspiration from the paradigm of reward-guided search in complex reasoning\ntasks and employ beam search for the interaction process. On top of this, we\npropose an efficient candidate ranking method to improve the recommendation\nresults derived from interaction. Extensive experiments on public datasets\ndemonstrate the effectiveness, efficiency, and transferability of our approach.",
+  "nuggets": [
+    {
+      "text": "Conversational recommender systems (CRSs) use multi-turn interactions",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "CRSs elicit user preferences via free-form natural language conversations",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Challenge: understanding multifaceted, complex user preferences in CRSs",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Frequent user involvement can degrade user experience in CRSs",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Simulated users can automate CRS interaction and preference elicitation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Instruction tuning enables unified simulated user development",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Beam search balances effectiveness and efficiency in CRS interaction",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "GRSU: generative reward model-based simulated user for CRSs",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "CRSs optimize interaction policy with pre-defined actions and templates",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "External knowledge sources: knowledge graphs, LLMs, conversational corpora",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Generative reward models unify generation and reward modeling",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Best-of-N strategy: reward models rank and select candidate solutions",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Generative reward models represent reward as token probabilities",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Critiques in generation improve reward modeling",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Candidate ranking methods improve recommendation results",
+      "importance": "okay",
+      "assignment": "not_support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Conversational recommender systems (CRSs) use multi-turn interactions",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "CRSs elicit user preferences via free-form natural language conversations",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Simulated users can automate CRS interaction and preference elicitation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "CRSs optimize interaction policy with pre-defined actions and templates",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "External knowledge sources: knowledge graphs, LLMs, conversational corpora",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Generative reward models unify generation and reward modeling",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Best-of-N strategy: reward models rank and select candidate solutions",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Generative reward models represent reward as token probabilities",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Critiques in generation improve reward modeling",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "Conversational recommender systems (CRSs) use multi-turn interactions",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "CRSs elicit user preferences via free-form natural language conversations",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Challenge: understanding multifaceted, complex user preferences in CRSs",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Simulated users can automate CRS interaction and preference elicitation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "GRSU: generative reward model-based simulated user for CRSs",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "CRSs optimize interaction policy with pre-defined actions and templates",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "External knowledge sources: knowledge graphs, LLMs, conversational corpora",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Generative reward models unify generation and reward modeling",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Best-of-N strategy: reward models rank and select candidate solutions",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Generative reward models represent reward as token probabilities",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Critiques in generation improve reward modeling",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 0.375,
+    "strict_all_score": 0.6,
+    "vital_score": 0.5,
+    "all_score": 0.6666666666666666
+  }
+}

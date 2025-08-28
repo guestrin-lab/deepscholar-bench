@@ -1,0 +1,231 @@
+{
+  "qid": "2505.12791v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nThis paper reports on findings from a comparative study on the effectiveness\nand efficiency of federated unlearning strategies within Federated Online\nLearning to Rank (FOLTR), with specific attention to systematically analysing\nthe unlearning capabilities of methods in a verifiable manner.\n  Federated approaches to ranking of search results have recently garnered\nattention to address users privacy concerns. In FOLTR, privacy is safeguarded\nby collaboratively training ranking models across decentralized data sources,\npreserving individual user data while optimizing search results based on\nimplicit feedback, such as clicks.\n  Recent legislation introduced across numerous countries is establishing the\nso called \"the right to be forgotten\", according to which services based on\nmachine learning models like those in FOLTR should provide capabilities that\nallow users to remove their own data from those used to train models. This has\nsparked the development of unlearning methods, along with evaluation practices\nto measure whether unlearning of a user data successfully occurred. Current\nevaluation practices are however often controversial, necessitating the use of\nmultiple metrics for a more comprehensive assessment -- but previous proposals\nof unlearning methods only used single evaluation metrics.\n  This paper addresses this limitation: our study rigorously assesses the\neffectiveness of unlearning strategies in managing both under-unlearning and\nover-unlearning scenarios using adapted, and newly proposed evaluation metrics.\nThanks to our detailed analysis, we uncover the strengths and limitations of\nfive unlearning strategies, offering valuable insights into optimizing\nfederated unlearning to balance data privacy and system performance within\nFOLTR. We publicly release our code and complete results at\nhttps://github.com/Iris1026/Unlearning-for-FOLTR.git.",
+  "nuggets": [
+    {
+      "text": "Federated Online Learning to Rank (FOLTR) enables privacy-preserving collaborative ranking",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "FOLTR trains ranking models across decentralized data using implicit feedback",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Federated Unlearning (FU) removes individual client data from global models",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "FU in FOLTR is largely unexplored; Wang et al. (2024) is the only prior work",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing FU methods in FOLTR use limited evaluation metrics",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Comprehensive FU evaluation in FOLTR requires multiple metrics for assessment",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "FOLtR-ES introduced evolution strategies and local differential privacy to FOLTR",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FOLtR-ES is less effective on large-scale datasets",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FPDGD integrates Pairwise Differentiable Gradient Descent into FOLTR for improved performance",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FPDGD shows strong ranking performance and robustness to data noise",
+      "importance": "okay",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "FOLTR research is early-stage, with foundational studies on privacy and performance",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Naive FU retrains models from scratch, incurring high computational cost",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FedEraser reconstructs unlearned models by adjusting historical client updates",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Other efficient FU methods use knowledge distillation or optimization techniques",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FU has been studied in NLP, recommendation, and knowledge graph domains",
+      "importance": "okay",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Wang et al. (2024) evaluated FU in FOLTR using user simulation and poisoning attacks",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Federated Online Learning to Rank (FOLTR) enables privacy-preserving collaborative ranking",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "FOLTR trains ranking models across decentralized data using implicit feedback",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Federated Unlearning (FU) removes individual client data from global models",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "FU in FOLTR is largely unexplored; Wang et al. (2024) is the only prior work",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "FOLtR-ES introduced evolution strategies and local differential privacy to FOLTR",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FOLtR-ES is less effective on large-scale datasets",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FPDGD integrates Pairwise Differentiable Gradient Descent into FOLTR for improved performance",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FOLTR research is early-stage, with foundational studies on privacy and performance",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Naive FU retrains models from scratch, incurring high computational cost",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FedEraser reconstructs unlearned models by adjusting historical client updates",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Other efficient FU methods use knowledge distillation or optimization techniques",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Wang et al. (2024) evaluated FU in FOLTR using user simulation and poisoning attacks",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "Federated Online Learning to Rank (FOLTR) enables privacy-preserving collaborative ranking",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "FOLTR trains ranking models across decentralized data using implicit feedback",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Federated Unlearning (FU) removes individual client data from global models",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "FU in FOLTR is largely unexplored; Wang et al. (2024) is the only prior work",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Comprehensive FU evaluation in FOLTR requires multiple metrics for assessment",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "FOLtR-ES introduced evolution strategies and local differential privacy to FOLTR",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FOLtR-ES is less effective on large-scale datasets",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FPDGD integrates Pairwise Differentiable Gradient Descent into FOLTR for improved performance",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FPDGD shows strong ranking performance and robustness to data noise",
+      "importance": "okay",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "FOLTR research is early-stage, with foundational studies on privacy and performance",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Naive FU retrains models from scratch, incurring high computational cost",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FedEraser reconstructs unlearned models by adjusting historical client updates",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Other efficient FU methods use knowledge distillation or optimization techniques",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FU has been studied in NLP, recommendation, and knowledge graph domains",
+      "importance": "okay",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Wang et al. (2024) evaluated FU in FOLTR using user simulation and poisoning attacks",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 0.6666666666666666,
+    "strict_all_score": 0.75,
+    "vital_score": 0.75,
+    "all_score": 0.84375
+  }
+}

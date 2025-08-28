@@ -1,0 +1,291 @@
+{
+  "qid": "2505.11554v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nMemory bandwidth regulation and cache partitioning are widely used techniques\nfor achieving predictable timing in real-time computing systems. Combined with\npartitioned scheduling, these methods require careful co-allocation of tasks\nand resources to cores, as task execution times strongly depend on available\nallocated resources. To address this challenge, this paper presents a 0-1\nlinear program for task-resource co-allocation, along with a multi-objective\nheuristic designed to minimize resource usage while guaranteeing schedulability\nunder a preemptive EDF scheduling policy. Our heuristic employs a multi-layer\nframework, where an outer layer explores resource allocations using\nPareto-pruned search, and an inner layer optimizes task allocation by solving a\nknapsack problem using dynamic programming. To evaluate the performance of the\nproposed optimization algorithm, we profile real-world benchmarks on an\nembedded AMD UltraScale+ ZCU102 platform, with fine-grained resource\npartitioning enabled by the Jailhouse hypervisor, leveraging cache set\npartitioning and MemGuard for memory bandwidth regulation. Experiments based on\nthe benchmarking results show that the proposed 0-1 linear program outperforms\nexisting mixed-integer programs by finding more optimal solutions within the\nsame time limit. Moreover, the proposed multi-objective multi-layer heuristic\nperforms consistently better than the state-of-the-art multi-resource-task\nco-allocation algorithm in terms of schedulability, resource usage, number of\nnon-dominated solutions, and computational efficiency.",
+  "nuggets": [
+    {
+      "text": "Task-resource co-allocation is critical for real-time system predictability",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Partitioned scheduling requires careful task and resource allocation to cores",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Cache partitioning and memory bandwidth regulation improve timing predictability",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing MILP approaches struggle with scalability for large systems",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Multi-objective heuristics optimize resource usage and schedulability",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Knapsack problem formulation enables optimal task allocation via dynamic programming",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "MMO heuristic improves on CaM with multi-layer, multi-objective optimization",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "MMO outperforms CaM in schedulability, resource usage, and efficiency",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Real-world benchmarks evaluated on AMD UltraScale+ ZCU102 platform",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Inter-task interference impacts allocation strategies and predictability",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Cache coloring and MemGuard are common software-based partitioning techniques",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Jailhouse hypervisor enables fine-grained cache and memory partitioning",
+      "importance": "okay",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Mixed-integer linear programming (MILP) used for exact task allocation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Pareto-pruned search explores resource allocations efficiently",
+      "importance": "okay",
+      "assignment": "not_support"
+    },
+    {
+      "text": "State-of-the-art CaM algorithm uses k-means clustering and bin-packing heuristics",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "MMO yields multiple non-dominated solutions, CaM produces only one",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Intel RDT and Arm MPAM provide hardware support for resource partitioning",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Dynamic memory bandwidth allocation adapts to runtime variations",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Parallel and gang task scheduling require specialized allocation methods",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Non-preemptive scheduling introduces additional allocation challenges",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Task-resource co-allocation is critical for real-time system predictability",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Partitioned scheduling requires careful task and resource allocation to cores",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Cache partitioning and memory bandwidth regulation improve timing predictability",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing MILP approaches struggle with scalability for large systems",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Multi-objective heuristics optimize resource usage and schedulability",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Knapsack problem formulation enables optimal task allocation via dynamic programming",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "MMO heuristic improves on CaM with multi-layer, multi-objective optimization",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "MMO outperforms CaM in schedulability, resource usage, and efficiency",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Inter-task interference impacts allocation strategies and predictability",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Cache coloring and MemGuard are common software-based partitioning techniques",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Mixed-integer linear programming (MILP) used for exact task allocation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "State-of-the-art CaM algorithm uses k-means clustering and bin-packing heuristics",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "MMO yields multiple non-dominated solutions, CaM produces only one",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Intel RDT and Arm MPAM provide hardware support for resource partitioning",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Dynamic memory bandwidth allocation adapts to runtime variations",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Parallel and gang task scheduling require specialized allocation methods",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Non-preemptive scheduling introduces additional allocation challenges",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "Task-resource co-allocation is critical for real-time system predictability",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Partitioned scheduling requires careful task and resource allocation to cores",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Cache partitioning and memory bandwidth regulation improve timing predictability",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing MILP approaches struggle with scalability for large systems",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Multi-objective heuristics optimize resource usage and schedulability",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Knapsack problem formulation enables optimal task allocation via dynamic programming",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "MMO heuristic improves on CaM with multi-layer, multi-objective optimization",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "MMO outperforms CaM in schedulability, resource usage, and efficiency",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Inter-task interference impacts allocation strategies and predictability",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Cache coloring and MemGuard are common software-based partitioning techniques",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Jailhouse hypervisor enables fine-grained cache and memory partitioning",
+      "importance": "okay",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Mixed-integer linear programming (MILP) used for exact task allocation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "State-of-the-art CaM algorithm uses k-means clustering and bin-packing heuristics",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "MMO yields multiple non-dominated solutions, CaM produces only one",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Intel RDT and Arm MPAM provide hardware support for resource partitioning",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Dynamic memory bandwidth allocation adapts to runtime variations",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Parallel and gang task scheduling require specialized allocation methods",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Non-preemptive scheduling introduces additional allocation challenges",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 0.9,
+    "strict_all_score": 0.85,
+    "vital_score": 0.9,
+    "all_score": 0.875
+  }
+}

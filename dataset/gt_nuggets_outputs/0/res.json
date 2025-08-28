@@ -1,0 +1,271 @@
+{
+  "qid": "2506.02838v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nEconomic inequality is a global challenge, intensifying disparities in\neducation, healthcare, and social stability. Traditional systems like the U.S.\nfederal income tax reduce inequality but lack adaptability. Although models\nlike the Saez Optimal Taxation adjust dynamically, they fail to address\ntaxpayer heterogeneity and irrational behavior. This study introduces TaxAgent,\na novel integration of large language models (LLMs) with agent-based modeling\n(ABM) to design adaptive tax policies. In our macroeconomic simulation,\nheterogeneous H-Agents (households) simulate real-world taxpayer behaviors\nwhile the TaxAgent (government) utilizes LLMs to iteratively optimize tax\nrates, balancing equity and productivity. Benchmarked against Saez Optimal\nTaxation, U.S. federal income taxes, and free markets, TaxAgent achieves\nsuperior equity-efficiency trade-offs. This research offers a novel taxation\nsolution and a scalable, data-driven framework for fiscal policy evaluation.",
+  "nuggets": [
+    {
+      "text": "Progressive taxation reduces inequality but lacks adaptability",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Optimal taxation maximizes social welfare, adjusts to economic conditions",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Traditional models assume rational taxpayers, oversimplify social welfare",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Taxpayer heterogeneity impacts optimal tax design",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "AI enables adaptive macroeconomic policy analysis, overcomes equilibrium assumptions",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "LLMs enable policy evaluation and human-like agent behavior in economics",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing frameworks are rule-based, lack dynamic, data-driven adaptation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Integrating LLMs with ABMs allows dynamic, human-like tax policy optimization",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Saez derived optimal nonlinear tax rates using earnings elasticity, income distribution",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Diamond and Saez extended optimal taxation to mitigate inequality, maximize welfare",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Piketty, Saez, Stantcheva studied behavioral responses to top tax rates",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Kroft et al. analyzed unemployment, wage responses, advocated EITC",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Reinforcement learning and Bayesian Neural Networks support adaptive simulations",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "The AI Economist uses RL for co-adaptive agent and planner tax policy",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "ABM models decentralized decision-making, systemic risk, policy interventions",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "ABMs applied to tax policy optimization, business cycles, inflation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LLMs provide advanced reasoning for economic research, market simulation",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Progressive taxation reduces inequality but lacks adaptability",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Optimal taxation maximizes social welfare, adjusts to economic conditions",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Traditional models assume rational taxpayers, oversimplify social welfare",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Taxpayer heterogeneity impacts optimal tax design",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "AI enables adaptive macroeconomic policy analysis, overcomes equilibrium assumptions",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "LLMs enable policy evaluation and human-like agent behavior in economics",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing frameworks are rule-based, lack dynamic, data-driven adaptation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Integrating LLMs with ABMs allows dynamic, human-like tax policy optimization",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Saez derived optimal nonlinear tax rates using earnings elasticity, income distribution",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Diamond and Saez extended optimal taxation to mitigate inequality, maximize welfare",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Piketty, Saez, Stantcheva studied behavioral responses to top tax rates",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Kroft et al. analyzed unemployment, wage responses, advocated EITC",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Reinforcement learning and Bayesian Neural Networks support adaptive simulations",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "The AI Economist uses RL for co-adaptive agent and planner tax policy",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "ABM models decentralized decision-making, systemic risk, policy interventions",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "ABMs applied to tax policy optimization, business cycles, inflation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LLMs provide advanced reasoning for economic research, market simulation",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "Progressive taxation reduces inequality but lacks adaptability",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Optimal taxation maximizes social welfare, adjusts to economic conditions",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Traditional models assume rational taxpayers, oversimplify social welfare",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Taxpayer heterogeneity impacts optimal tax design",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "AI enables adaptive macroeconomic policy analysis, overcomes equilibrium assumptions",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "LLMs enable policy evaluation and human-like agent behavior in economics",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing frameworks are rule-based, lack dynamic, data-driven adaptation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Integrating LLMs with ABMs allows dynamic, human-like tax policy optimization",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Saez derived optimal nonlinear tax rates using earnings elasticity, income distribution",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Diamond and Saez extended optimal taxation to mitigate inequality, maximize welfare",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Piketty, Saez, Stantcheva studied behavioral responses to top tax rates",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Kroft et al. analyzed unemployment, wage responses, advocated EITC",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Reinforcement learning and Bayesian Neural Networks support adaptive simulations",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "The AI Economist uses RL for co-adaptive agent and planner tax policy",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "ABM models decentralized decision-making, systemic risk, policy interventions",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "ABMs applied to tax policy optimization, business cycles, inflation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LLMs provide advanced reasoning for economic research, market simulation",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 1.0,
+    "strict_all_score": 1.0,
+    "vital_score": 1.0,
+    "all_score": 1.0
+  }
+}

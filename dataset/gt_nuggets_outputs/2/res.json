@@ -1,0 +1,216 @@
+{
+  "qid": "2506.00958v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nNonverbal communication is integral to human interaction, with gestures,\nfacial expressions, and body language conveying critical aspects of intent and\nemotion. However, existing large language models (LLMs) fail to effectively\nincorporate these nonverbal elements, limiting their capacity to create fully\nimmersive conversational experiences. We introduce MARS, a multimodal language\nmodel designed to understand and generate nonverbal cues alongside text,\nbridging this gap in conversational AI. Our key innovation is VENUS, a\nlarge-scale dataset comprising annotated videos with time-aligned text, facial\nexpressions, and body language. Leveraging VENUS, we train MARS with a\nnext-token prediction objective, combining text with vector-quantized nonverbal\nrepresentations to achieve multimodal understanding and generation within a\nunified framework. Based on various analyses of the VENUS datasets, we validate\nits substantial scale and high effectiveness. Our quantitative and qualitative\nresults demonstrate that MARS successfully generates text and nonverbal\nlanguages, corresponding to conversational input.",
+  "nuggets": [
+    {
+      "text": "MARS: multimodal language model for text and nonverbal cue generation",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "VENUS: large-scale dataset with annotated videos, text, facial, body cues",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Existing LLMs lack effective nonverbal communication modeling",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Prior datasets lack detailed 3D facial and body language annotations",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "MARS generates aligned text, facial expressions, and body language",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "LLaVA, Qwen-VL, MiniGPT-4: vision-augmented LLMs for visual understanding",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "VideoChat, Video-LLaMA: LLMs extended to video comprehension",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Unified-IO-2, GPT-4-O: multimodal LLMs with auditory and visual reasoning",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Dialogue datasets: IEMOCAP, CMU-MOSEI, MELD for multimodal sentiment analysis",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Champagne (YTD-18M), MultiDialog: video-based dialogue generation datasets",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "EmotionCLIP, Shafique et al.: nonverbal cue recognition in conversation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FurChat, Lee et al.: nonverbal signals for robotic facial expressions",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Recent 3D human reconstruction advances enable scalable pseudo-ground truth",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "MotionLLM, HumanToMaTo: text-to-human motion generation models",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Ng et al.: listener facial motion generation from text",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Prior datasets lack detailed 3D facial and body language annotations",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "LLaVA, Qwen-VL, MiniGPT-4: vision-augmented LLMs for visual understanding",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "VideoChat, Video-LLaMA: LLMs extended to video comprehension",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Unified-IO-2, GPT-4-O: multimodal LLMs with auditory and visual reasoning",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Dialogue datasets: IEMOCAP, CMU-MOSEI, MELD for multimodal sentiment analysis",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Champagne (YTD-18M), MultiDialog: video-based dialogue generation datasets",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "EmotionCLIP, Shafique et al.: nonverbal cue recognition in conversation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FurChat, Lee et al.: nonverbal signals for robotic facial expressions",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Recent 3D human reconstruction advances enable scalable pseudo-ground truth",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "MotionLLM, HumanToMaTo: text-to-human motion generation models",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Ng et al.: listener facial motion generation from text",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "VENUS: large-scale dataset with annotated videos, text, facial, body cues",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Existing LLMs lack effective nonverbal communication modeling",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Prior datasets lack detailed 3D facial and body language annotations",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "MARS generates aligned text, facial expressions, and body language",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "LLaVA, Qwen-VL, MiniGPT-4: vision-augmented LLMs for visual understanding",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "VideoChat, Video-LLaMA: LLMs extended to video comprehension",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Unified-IO-2, GPT-4-O: multimodal LLMs with auditory and visual reasoning",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Dialogue datasets: IEMOCAP, CMU-MOSEI, MELD for multimodal sentiment analysis",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Champagne (YTD-18M), MultiDialog: video-based dialogue generation datasets",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "EmotionCLIP, Shafique et al.: nonverbal cue recognition in conversation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FurChat, Lee et al.: nonverbal signals for robotic facial expressions",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Recent 3D human reconstruction advances enable scalable pseudo-ground truth",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "MotionLLM, HumanToMaTo: text-to-human motion generation models",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Ng et al.: listener facial motion generation from text",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 0.2,
+    "strict_all_score": 0.7333333333333333,
+    "vital_score": 0.5,
+    "all_score": 0.8333333333333334
+  }
+}

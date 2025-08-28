@@ -1,0 +1,301 @@
+{
+  "qid": "2505.00552v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nGraph convolutional networks have recently gained prominence in collaborative\nfiltering (CF) for recommendations. However, we identify potential bottlenecks\nin two foundational components. First, the embedding layer leads to a latent\nspace with limited capacity, overlooking locally observed but potentially\nvaluable preference patterns. Also, the widely-used neighborhood aggregation is\nlimited in its ability to leverage diverse preference patterns in a\nfine-grained manner. Building on spectral graph theory, we reveal that these\nlimitations stem from graph filtering with a cut-off in the frequency spectrum\nand a restricted linear form. To address these issues, we introduce ChebyCF, a\nCF framework based on graph spectral filtering. Instead of a learned embedding,\nit takes a user's raw interaction history to utilize the full spectrum of\nsignals contained in it. Also, it adopts Chebyshev interpolation to effectively\napproximate a flexible non-linear graph filter, and further enhances it by\nusing an additional ideal pass filter and degree-based normalization. Through\nextensive experiments, we verify that ChebyCF overcomes the aforementioned\nbottlenecks and achieves state-of-the-art performance across multiple\nbenchmarks and reasonably fast inference. Our code is available at\nhttps://github.com/chanwoo0806/ChebyCF.",
+  "nuggets": [
+    {
+      "text": "Graph convolutional networks (GCNs) widely used in collaborative filtering (CF)",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "ChebNet uses Chebyshev basis for spectral filtering",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "GCNs first applied to CF in NGCF; complexity issues noted",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "CF relies on user-item interaction data, not node features",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Most graph filters in CF are linear, limiting flexibility",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "ChebyCF uses Chebyshev interpolation for flexible, efficient graph filtering",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "ChebyCF leverages raw interaction history, not learned embeddings",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "ChebyCF achieves state-of-the-art CF performance",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Spatial and spectral graph convolutions are main GNN approaches",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "GCN simplifies spectral convolutions with first-order linear filters",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Spectral graph convolution uses Laplacian eigendecomposition; polynomial approximations reduce cost",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "ChebNetII improves Chebyshev interpolation, reducing Runge phenomenon",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "GPR-GNN and BernNet use monomial and Bernstein bases",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Model simplification for CF: SGC, LightGCN, UltraGCN, SGCF",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Various methods capture user-item graph information: disentanglement, trend filtering, message passing",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Graph contrastive learning addresses interaction data sparsity",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "GSF-based CF models use spectral convolution: SpectralCF, GF-CF, LinkProp, PGSP, SGFCF",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "GF-CF shows spatial GCNs act as low-pass spectral filters",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SGFCF introduces new normalization and individualized filtering",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "ChebyCF eliminates heavy node-wise feature transformations",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Graph convolutional networks (GCNs) widely used in collaborative filtering (CF)",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "ChebNet uses Chebyshev basis for spectral filtering",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "GCNs first applied to CF in NGCF; complexity issues noted",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "CF relies on user-item interaction data, not node features",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Most graph filters in CF are linear, limiting flexibility",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "ChebyCF uses Chebyshev interpolation for flexible, efficient graph filtering",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Spatial and spectral graph convolutions are main GNN approaches",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "GCN simplifies spectral convolutions with first-order linear filters",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Spectral graph convolution uses Laplacian eigendecomposition; polynomial approximations reduce cost",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "ChebNetII improves Chebyshev interpolation, reducing Runge phenomenon",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "GPR-GNN and BernNet use monomial and Bernstein bases",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Model simplification for CF: SGC, LightGCN, UltraGCN, SGCF",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Various methods capture user-item graph information: disentanglement, trend filtering, message passing",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Graph contrastive learning addresses interaction data sparsity",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "GSF-based CF models use spectral convolution: SpectralCF, GF-CF, LinkProp, PGSP, SGFCF",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "GF-CF shows spatial GCNs act as low-pass spectral filters",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SGFCF introduces new normalization and individualized filtering",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "ChebyCF eliminates heavy node-wise feature transformations",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "Graph convolutional networks (GCNs) widely used in collaborative filtering (CF)",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "ChebNet uses Chebyshev basis for spectral filtering",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "GCNs first applied to CF in NGCF; complexity issues noted",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "CF relies on user-item interaction data, not node features",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Most graph filters in CF are linear, limiting flexibility",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "ChebyCF uses Chebyshev interpolation for flexible, efficient graph filtering",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "ChebyCF leverages raw interaction history, not learned embeddings",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Spatial and spectral graph convolutions are main GNN approaches",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "GCN simplifies spectral convolutions with first-order linear filters",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Spectral graph convolution uses Laplacian eigendecomposition; polynomial approximations reduce cost",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "ChebNetII improves Chebyshev interpolation, reducing Runge phenomenon",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "GPR-GNN and BernNet use monomial and Bernstein bases",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Model simplification for CF: SGC, LightGCN, UltraGCN, SGCF",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Various methods capture user-item graph information: disentanglement, trend filtering, message passing",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Graph contrastive learning addresses interaction data sparsity",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "GSF-based CF models use spectral convolution: SpectralCF, GF-CF, LinkProp, PGSP, SGFCF",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "GF-CF shows spatial GCNs act as low-pass spectral filters",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SGFCF introduces new normalization and individualized filtering",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "ChebyCF eliminates heavy node-wise feature transformations",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 0.75,
+    "strict_all_score": 0.9,
+    "vital_score": 0.8125,
+    "all_score": 0.925
+  }
+}

@@ -1,0 +1,241 @@
+{
+  "qid": "2505.19356v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nNeural retrieval methods using transformer-based pre-trained language models\nhave advanced multilingual and cross-lingual retrieval. However, their\neffectiveness for low-resource, morphologically rich languages such as Amharic\nremains underexplored due to data scarcity and suboptimal tokenization. We\naddress this gap by introducing Amharic-specific dense retrieval models based\non pre-trained Amharic BERT and RoBERTa backbones. Our proposed\nRoBERTa-Base-Amharic-Embed model (110M parameters) achieves a 17.6% relative\nimprovement in MRR@10 and a 9.86% gain in Recall@10 over the strongest\nmultilingual baseline, Arctic Embed 2.0 (568M parameters). More compact\nvariants, such as RoBERTa-Medium-Amharic-Embed (42M), remain competitive while\nbeing over 13x smaller. Additionally, we train a ColBERT-based late interaction\nretrieval model that achieves the highest MRR@10 score (0.843) among all\nevaluated models. We benchmark our proposed models against both sparse and\ndense retrieval baselines to systematically assess retrieval effectiveness in\nAmharic. Our analysis highlights key challenges in low-resource settings and\nunderscores the importance of language-specific adaptation. To foster future\nresearch in low-resource IR, we publicly release our dataset, codebase, and\ntrained models at https://github.com/kidist-amde/amharic-ir-benchmarks.",
+  "nuggets": [
+    {
+      "text": "Dense retrieval uses neural encoders for semantic matching via embeddings",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Multilingual models (mBERT, XLM-R, AfriBERTa) partially address data scarcity",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Effectiveness of dense retrieval in Amharic remains underexplored",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Tokenization challenges degrade retrieval in morphologically rich languages like Amharic",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "State-of-the-art models (Arctic Embed 2.0, Multilingual E5) struggle with Amharic",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Systematic evaluation of sparse and dense retrieval in Amharic is lacking",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Language-specific adaptation is crucial for low-resource IR",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Recent work introduces Amharic-specific dense and ColBERT retrieval models",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Tokenization errors fragment Amharic representations, harming retrieval",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "BM25 is efficient but struggles with morphological variability in Amharic",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LSR methods improve sparse retrieval but need annotated data and morphological tools",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Unsupervised contrastive models (Contriever) show promise but lack Amharic evaluation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Prior Amharic IR work used pre-trained embeddings and morphological tools",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "2AIRTC provides Amharic IR test collection but lacks strong baselines",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Amharic Passage Retrieval Dataset enables robust evaluation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Compact Amharic models achieve competitive performance with fewer parameters",
+      "importance": "okay",
+      "assignment": "not_support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Dense retrieval uses neural encoders for semantic matching via embeddings",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Multilingual models (mBERT, XLM-R, AfriBERTa) partially address data scarcity",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Effectiveness of dense retrieval in Amharic remains underexplored",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Tokenization challenges degrade retrieval in morphologically rich languages like Amharic",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "State-of-the-art models (Arctic Embed 2.0, Multilingual E5) struggle with Amharic",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Systematic evaluation of sparse and dense retrieval in Amharic is lacking",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Recent work introduces Amharic-specific dense and ColBERT retrieval models",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Tokenization errors fragment Amharic representations, harming retrieval",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "BM25 is efficient but struggles with morphological variability in Amharic",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LSR methods improve sparse retrieval but need annotated data and morphological tools",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Unsupervised contrastive models (Contriever) show promise but lack Amharic evaluation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Prior Amharic IR work used pre-trained embeddings and morphological tools",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "2AIRTC provides Amharic IR test collection but lacks strong baselines",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Amharic Passage Retrieval Dataset enables robust evaluation",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "Dense retrieval uses neural encoders for semantic matching via embeddings",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Multilingual models (mBERT, XLM-R, AfriBERTa) partially address data scarcity",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Effectiveness of dense retrieval in Amharic remains underexplored",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Tokenization challenges degrade retrieval in morphologically rich languages like Amharic",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "State-of-the-art models (Arctic Embed 2.0, Multilingual E5) struggle with Amharic",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Systematic evaluation of sparse and dense retrieval in Amharic is lacking",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Language-specific adaptation is crucial for low-resource IR",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Recent work introduces Amharic-specific dense and ColBERT retrieval models",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Tokenization errors fragment Amharic representations, harming retrieval",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "BM25 is efficient but struggles with morphological variability in Amharic",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LSR methods improve sparse retrieval but need annotated data and morphological tools",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Unsupervised contrastive models (Contriever) show promise but lack Amharic evaluation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Prior Amharic IR work used pre-trained embeddings and morphological tools",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "2AIRTC provides Amharic IR test collection but lacks strong baselines",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Amharic Passage Retrieval Dataset enables robust evaluation",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 0.8888888888888888,
+    "strict_all_score": 0.875,
+    "vital_score": 0.9444444444444444,
+    "all_score": 0.90625
+  }
+}

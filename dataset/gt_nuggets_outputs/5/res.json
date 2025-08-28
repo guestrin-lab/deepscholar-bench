@@ -1,0 +1,181 @@
+{
+  "qid": "2505.24754v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nIn this work, we investigate an important task named instruction-following\ntext embedding, which generates dynamic text embeddings that adapt to user\ninstructions, highlighting specific attributes of text. Despite recent\nadvancements, existing approaches suffer from significant computational\noverhead, as they require re-encoding the entire corpus for each new\ninstruction. To address this challenge, we propose GSTransform, a novel\ninstruction-following text embedding framework based on Guided Space\nTransformation. Our key observation is that instruction-relevant information is\ninherently encoded in generic embeddings but remains underutilized. Instead of\nrepeatedly encoding the corpus for each instruction, GSTransform is a\nlightweight transformation mechanism that adapts pre-computed embeddings in\nreal time to align with user instructions, guided by a small amount of text\ndata with instruction-focused label annotation. We conduct extensive\nexperiments on three instruction-awareness downstream tasks across nine\nreal-world datasets, demonstrating that GSTransform improves\ninstruction-following text embedding quality over state-of-the-art methods\nwhile achieving dramatic speedups of 6~300x in real-time processing on\nlarge-scale datasets. The source code is available at\nhttps://github.com/YingchaojieFeng/GSTransform.",
+  "nuggets": [
+    {
+      "text": "Instruction-following text embedding adapts embeddings to user instructions",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing methods require re-encoding corpus for each instruction",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Re-encoding leads to high computational overhead and latency",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Generic text embeddings use self-supervised learning and Transformer models",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "InstructOR concatenates instructions with text for instruction-based embeddings",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "InBedder treats instructions as questions for fine-grained embeddings",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Instruction-following embeddings evaluated on Triplet Alignment, STS, Clustering",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Instruction-aware retrieval leverages user intent for improved search",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Large language models enhance state-of-the-art text embeddings",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Contrastive objectives commonly used in training embedding models",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Prompt-based retrieval methods offer alternative instruction-aware approaches",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Instruction-following text embedding adapts embeddings to user instructions",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing methods require re-encoding corpus for each instruction",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Re-encoding leads to high computational overhead and latency",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Generic text embeddings use self-supervised learning and Transformer models",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "InstructOR concatenates instructions with text for instruction-based embeddings",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "InBedder treats instructions as questions for fine-grained embeddings",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Instruction-following embeddings evaluated on Triplet Alignment, STS, Clustering",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Instruction-aware retrieval leverages user intent for improved search",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Large language models enhance state-of-the-art text embeddings",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Contrastive objectives commonly used in training embedding models",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Prompt-based retrieval methods offer alternative instruction-aware approaches",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "Instruction-following text embedding adapts embeddings to user instructions",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing methods require re-encoding corpus for each instruction",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Re-encoding leads to high computational overhead and latency",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Generic text embeddings use self-supervised learning and Transformer models",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "InstructOR concatenates instructions with text for instruction-based embeddings",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "InBedder treats instructions as questions for fine-grained embeddings",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Instruction-following embeddings evaluated on Triplet Alignment, STS, Clustering",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Instruction-aware retrieval leverages user intent for improved search",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Large language models enhance state-of-the-art text embeddings",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Contrastive objectives commonly used in training embedding models",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Prompt-based retrieval methods offer alternative instruction-aware approaches",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 1.0,
+    "strict_all_score": 1.0,
+    "vital_score": 1.0,
+    "all_score": 1.0
+  }
+}

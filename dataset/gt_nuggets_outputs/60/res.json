@@ -1,0 +1,296 @@
+{
+  "qid": "2504.14243v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nRanking models primarily focus on modeling the relative order of predictions\nwhile often neglecting the significance of the accuracy of their absolute\nvalues. However, accurate absolute values are essential for certain downstream\ntasks, necessitating the calibration of the original predictions. To address\nthis, existing calibration approaches typically employ predefined\ntransformation functions with order-preserving properties to adjust the\noriginal predictions. Unfortunately, these functions often adhere to fixed\nforms, such as piece-wise linear functions, which exhibit limited\nexpressiveness and flexibility, thereby constraining their effectiveness in\ncomplex calibration scenarios. To mitigate this issue, we propose implementing\na calibrator using an Unconstrained Monotonic Neural Network (UMNN), which can\nlearn arbitrary monotonic functions with great modeling power. This approach\nsignificantly relaxes the constraints on the calibrator, improving its\nflexibility and expressiveness while avoiding excessively distorting the\noriginal predictions by requiring monotonicity. Furthermore, to optimize this\nhighly flexible network for calibration, we introduce a novel additional loss\nfunction termed Smooth Calibration Loss (SCLoss), which aims to fulfill a\nnecessary condition for achieving the ideal calibration state. Extensive\noffline experiments confirm the effectiveness of our method in achieving\nsuperior calibration performance. Moreover, deployment in Kuaishou's\nlarge-scale online video ranking system demonstrates that the method's\ncalibration improvements translate into enhanced business metrics. The source\ncode is available at https://github.com/baiyimeng/UMC.",
+  "nuggets": [
+    {
+      "text": "Calibration of ranking models ensures accurate absolute prediction values",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Global order preservation prevents calibration from harming ranking",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Fixed-form calibrators limit expressiveness in complex scenarios",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Neural network calibrators adaptively learn transformation parameters",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Piece-wise linear interpolation struggles with multi-field calibration",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "DESC uses nonlinear basis functions but lacks full monotonic expressiveness",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "JRC decouples ranking and calibration optimization with dual logits",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Binning methods partition samples and assign bin-based calibrated values",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Isotonic regression fits univariate monotonic calibration functions",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Scaling methods use predefined transformations like logistic functions",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FAC combines piece-wise linear models with auxiliary neural networks",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "AdaCalib learns isotonic function families guided by posterior statistics",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SBCR integrates sample features into neural piece-wise linear calibration",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Loss reconciling research jointly optimizes ranking and calibration losses",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "CalSoftmax uses virtual candidates to achieve calibrated outputs",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "RCR balances calibration and ranking accuracy via regression-compatible ranking",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "CLID distills teacher model ranking without harming calibration",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SBCR uses self-boosted ranking loss with dumped online scores",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "BBP estimates beta distributions to generate comparable ranking labels",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Global order preservation prevents calibration from harming ranking",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Fixed-form calibrators limit expressiveness in complex scenarios",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Neural network calibrators adaptively learn transformation parameters",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Piece-wise linear interpolation struggles with multi-field calibration",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "DESC uses nonlinear basis functions but lacks full monotonic expressiveness",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "JRC decouples ranking and calibration optimization with dual logits",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Binning methods partition samples and assign bin-based calibrated values",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Isotonic regression fits univariate monotonic calibration functions",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Scaling methods use predefined transformations like logistic functions",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FAC combines piece-wise linear models with auxiliary neural networks",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "AdaCalib learns isotonic function families guided by posterior statistics",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SBCR integrates sample features into neural piece-wise linear calibration",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Loss reconciling research jointly optimizes ranking and calibration losses",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "CalSoftmax uses virtual candidates to achieve calibrated outputs",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "RCR balances calibration and ranking accuracy via regression-compatible ranking",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "CLID distills teacher model ranking without harming calibration",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SBCR uses self-boosted ranking loss with dumped online scores",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "BBP estimates beta distributions to generate comparable ranking labels",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "Calibration of ranking models ensures accurate absolute prediction values",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Global order preservation prevents calibration from harming ranking",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Fixed-form calibrators limit expressiveness in complex scenarios",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Neural network calibrators adaptively learn transformation parameters",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Piece-wise linear interpolation struggles with multi-field calibration",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "DESC uses nonlinear basis functions but lacks full monotonic expressiveness",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "JRC decouples ranking and calibration optimization with dual logits",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Binning methods partition samples and assign bin-based calibrated values",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Isotonic regression fits univariate monotonic calibration functions",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Scaling methods use predefined transformations like logistic functions",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "FAC combines piece-wise linear models with auxiliary neural networks",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "AdaCalib learns isotonic function families guided by posterior statistics",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SBCR integrates sample features into neural piece-wise linear calibration",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Loss reconciling research jointly optimizes ranking and calibration losses",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "CalSoftmax uses virtual candidates to achieve calibrated outputs",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "RCR balances calibration and ranking accuracy via regression-compatible ranking",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "CLID distills teacher model ranking without harming calibration",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SBCR uses self-boosted ranking loss with dumped online scores",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "BBP estimates beta distributions to generate comparable ranking labels",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 0.8571428571428571,
+    "strict_all_score": 0.9473684210526315,
+    "vital_score": 0.9285714285714286,
+    "all_score": 0.9736842105263158
+  }
+}

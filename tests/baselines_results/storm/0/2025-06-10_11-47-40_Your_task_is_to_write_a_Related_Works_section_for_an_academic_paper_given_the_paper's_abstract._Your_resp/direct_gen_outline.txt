@@ -1,0 +1,10 @@
+# Related Works
+## Taxation and Inequality
+### Traditional Taxation Systems
+### Optimal Taxation Models
+## Agent-Based Modeling in Economics
+### Overview of Agent-Based Modeling
+### Applications in Taxation and Fiscal Policy
+## Large Language Models and Economic Decision-Making
+### Integration of LLMs with Economic Models
+### Potential for Adaptive Policy-Making

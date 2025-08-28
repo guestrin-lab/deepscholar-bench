@@ -1,0 +1,336 @@
+{
+  "qid": "2504.14861v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nMaximum Inner Product Search (MIPS) is a fundamental challenge in machine\nlearning and information retrieval, particularly in high-dimensional data\napplications. Existing approaches to MIPS either rely solely on Inner Product\n(IP) similarity, which faces issues with local optima and redundant\ncomputations, or reduce the MIPS problem to the Nearest Neighbor Search under\nthe Euclidean metric via space projection, leading to topology destruction and\ninformation loss. Despite the divergence of the two paradigms, we argue that\nthere is no inherent binary opposition between IP and Euclidean metrics. By\nstitching IP and Euclidean in the design of indexing and search algorithms, we\ncan significantly enhance MIPS performance. Specifically, this paper explores\nthe theoretical and empirical connections between these two metrics from the\nMIPS perspective. Our investigation, grounded in graph-based search, reveals\nthat different indexing and search strategies offer distinct advantages for\nMIPS, depending on the underlying data topology. Building on these insights, we\nintroduce a novel graph-based index called Metric-Amphibious Graph (MAG) and a\ncorresponding search algorithm, Adaptive Navigation with Metric Switch (ANMS).\nTo facilitate parameter tuning for optimal performance, we identify three\nstatistical indicators that capture essential data topology properties and\ncorrelate strongly with parameter tuning. Extensive experiments on 12\nreal-world datasets demonstrate that MAG outperforms existing state-of-the-art\nmethods, achieving up to 4x search speedup while maintaining adaptability and\nscalability.",
+  "nuggets": [
+    {
+      "text": "MIPS is crucial in machine learning and information retrieval",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "LSH-based methods adapt Euclidean LSH for MIPS via transformations",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Tree-based MIPS methods struggle with high dimensionality",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "ProMIPS projects vectors to lower dimensions, risking information loss",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Quantization-based methods reduce norm errors for MIPS",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Graph-based methods adapted from NNS for MIPS",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing MIPS methods face local optima or information loss",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "IP and Euclidean metrics are not inherently opposed",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Combining IP and Euclidean metrics can enhance MIPS",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Graph-based search strategies offer distinct MIPS advantages by data topology",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Metric-Amphibious Graph (MAG) is a novel graph-based MIPS index",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Range-LSH observes MIPS results cluster around large-norm vectors",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Simple-LSH introduces symmetric LSH with strong guarantees",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Fargo represents recent state-of-the-art in LSH-based MIPS",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LRUS-CoverTree improves tree-based MIPS, struggles with negative IP values",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "NEQ quantizes item norms to reduce error",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "ScaNN integrates VQ-PQ and anisotropic quantization loss",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SOAR uses orthogonality-amplified residual loss, integrated into ScaNN",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "ip-NSW builds Delaunay graphs via inner product",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "ip-NSW+ improves graph quality with angular proximity",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Möbius-Graph uses Möbius transforms for MIPS",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "IPDG prunes extreme points for top-1 MIPS",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "NAPG uses norm-adaptive inner product in ip-NSW",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Adaptive Navigation with Metric Switch (ANMS) is a new search algorithm",
+      "importance": "okay",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Three statistical indicators guide parameter tuning for optimal MIPS performance",
+      "importance": "okay",
+      "assignment": "not_support"
+    },
+    {
+      "text": "MAG outperforms state-of-the-art, achieving up to 4x search speedup",
+      "importance": "okay",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "MAG maintains adaptability and scalability across 12 real-world datasets",
+      "importance": "okay",
+      "assignment": "not_support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "MIPS is crucial in machine learning and information retrieval",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "LSH-based methods adapt Euclidean LSH for MIPS via transformations",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Tree-based MIPS methods struggle with high dimensionality",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "ProMIPS projects vectors to lower dimensions, risking information loss",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Quantization-based methods reduce norm errors for MIPS",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Graph-based methods adapted from NNS for MIPS",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Range-LSH observes MIPS results cluster around large-norm vectors",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Simple-LSH introduces symmetric LSH with strong guarantees",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Fargo represents recent state-of-the-art in LSH-based MIPS",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LRUS-CoverTree improves tree-based MIPS, struggles with negative IP values",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "NEQ quantizes item norms to reduce error",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "ScaNN integrates VQ-PQ and anisotropic quantization loss",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SOAR uses orthogonality-amplified residual loss, integrated into ScaNN",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "ip-NSW builds Delaunay graphs via inner product",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "ip-NSW+ improves graph quality with angular proximity",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Möbius-Graph uses Möbius transforms for MIPS",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "IPDG prunes extreme points for top-1 MIPS",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "NAPG uses norm-adaptive inner product in ip-NSW",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "MIPS is crucial in machine learning and information retrieval",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "LSH-based methods adapt Euclidean LSH for MIPS via transformations",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Tree-based MIPS methods struggle with high dimensionality",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "ProMIPS projects vectors to lower dimensions, risking information loss",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Quantization-based methods reduce norm errors for MIPS",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Graph-based methods adapted from NNS for MIPS",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Range-LSH observes MIPS results cluster around large-norm vectors",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Simple-LSH introduces symmetric LSH with strong guarantees",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Fargo represents recent state-of-the-art in LSH-based MIPS",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "LRUS-CoverTree improves tree-based MIPS, struggles with negative IP values",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "NEQ quantizes item norms to reduce error",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "ScaNN integrates VQ-PQ and anisotropic quantization loss",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SOAR uses orthogonality-amplified residual loss, integrated into ScaNN",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "ip-NSW builds Delaunay graphs via inner product",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "ip-NSW+ improves graph quality with angular proximity",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Möbius-Graph uses Möbius transforms for MIPS",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "IPDG prunes extreme points for top-1 MIPS",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "NAPG uses norm-adaptive inner product in ip-NSW",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "MAG outperforms state-of-the-art, achieving up to 4x search speedup",
+      "importance": "okay",
+      "assignment": "partial_support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 0.5454545454545454,
+    "strict_all_score": 0.6666666666666666,
+    "vital_score": 0.5454545454545454,
+    "all_score": 0.6851851851851852
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "qid": "2506.00434v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nIn this paper, we address the crucial task of brain tumor segmentation in\nmedical imaging and propose innovative approaches to enhance its performance.\nThe current state-of-the-art nnU-Net has shown promising results but suffers\nfrom extensive training requirements and underutilization of pre-trained\nweights. To overcome these limitations, we integrate Axial-Coronal-Sagittal\nconvolutions and pre-trained weights from ImageNet into the nnU-Net framework,\nresulting in reduced training epochs, reduced trainable parameters, and\nimproved efficiency. Two strategies for transferring 2D pre-trained weights to\nthe 3D domain are presented, ensuring the preservation of learned relationships\nand feature representations critical for effective information propagation.\nFurthermore, we explore a joint classification and segmentation model that\nleverages pre-trained encoders from a brain glioma grade classification proxy\ntask, leading to enhanced segmentation performance, especially for challenging\ntumor labels. Experimental results demonstrate that our proposed methods in the\nfast training settings achieve comparable or even outperform the ensemble of\ncross-validation models, a common practice in the brain tumor segmentation\nliterature.",
+  "nuggets": [
+    {
+      "text": "U-Net is the standard for medical image segmentation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "nnU-Net automates configuration and dominates BraTS challenges",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Cross-validation ensembles are common but computationally expensive",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Transfer learning is gaining attention for efficiency in segmentation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Large-scale 2D pre-trained weights (e.g., ImageNet) are underutilized",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Efficient training and fine-tuning in 3D segmentation remain challenging",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "BraTS challenge solutions rely on U-shaped encoder-decoder CNNs",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Transformer-based methods like TransBTS, SwinUNetR show comparable performance",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Med3D provides 3D pre-trained weights but with limited data scale",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Model Genesis uses self-supervised learning on 3D medical images",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Fully-supervised approaches still outperform self-supervised methods",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "U-Net is the standard for medical image segmentation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "nnU-Net automates configuration and dominates BraTS challenges",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Cross-validation ensembles are common but computationally expensive",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Transfer learning is gaining attention for efficiency in segmentation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Large-scale 2D pre-trained weights (e.g., ImageNet) are underutilized",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Efficient training and fine-tuning in 3D segmentation remain challenging",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "BraTS challenge solutions rely on U-shaped encoder-decoder CNNs",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Transformer-based methods like TransBTS, SwinUNetR show comparable performance",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Med3D provides 3D pre-trained weights but with limited data scale",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Model Genesis uses self-supervised learning on 3D medical images",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Fully-supervised approaches still outperform self-supervised methods",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "U-Net is the standard for medical image segmentation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "nnU-Net automates configuration and dominates BraTS challenges",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Cross-validation ensembles are common but computationally expensive",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Transfer learning is gaining attention for efficiency in segmentation",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Large-scale 2D pre-trained weights (e.g., ImageNet) are underutilized",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Efficient training and fine-tuning in 3D segmentation remain challenging",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "BraTS challenge solutions rely on U-shaped encoder-decoder CNNs",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Transformer-based methods like TransBTS, SwinUNetR show comparable performance",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Med3D provides 3D pre-trained weights but with limited data scale",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Model Genesis uses self-supervised learning on 3D medical images",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Fully-supervised approaches still outperform self-supervised methods",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 1.0,
+    "strict_all_score": 1.0,
+    "vital_score": 1.0,
+    "all_score": 1.0
+  }
+}

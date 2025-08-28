@@ -1,0 +1,231 @@
+{
+  "qid": "2504.09935v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nGenerative retrieval seeks to replace traditional search index data\nstructures with a single large-scale neural network, offering the potential for\nimproved efficiency and seamless integration with generative large language\nmodels. As an end-to-end paradigm, generative retrieval adopts a learned\ndifferentiable search index to conduct retrieval by directly generating\ndocument identifiers through corpus-specific constrained decoding. The\ngeneralization capabilities of generative retrieval on out-of-distribution\ncorpora have gathered significant attention.\n  In this paper, we examine the inherent limitations of constrained\nauto-regressive generation from two essential perspectives: constraints and\nbeam search. We begin with the Bayes-optimal setting where the generative\nretrieval model exactly captures the underlying relevance distribution of all\npossible documents. Then we apply the model to specific corpora by simply\nadding corpus-specific constraints. Our main findings are two-fold: (i) For the\neffect of constraints, we derive a lower bound of the error, in terms of the KL\ndivergence between the ground-truth and the model-predicted step-wise marginal\ndistributions. (ii) For the beam search algorithm used during generation, we\nreveal that the usage of marginal distributions may not be an ideal approach.\nThis paper aims to improve our theoretical understanding of the generalization\ncapabilities of the auto-regressive decoding retrieval paradigm, laying a\nfoundation for its limitations and inspiring future advancements toward more\nrobust and generalizable generative retrieval.",
+  "nuggets": [
+    {
+      "text": "Generative retrieval replaces traditional search indexes with neural networks",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Direct generation of document identifiers via corpus-specific constrained decoding",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Generalization to out-of-distribution corpora is a major challenge",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Constrained decoding guides outputs to satisfy specific conditions at inference",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Lower bound error exists for constrained auto-regressive models",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Beam search is widely used but can prune relevant docIDs",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Marginal distributions may not be ideal for beam search in retrieval",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Bayes-optimal settings analyzed for theoretical understanding of retrieval",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Model capacity and docID construction limit generalization",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Few-shot indexing uses pre-trained LLMs for docID generation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Continual learning and updatable generative retrieval address dynamic corpora",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Corpus-level constraints unique to retrieval tasks",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Beam search performance deteriorates in sparse relevance situations",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Hybrid retrieval strategies proposed to address beam search limitations",
+      "importance": "okay",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Strict constraint satisfaction studied in controllable text generation",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Generative retrieval replaces traditional search indexes with neural networks",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Direct generation of document identifiers via corpus-specific constrained decoding",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Generalization to out-of-distribution corpora is a major challenge",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Constrained decoding guides outputs to satisfy specific conditions at inference",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Lower bound error exists for constrained auto-regressive models",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Beam search is widely used but can prune relevant docIDs",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Marginal distributions may not be ideal for beam search in retrieval",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Model capacity and docID construction limit generalization",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Few-shot indexing uses pre-trained LLMs for docID generation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Continual learning and updatable generative retrieval address dynamic corpora",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Corpus-level constraints unique to retrieval tasks",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Beam search performance deteriorates in sparse relevance situations",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Strict constraint satisfaction studied in controllable text generation",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "Generative retrieval replaces traditional search indexes with neural networks",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Direct generation of document identifiers via corpus-specific constrained decoding",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Generalization to out-of-distribution corpora is a major challenge",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Constrained decoding guides outputs to satisfy specific conditions at inference",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Lower bound error exists for constrained auto-regressive models",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Beam search is widely used but can prune relevant docIDs",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Marginal distributions may not be ideal for beam search in retrieval",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Bayes-optimal settings analyzed for theoretical understanding of retrieval",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Model capacity and docID construction limit generalization",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Few-shot indexing uses pre-trained LLMs for docID generation",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Continual learning and updatable generative retrieval address dynamic corpora",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Corpus-level constraints unique to retrieval tasks",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Beam search performance deteriorates in sparse relevance situations",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Hybrid retrieval strategies proposed to address beam search limitations",
+      "importance": "okay",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Strict constraint satisfaction studied in controllable text generation",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 0.875,
+    "strict_all_score": 0.8666666666666667,
+    "vital_score": 0.9375,
+    "all_score": 0.9333333333333333
+  }
+}

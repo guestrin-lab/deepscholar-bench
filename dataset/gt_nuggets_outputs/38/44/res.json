@@ -1,0 +1,231 @@
+{
+  "qid": "2504.19283v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nServerless computing abstracts away server management, enabling automatic\nscaling, efficient resource utilization, and cost-effective pricing models.\nHowever, despite these advantages, it faces the significant challenge of\ncold-start latency, adversely impacting end-to-end performance. Our study shows\nthat many serverless functions initialize libraries that are rarely or never\nused under typical workloads, thus introducing unnecessary overhead. Although\nexisting static analysis techniques can identify unreachable libraries, they\nfail to address workload-dependent inefficiencies, resulting in limited\nperformance improvements. To overcome these limitations, we present SLIMSTART,\na profile-guided optimization tool designed to identify and mitigate\ninefficient library usage patterns in serverless applications. By leveraging\nstatistical sampling and call-path profiling, SLIMSTART collects runtime\nlibrary usage data, generates detailed optimization reports, and applies\nautomated code transformations to reduce cold-start overhead. Furthermore,\nSLIMSTART integrates seamlessly into CI/CD pipelines, enabling adaptive\nmonitoring and continuous optimizations tailored to evolving workloads. Through\nextensive evaluation across three benchmark suites and four real-world\nserverless applications, SLIMSTART achieves up to a 2.30X speedup in\ninitialization latency, a 2.26X improvement in end-to-end latency, and a 1.51X\nreduction in memory usage, demonstrating its effectiveness in addressing\ncold-start inefficiencies and optimizing resource utilization.",
+  "nuggets": [
+    {
+      "text": "Platform-level methods do not address application-level library inefficiencies",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Runtime policies lack granularity for code-level library inefficiencies",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Code-level optimizations include function fusion, decomposition, and compression",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Static analysis tools (JAX, GraalVM, ProGuard, R8) optimize code statically",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Static tools do not adapt to dynamic, workload-dependent library usage",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "SLIMSTART uses runtime profiling to capture real-time library usage patterns",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "SLIMSTART identifies and mitigates workload-specific library inefficiencies",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "SLIMSTART applies automated code transformations to reduce cold-start overhead",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Platform-level optimizations reduce cold start via resource allocation and scheduling",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Techniques include resource sharing, memory deduplication, function caching, compression",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Pre-warmed instances and proactive library loading mitigate cold start at platform level",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "User-directed optimizations configure runtime policies to reduce cold start",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Checkpointing, provisioned concurrency, memory tuning, and keep-alive reduce cold start",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Layering dependencies caches and updates libraries independently to reduce loading overhead",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "SLIMSTART integrates with CI/CD for adaptive, continuous optimization",
+      "importance": "okay",
+      "assignment": "not_support"
+    },
+    {
+      "text": "SLIMSTART achieves up to 2.30X speedup in initialization latency",
+      "importance": "okay",
+      "assignment": "not_support"
+    },
+    {
+      "text": "SLIMSTART achieves up to 2.26X improvement in end-to-end latency",
+      "importance": "okay",
+      "assignment": "not_support"
+    },
+    {
+      "text": "SLIMSTART achieves up to 1.51X reduction in memory usage",
+      "importance": "okay",
+      "assignment": "not_support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Platform-level methods do not address application-level library inefficiencies",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Runtime policies lack granularity for code-level library inefficiencies",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Code-level optimizations include function fusion, decomposition, and compression",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Static analysis tools (JAX, GraalVM, ProGuard, R8) optimize code statically",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Static tools do not adapt to dynamic, workload-dependent library usage",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "SLIMSTART uses runtime profiling to capture real-time library usage patterns",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Platform-level optimizations reduce cold start via resource allocation and scheduling",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Techniques include resource sharing, memory deduplication, function caching, compression",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Pre-warmed instances and proactive library loading mitigate cold start at platform level",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "User-directed optimizations configure runtime policies to reduce cold start",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Checkpointing, provisioned concurrency, memory tuning, and keep-alive reduce cold start",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Layering dependencies caches and updates libraries independently to reduce loading overhead",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "Platform-level methods do not address application-level library inefficiencies",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Runtime policies lack granularity for code-level library inefficiencies",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Code-level optimizations include function fusion, decomposition, and compression",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Static analysis tools (JAX, GraalVM, ProGuard, R8) optimize code statically",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Static tools do not adapt to dynamic, workload-dependent library usage",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "SLIMSTART uses runtime profiling to capture real-time library usage patterns",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "SLIMSTART identifies and mitigates workload-specific library inefficiencies",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Platform-level optimizations reduce cold start via resource allocation and scheduling",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Techniques include resource sharing, memory deduplication, function caching, compression",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Pre-warmed instances and proactive library loading mitigate cold start at platform level",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "User-directed optimizations configure runtime policies to reduce cold start",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Checkpointing, provisioned concurrency, memory tuning, and keep-alive reduce cold start",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Layering dependencies caches and updates libraries independently to reduce loading overhead",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 0.75,
+    "strict_all_score": 0.6666666666666666,
+    "vital_score": 0.8125,
+    "all_score": 0.6944444444444444
+  }
+}

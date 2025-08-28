@@ -1,0 +1,226 @@
+{
+  "qid": "2504.06975v1",
+  "query": "Write a Related Works section for an academic paper given the paper's abstract. Here is the paper abstract:\nIn order to achieve low latency, high throughput, and partition tolerance,\nmodern databases forgo strong transaction isolation for weak isolation\nguarantees. However, several production databases have been found to suffer\nfrom isolation bugs, breaking their data-consistency contract. Black-box\ntesting is a prominent technique for detecting isolation bugs, by checking\nwhether histories of database transactions adhere to a prescribed isolation\nlevel.\n  Testing databases on realistic workloads of large size requires isolation\ntesters to be as efficient as possible, a requirement that has initiated a\nstudy of the complexity of isolation testing. Although testing strong isolation\nhas been known to be NP-complete, weak isolation levels were recently shown to\nbe testable in polynomial time, which has propelled the scalability of testing\ntools. However, existing testers have a large polynomial complexity,\nrestricting testing to workloads of only moderate size, which is not typical of\nlarge-scale databases.\n  In this work, we develop AWDIT, a highly-efficient and provably optimal\ntester for weak database isolation. Given a history $H$ of size $n$ and $k$\nsessions, AWDIT tests whether H satisfies the most common weak isolation levels\nof Read Committed (RC), Read Atomic (RA), and Causal Consistency (CC) in time\n$O(n^{3/2})$, $O(n^{3/2})$, and $O(n \\cdot k)$, respectively, improving\nsignificantly over the state of the art. Moreover, we prove that AWDIT is\nessentially optimal, in the sense that there is a conditional lower bound of\n$n^{3/2}$ for any weak isolation level between RC and CC. Our experiments show\nthat AWDIT is significantly faster than existing, highly optimized testers;\ne.g., for the $\\sim$20% largest histories, AWDIT obtains an average speedup of\n$245\\times$, $193\\times$, and $62\\times$ for RC, RA, and CC, respectively, over\nthe best baseline.",
+  "nuggets": [
+    {
+      "text": "Black-box testing detects isolation bugs in databases",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Weak isolation levels testable in polynomial time",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing weak isolation testers have high polynomial complexity",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "AWDIT achieves optimal complexity for weak isolation testing",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "AWDIT tests RC, RA, CC in O(n^{3/2}), O(n^{3/2}), O(n·k)",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "AWDIT significantly outperforms previous testers in speed",
+      "importance": "vital",
+      "assignment": "not_support"
+    },
+    {
+      "text": "Conditional lower bound of n^{3/2} for weak isolation testing",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Parameterization by sessions/topology yields efficient algorithms",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "NP-completeness for strong and some weak memory models",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Database isolation formalized axiomatically and operationally",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Testing strong isolation is NP-complete",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "AWDIT avoids exhaustive search over all Transactional Anomalous Patterns",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Plume checks weak isolation via Transactional Anomalous Patterns",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Strong isolation testers use SAT/SMT solving",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Consistency testing parallels shared-memory memory model verification",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Causally-consistent memory models allow efficient consistency checks",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "supported_nuggets": [
+    {
+      "text": "Black-box testing detects isolation bugs in databases",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Weak isolation levels testable in polynomial time",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing weak isolation testers have high polynomial complexity",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Parameterization by sessions/topology yields efficient algorithms",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "NP-completeness for strong and some weak memory models",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Database isolation formalized axiomatically and operationally",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Testing strong isolation is NP-complete",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "AWDIT avoids exhaustive search over all Transactional Anomalous Patterns",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Plume checks weak isolation via Transactional Anomalous Patterns",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Strong isolation testers use SAT/SMT solving",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Consistency testing parallels shared-memory memory model verification",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Causally-consistent memory models allow efficient consistency checks",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "partially_supported_nuggets": [
+    {
+      "text": "Black-box testing detects isolation bugs in databases",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Weak isolation levels testable in polynomial time",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Existing weak isolation testers have high polynomial complexity",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "AWDIT achieves optimal complexity for weak isolation testing",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Conditional lower bound of n^{3/2} for weak isolation testing",
+      "importance": "vital",
+      "assignment": "partial_support"
+    },
+    {
+      "text": "Parameterization by sessions/topology yields efficient algorithms",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "NP-completeness for strong and some weak memory models",
+      "importance": "vital",
+      "assignment": "support"
+    },
+    {
+      "text": "Database isolation formalized axiomatically and operationally",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Testing strong isolation is NP-complete",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "AWDIT avoids exhaustive search over all Transactional Anomalous Patterns",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Plume checks weak isolation via Transactional Anomalous Patterns",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Strong isolation testers use SAT/SMT solving",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Consistency testing parallels shared-memory memory model verification",
+      "importance": "okay",
+      "assignment": "support"
+    },
+    {
+      "text": "Causally-consistent memory models allow efficient consistency checks",
+      "importance": "okay",
+      "assignment": "support"
+    }
+  ],
+  "nuggets_metrics": {
+    "strict_vital_score": 0.5555555555555556,
+    "strict_all_score": 0.75,
+    "vital_score": 0.6666666666666666,
+    "all_score": 0.8125
+  }
+}
