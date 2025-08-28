@@ -33,7 +33,7 @@ To get started, simply clone the repository and install dependencies as follows:
 ```bash
 # Clone the repository
 git clone git@github.com:guestrin-lab/deepscholar-bench.git
-cd deepScholarBench
+cd deepscholar-bench
 
 # Install dependencies
 pip install -r requirements.txt
