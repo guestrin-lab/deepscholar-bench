@@ -69,7 +69,8 @@ For more details and a full introduction, please continue to our **[Dataset Scri
 
 ## 🤝 Contributing
 
-We welcome contributions to DeepScholarBench! Please feel free to submit a PR.
+We welcome contributions to DeepScholarBench! Please feel free to submit a PR for code contributions. If you would like to add your AI system to the DeepScholar-bench leaderboard, please fill out this [this form](https://docs.google.com/forms/d/e/1FAIpQLSeug4igDHhVUU3XnrUSeMVRUJFKlHP28i8fcBAu_LHCkqdV1g/viewform).
+
 
 ## Citation
 If you use DeepScholar-Bench in an academic work, we would greatly appreciate it if you can cite this work as follows:
