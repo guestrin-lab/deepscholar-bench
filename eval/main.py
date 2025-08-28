@@ -101,7 +101,8 @@ def main() -> None:
 
     mode_results = {
         mode.value: process_mode(args, mode, input_folder, dataset)
-        for mode, input_folder in zip(args.mode, args.input_folder)
+        for mode, input_folder in zip(args.modes, args.input_folder)
+
     }
 
     results: pd.DataFrame | None = None
