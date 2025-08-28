@@ -110,7 +110,7 @@ def parse_args():
     logger.info(f"Processing modes: {args.modes}")
     logger.info(f"Input folder: {args.input_folder}")
     logger.info(f"Output directory: {args.output_folder}")
-    logger.info(f"Model: {args.model}")
+    logger.info(f"Model: {args.model_name}")
     logger.info(f"Evals: {args.evals}")
 
     if args.file_id:

@@ -4,6 +4,7 @@ Author filtering module for h-index based paper filtering.
 
 import asyncio
 import logging
+import time
 import requests  # type: ignore
 from dataclasses import dataclass
 
@@ -134,6 +135,8 @@ class AuthorFilter:
     ) -> AuthorInfo | None:
         """Get author information from Semantic Scholar API."""
         try:
+            # Sleep to avoid rate limiting
+            time.sleep(3)
             # Semantic Scholar API endpoint
             url = "https://api.semanticscholar.org/graph/v1/author/search"
             params = {
