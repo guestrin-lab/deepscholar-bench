@@ -1,4 +1,7 @@
-# DeepScholar-Bench: A Live Benchmark for Generative Research Synthesis
+<h1 align="center"> 
+    🌐🔍DeepScholar-Bench: A Live Benchmark for Generative Research Synthesis
+</h1>
+
 
 <!-- [![Dataset](https://img.shields.io/badge/Dataset-deepscholar--bench%2FDeepScholarBench-blue)](https://huggingface.co/datasets/deepscholar-bench/DeepScholarBench)
 [![GitHub](https://img.shields.io/badge/GitHub-deepscholar--bench-green)](https://github.com/guestrin-lab/deepscholar-bench)
