@@ -63,7 +63,7 @@ python -m eval.main \
     --model_name gpt-4o
 ```
 
-For more details and a full introduction, please continue to our **[Dataset Scripts Descrption](data_pipeline/README.md)** and/or our **[Evaluation library Description](eval/README.md)**.
+For more details and a full introduction, please continue to our **[Dataset Scripts Description](data_pipeline/README.md)** and/or our **[Evaluation library Description](eval/README.md)**.
 
 
 
