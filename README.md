@@ -20,7 +20,7 @@ DeepScholar-Bench provides a live benchmark dataset and holistic evaluation of g
 
 This repository contains code following the DeepScholar-Bench framework. We provide:
 1. **[Dataset Scripts](data_pipeline/README.md)** - which allow you to collect new datasets from recent, high-quality Arxiv papers using our automated data-colleciton pipeline. You can set your own configurations (e.g., choice of valid date ranges and valid Arxiv domains) to customize your dataset
-2. **[An evaluation library](eval/README.md)** - for measuring performance of long-form research synthesis answers. Our evaluation framework supports a holistic set of metrics, which demonstrate high agreement with human annotations. We build on top of the (LOTUS framework for LLM-powered data processing)[https://github.com/lotus-data/lotus], which also allows you to easily instantiate [custom LLM-judges](https://lotus-ai.readthedocs.io/en/latest/evals.html#).
+2. **[An Evaluation Suite](eval/README.md)** - for measuring performance of long-form research synthesis answers. Our evaluation framework supports a holistic set of metrics, which demonstrate high agreement with human annotations. Our library is built using the [LOTUS framework for LLM-based data processing](https://github.com/lotus-data/lotus), which also provides a library for easily instantiate [your custom LLM-judges](https://lotus-ai.readthedocs.io/en/latest/evals.html#).
 
 
 If you run into any problems with the code in this repo, leaderboard, or dataset, please feel free to raise an issue and we will address it promptly. If you would like to add your AI system to the DeepScholar-bench leaderboard, please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSeug4igDHhVUU3XnrUSeMVRUJFKlHP28i8fcBAu_LHCkqdV1g/viewform).
