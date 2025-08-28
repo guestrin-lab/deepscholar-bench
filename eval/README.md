@@ -202,7 +202,5 @@ This project is licensed under the MIT License - see the [LICENSE](../LICENSE) f
 ## 📞 Support
 
 For questions, issues, or contributions:
-- 🐛 [Report bugs](https://github.com/your-repo/issues)
-- 💡 [Request features](https://github.com/your-repo/issues)
-- 📖 [Documentation](https://your-docs-url.com)
-- 💬 [Discussions](https://github.com/your-repo/discussions)
+- 🐛 [Report bugs](https://github.com/guestrin-lab/deepscholar-bench/issues)
+- 💡 [Request features](https://github.com/guestrin-lab/deepscholar-bench/issues)
