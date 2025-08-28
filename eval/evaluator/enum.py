@@ -61,6 +61,7 @@ class EvaluationFunction(Enum):
             for key, parsers in key_to_parsers.items()
         }
         if output_dir:
+            os.makedirs(output_dir, exist_ok=True)
             for key, dfs in results.items():
                 dfs.to_csv(os.path.join(output_dir, f"{key}.csv"), index=False)
         return results
@@ -77,6 +78,7 @@ class EvaluationFunction(Enum):
         results = self.calculate(key_to_parsers, output_dir, **kwargs)
         aggregated_results = self.to_evaluator().aggregate(results)
         if output_dir:
+            os.makedirs(output_dir, exist_ok=True)
             aggregated_results.to_csv(
                 os.path.join(output_dir, "aggregated_results.csv"), index=False
             )

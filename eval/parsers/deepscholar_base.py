@@ -12,7 +12,7 @@ class DeepScholarBaseParser(Parser):
     parser_type = ParserType.DEEPSCHOLAR_BASE
 
     def _get_file_path(self):
-        self.folder_path + "/intro.md"
+        return self.folder_path + "/intro.md"
 
     @property
     def citation_pattern(self):

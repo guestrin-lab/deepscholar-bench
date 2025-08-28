@@ -6,7 +6,7 @@ import logging
 from tabulate import tabulate  # type: ignore
 import lotus
 from lotus.models import LM
-
+import traceback
 try:
     from parsers import get_parser, Parser, ParserType
     from argument_parser import parse_args
@@ -64,7 +64,7 @@ def process_mode(
                 folder_path,
             )
         except Exception as e:
-            logger.warning(f"❌ Error processing {mode.value} / {file_id}: {e}")
+            logger.warning(f"❌ Error processing {mode.value} / {file_id}: {traceback.format_exc()}")
             continue
 
         if parser.docs:
@@ -104,6 +104,8 @@ def main() -> None:
         for mode, input_folder in zip(args.modes, args.input_folder)
 
     }
+
+    os.makedirs(args.output_folder, exist_ok=True)
 
     results: pd.DataFrame | None = None
     for eval in args.evals:
