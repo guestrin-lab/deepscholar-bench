@@ -29,7 +29,8 @@ If you run into any problems with the code in this repo, leaderboard, or dataset
 
 ## 🚀 Quick Start
 
-To get started, simply clone the repository and install dependencies as follows:
+To get started, make sure you are using Python 3.10, simply clone the repository and install dependencies as follows:
+
 ```bash
 # Clone the repository
 git clone git@github.com:guestrin-lab/deepscholar-bench.git
