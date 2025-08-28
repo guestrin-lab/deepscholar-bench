@@ -18,8 +18,8 @@
 
 DeepScholar-Bench provides a live benchmark dataset and holistic evaluation of generative research synthesis, an emerging capability among AI systems designed for DeepResearch.
 
-This repository contains code following the DeepScholar-Bench framework. We provide:
-1. **[Dataset Scripts](data_pipeline/README.md)** - which allow you to collect new datasets from recent, high-quality Arxiv papers using our automated data-colleciton pipeline. You can set your own configurations (e.g., choice of valid date ranges and valid Arxiv domains) to customize your dataset
+This repository provides:
+1. **[Dataset Scripts](data_pipeline/README.md)** - which allow you to collect new datasets from recent, high-quality Arxiv papers using our automated data-collection pipeline. You can set your own configurations (e.g., choice of valid date ranges and valid Arxiv domains) to customize your dataset
 2. **[An Evaluation Suite](eval/README.md)** - for measuring performance of long-form research synthesis answers. Our evaluation framework supports a holistic set of metrics, which demonstrate high agreement with human annotations. Our library is built using the [LOTUS framework for LLM-based data processing](https://github.com/lotus-data/lotus), which also provides a library for easily instantiate [your custom LLM-judges](https://lotus-ai.readthedocs.io/en/latest/evals.html#).
 
 
