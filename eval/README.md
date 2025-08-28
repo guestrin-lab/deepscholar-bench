@@ -25,7 +25,7 @@ Run the evaluation suite from the project root directory:
 ```bash
 # Evaluate a single system with multiple metrics
 python -m eval.main \
-  --modes deepscholar_base \
+  --mode deepscholar_base \
   --evals nugget_coverage reference_coverage \
   --input_folder tests/baselines_results/deepscholar_base_gpt_4.1 \
   --output_folder evaluation_results/
