@@ -37,6 +37,8 @@ git clone git@github.com:guestrin-lab/deepscholar-bench.git
 cd deepscholar-bench
 
 # Install dependencies
+conda create -n dsbench python=3.10 -y
+conda activate dsbench
 pip install -r requirements.txt
 ```
 
