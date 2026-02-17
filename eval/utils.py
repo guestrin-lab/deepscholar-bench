@@ -54,9 +54,14 @@ def jaccard_similarity(str1, str2):
     return len(intersection) / len(union) if union else 0
 
 
+OPENALEX_MAILTO = os.environ.get("OPENALEX_MAILTO", "your@email.com")
+
+
 def get_citation_count_from_title(
-    title, mailto="your@email.com", similarity_threshold=0.8
+    title, mailto=None, similarity_threshold=0.8
 ):
+    if mailto is None:
+        mailto = OPENALEX_MAILTO
     try:
         search_url = f"https://api.openalex.org/works?search={title}&mailto={mailto}"
         response = requests.get(search_url, timeout=10)
@@ -75,7 +80,7 @@ def get_citation_count_from_title(
             else:
                 return None
     except Exception as e:
-        print(f"Error fetching citation count: {e}")
+        logger.error("Error fetching citation count: %s", e)
         return None
 
 
@@ -151,11 +156,11 @@ def get_arxiv_title_and_abstract(arxiv_id: str) -> tuple[str, str]:
                     if api_title and api_abstract:
                         return api_title, api_abstract
         except Exception as api_e:
-            print(f"API fallback failed for arXiv {arxiv_id}: {api_e}")
+            logger.error("API fallback failed for arXiv %s: %s", arxiv_id, api_e)
 
         return "", ""
     except Exception as e:
-        print(f"Error fetching title and abstract for arXiv {arxiv_id}: {e}")
+        logger.error("Error fetching title and abstract for arXiv %s: %s", arxiv_id, e)
         return "", ""
 
 
@@ -237,11 +242,11 @@ def get_arxiv_abstract_by_title(
                     if api_title and api_abstract:
                         return api_title, api_abstract
         except Exception as api_e:
-            print(f"API fallback failed for '{title}': {api_e}")
+            logger.error("API fallback failed for '%s': %s", title, api_e)
 
         return "", ""
     except Exception as e:
-        print(f"Error fetching abstract for title '{title}': {e}")
+        logger.error("Error fetching abstract for title '%s': %s", title, e)
         return "", ""
 
 
@@ -268,38 +273,40 @@ def get_arxiv_abstract(
             title_similarity = SequenceMatcher(
                 None, title.lower(), fetched_title.lower()
             ).ratio()
-            print(
-                f"Title similarity: {title_similarity:.2f} (expected: '{title}' vs fetched: '{fetched_title}')"
+            logger.debug(
+                "Title similarity: %.2f (expected: '%s' vs fetched: '%s')",
+                title_similarity, title, fetched_title,
             )
 
         # Use title search if similarity is low
         if title_similarity < 0.7 and fetched_title:
-            print(
-                f"⚠️  arXiv ID {arxiv_id} returned different title, searching by title instead..."
+            logger.warning(
+                "arXiv ID %s returned different title, searching by title instead...",
+                arxiv_id,
             )
             try:
                 search_title, search_abstract = get_arxiv_abstract_by_title(title)
                 if search_abstract:
-                    print(f"✅ Found matching paper by title search: '{title}'")
+                    logger.info("Found matching paper by title search: '%s'", title)
                     return title, search_abstract
                 else:
-                    print("❌ Title search failed, using arXiv ID result")
+                    logger.warning("Title search failed, using arXiv ID result")
             except Exception as search_e:
-                print(f"❌ Title search failed: {search_e}")
+                logger.error("Title search failed: %s", search_e)
 
         # Use fetched results
         final_title = fetched_title or title
         final_abstract = abstract or ""
 
         if final_abstract:
-            print(f"✅ Final result for '{final_title}': {final_abstract[:100]}...")
+            logger.debug("Final result for '%s': %s...", final_title, final_abstract[:100])
         else:
-            print(f"⚠️  No abstract found for '{final_title}', using title only")
+            logger.warning("No abstract found for '%s', using title only", final_title)
 
         return final_title, final_abstract
 
     except Exception as e:
-        print(f"❌ Error fetching abstract for arXiv {arxiv_id}: {e}")
+        logger.error("Error fetching abstract for arXiv %s: %s", arxiv_id, e)
         return title, ""
 
 
@@ -335,9 +342,9 @@ def extract_html_content(url: str, max_retries: int = 3) -> str:
 
                 return text
             else:
-                print(f"HTTP {response.status_code} for {url}")
+                logger.warning("HTTP %s for %s", response.status_code, url)
         except Exception as e:
-            print(f"Attempt {attempt + 1} failed for {url}: {e}")
+            logger.error("Attempt %d failed for %s: %s", attempt + 1, url, e)
             if attempt < max_retries - 1:
                 time.sleep(2)  # Wait before retry
 

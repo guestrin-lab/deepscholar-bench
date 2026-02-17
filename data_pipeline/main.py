@@ -165,10 +165,9 @@ class DataPipeline:
             logger.info("💾 Step 6: Saving dataframes to CSV files...")
             try:
                 self._save_dataframes(dataframes, name=timestamp)
-            except Exception:
-                import pdb
-
-                pdb.set_trace()
+            except Exception as e:
+                logger.error("Failed to save dataframes: %s", e)
+                raise
 
         # Step 7: Combine related works
         all_related_works = glob.glob(f"{self.config.output_dir}/related_works/*.csv")

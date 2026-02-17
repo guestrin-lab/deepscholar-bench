@@ -6,6 +6,8 @@ import asyncio
 import time
 from lotus import web_search
 from datetime import datetime, timedelta
+from exa_py import Exa
+
 try:
     from deepscholar_base.utils.summary_generation import generate_section_summary
     from deepscholar_base.utils.prompts import (
@@ -61,6 +63,20 @@ async def recursive_search(
                 results = web_results
             else:
                 results = pd.concat([results, web_results])
+                results.fillna("", inplace=True)
+        if configs.enable_exa_search:
+            exa_queries, exa_results = await _exa_multiquery_search(
+                web_multiquery_system_prompt,
+                topic,
+                background,
+                configs,
+                end_date,
+            )
+            queries.extend(exa_queries)
+            if results is None:
+                results = exa_results
+            elif exa_results is not None and not exa_results.empty:
+                results = pd.concat([results, exa_results])
                 results.fillna("", inplace=True)
         if results is not None:
             results = results.drop_duplicates(subset=["url"])
@@ -224,6 +240,96 @@ async def _process_single_lotus_search_task(
     assert not missing, f"Missing required columns: {missing}"
 
     return df
+
+
+########### Exa Search ###########
+async def _exa_multiquery_search(
+    instruction: str,
+    topic: str,
+    background: str,
+    configs: Configs,
+    end_date: datetime | None = None,
+) -> tuple[list[str], pd.DataFrame]:
+    queries = await _generate_queries(
+        topic, background, instruction, end_date, configs
+    )
+    configs.logger.info(f"Searching Exa for queries: {queries}")
+    results = await _safe_exa_async_search(configs, queries, configs.per_query_max_search_results_count, end_date=end_date)
+    return queries, results
+
+
+async def _safe_exa_async_search(
+    configs: Configs,
+    queries: list[str],
+    K: int,
+    end_date: datetime | None = None,
+) -> pd.DataFrame:
+    dfs = await asyncio.gather(
+        *[_process_single_exa_search(configs, query, K, end_date) for query in queries]
+    )
+    if dfs:
+        result_df = pd.concat(dfs, ignore_index=True).fillna("")
+    else:
+        result_df = pd.DataFrame()
+    if not result_df.empty and "url" in result_df.columns:
+        result_df = result_df.drop_duplicates(subset=["url"])
+    return result_df
+
+
+async def _process_single_exa_search(
+    configs: Configs,
+    query: str,
+    K: int,
+    end_date: datetime | None = None,
+) -> pd.DataFrame:
+    required_columns = ["title", "url", "snippet", "query", "context", "date"]
+    count = 5
+    while count > 0:
+        try:
+            exa = Exa()
+            search_kwargs = {
+                "query": query,
+                "num_results": K,
+                "type": "auto",
+                "category": "research paper",
+            }
+            if end_date:
+                search_kwargs["end_published_date"] = end_date.strftime("%Y-%m-%dT%H:%M:%S.000Z")
+            results = await asyncio.get_event_loop().run_in_executor(
+                None, lambda: exa.search(**search_kwargs)
+            )
+            rows = []
+            for r in results.results:
+                rows.append({
+                    "title": r.title or "",
+                    "url": r.url or "",
+                    "snippet": r.text if hasattr(r, "text") and r.text else "",
+                    "date": r.published_date or "",
+                    "query": query,
+                })
+            if not rows:
+                return pd.DataFrame(columns=required_columns)
+            df = pd.DataFrame(rows)
+            df["context"] = df.apply(
+                lambda row: f"{row.get('title', '')}[{row.get('url', '')}]: {row.get('snippet', '')}", axis=1
+            )
+            for col in required_columns:
+                if col not in df.columns:
+                    df[col] = ""
+            if end_date is not None and "date" in df.columns:
+                try:
+                    df["_date"] = pd.to_datetime(df["date"], errors="coerce")
+                    cutoff_date = end_date - timedelta(days=1)
+                    df = df[df["_date"].dt.date <= cutoff_date.date()]
+                    df.drop(columns=["_date"], inplace=True)
+                except Exception as e:
+                    configs.logger.error(f"Error processing Exa date: {e}")
+            return df
+        except Exception as e:
+            configs.logger.error(f"Error in Exa search for query {query}, attempt {6 - count}/5: {e}")
+            time.sleep(1)
+            count -= 1
+    return pd.DataFrame(columns=required_columns)
 
 
 ########### Generate Queries ###########

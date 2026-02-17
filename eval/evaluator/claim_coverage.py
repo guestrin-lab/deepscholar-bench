@@ -1,6 +1,5 @@
 import pandas as pd
 import re
-from nltk.tokenize import sent_tokenize
 import numpy as np
 
 try:
@@ -8,11 +7,13 @@ try:
     from parsers import Parser
     from evaluator import EvaluationFunction
     from prompts.support import get_support
+    from evaluator.citation_utils import custom_sent_tokenize, remove_citations, format_document
 except ImportError:
     from .evaluator import Evaluator
     from ..parsers import Parser
     from .enum import EvaluationFunction
     from ..prompts.support import get_support
+    from .citation_utils import custom_sent_tokenize, remove_citations, format_document
 
 
 class ClaimCoverageEvaluator(Evaluator):
@@ -26,7 +27,7 @@ class ClaimCoverageEvaluator(Evaluator):
         sentences = custom_sent_tokenize(parser.clean_text)
         supports = []
         for sid, sent in enumerate(sentences):
-            stripped_sent = _remove_citations(sent)
+            stripped_sent = remove_citations(sent)
             if len(stripped_sent) < 50:
                 continue
 
@@ -41,7 +42,7 @@ class ClaimCoverageEvaluator(Evaluator):
                     if ref > len(parser.docs) - 1 or ref < 0:
                         continue
                     sentence_docs.append(
-                        _format_document(parser.citations_for_cite_quality[ref])
+                        format_document(parser.citations_for_cite_quality[ref])
                     )
                 all_window_docs.extend(sentence_docs)
                 if sentence_docs:
@@ -69,19 +70,3 @@ class ClaimCoverageEvaluator(Evaluator):
                 ],
             }
         )
-
-
-def custom_sent_tokenize(text):
-    protected_text = text
-    protected_text = re.sub(r"\bet al\.", "ET_AL_PLACEHOLDER", protected_text)
-    sentences = sent_tokenize(protected_text)
-    sentences = [s.replace("ET_AL_PLACEHOLDER", "et al.") for s in sentences]
-    return sentences
-
-
-def _remove_citations(text: str) -> str:
-    return re.sub(r"\s*\[\d+\]", "", text).replace(" |", "").strip()
-
-
-def _format_document(doc: tuple[str, str]) -> str:
-    return f"Title: {doc[0]}\n{doc[1]}"

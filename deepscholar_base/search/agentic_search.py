@@ -18,6 +18,7 @@ from agents import OpenAIResponsesModel, OpenAIChatCompletionsModel, ModelSettin
 from openai.types.shared import Reasoning
 import re
 from lotus import web_search, web_extract, WebSearchCorpus
+from exa_py import Exa
 
 try:
     from deepscholar_base.utils.prompts import (
@@ -25,6 +26,8 @@ try:
         openai_sdk_arxiv_search_system_prompt_without_cutoff,
         openai_sdk_search_system_prompt,
         openai_sdk_search_system_prompt_without_cutoff,
+        openai_sdk_exa_search_system_prompt,
+        openai_sdk_exa_search_system_prompt_without_cutoff,
     )
     from deepscholar_base.configs import Configs
 except ImportError:
@@ -33,6 +36,8 @@ except ImportError:
         openai_sdk_arxiv_search_system_prompt_without_cutoff,
         openai_sdk_search_system_prompt,
         openai_sdk_search_system_prompt_without_cutoff,
+        openai_sdk_exa_search_system_prompt,
+        openai_sdk_exa_search_system_prompt_without_cutoff,
     )
     from ..configs import Configs
 
@@ -61,6 +66,7 @@ class AgentContext:
 class ToolTypes(Enum):
     ARXIV = "arxiv"
     WEB = "web"
+    EXA = "exa"
     
     def to_web_search_corpus(self) -> WebSearchCorpus:
         if self == ToolTypes.ARXIV:
@@ -75,6 +81,8 @@ class ToolTypes(Enum):
             return {"link": "url", "abstract": "snippet", "published": "date"}
         elif self == ToolTypes.WEB:
             return {"content": "snippet"}
+        elif self == ToolTypes.EXA:
+            return {}
         else:
             raise ValueError(f"Invalid search type: {self}")
 
@@ -293,6 +301,174 @@ async def read_webpage_full_text(
     """
     return await _read_content(ctx, ToolTypes.WEB, urls)
 
+
+# ---------- Exa Search Functions ----------
+def _exa_search(
+    queries: list[str],
+    max_results: int = 10,
+    end_date: datetime | None = None,
+) -> pd.DataFrame:
+    exa = Exa()
+    all_results = []
+    for query in queries:
+        try:
+            search_kwargs = {
+                "query": query,
+                "num_results": max_results,
+                "type": "auto",
+                "category": "research paper",
+            }
+            if end_date:
+                search_kwargs["end_published_date"] = end_date.strftime("%Y-%m-%dT%H:%M:%S.000Z")
+            results = exa.search(**search_kwargs)
+            for r in results.results:
+                all_results.append({
+                    "title": r.title or "",
+                    "url": r.url or "",
+                    "snippet": r.text if hasattr(r, "text") and r.text else "",
+                    "date": r.published_date or "",
+                    "query": query,
+                })
+        except Exception:
+            continue
+    if not all_results:
+        return pd.DataFrame(columns=["title", "url", "snippet", "date", "query"])
+    return pd.DataFrame(all_results)
+
+
+def _exa_get_contents(
+    urls: list[str],
+) -> pd.DataFrame:
+    exa = Exa()
+    all_results = []
+    try:
+        results = exa.get_contents(urls, text=True)
+        for r in results.results:
+            all_results.append({
+                "title": r.title or "",
+                "url": r.url or "",
+                "full_text": r.text if hasattr(r, "text") and r.text else "",
+            })
+    except Exception:
+        pass
+    if not all_results:
+        return pd.DataFrame(columns=["title", "url", "full_text"])
+    return pd.DataFrame(all_results)
+
+
+@function_tool
+async def search_exa(ctx: RunContextWrapper[AgentContext], queries: list[str]) -> str:
+    """
+    Search for academic papers and research using Exa's neural search engine.
+    Exa excels at finding research papers, technical blog posts, and scholarly content
+    that may not be indexed on arXiv.
+
+    Returns up to 10 entries per query, with clear separation showing which results
+    correspond to which query. Each entry is formatted as "Title (date): URL".
+
+    Guidelines for Constructing Effective Exa Search Queries:
+    - Use natural language queries that describe the concept you are looking for.
+    - Be specific about the research area, methodology, or finding.
+    - Use different queries to cover distinct aspects of the topic.
+
+    Args:
+        queries: A list of search query strings.
+            Example: ["retrieval augmented generation for question answering", "dense passage retrieval methods"]
+    """
+    ctx.context.configs.logger.info(f"Searching Exa for queries: {queries}")
+    cutoff = ctx.context.end_date
+    all_results_sections = []
+    successful_queries_list = []
+
+    exa_df = await asyncio.get_event_loop().run_in_executor(
+        None,
+        lambda: _exa_search(
+            queries,
+            max_results=ctx.context.configs.per_query_max_search_results_count,
+            end_date=cutoff,
+        ),
+    )
+
+    for query in queries:
+        query_df = exa_df[exa_df["query"] == query] if not exa_df.empty else pd.DataFrame()
+        if query_df.empty:
+            all_results_sections.append(f"=== QUERY: {query} ===\nNo results found.")
+            continue
+
+        query_df["context"] = query_df.apply(
+            lambda row: f"{row.get('title', '')}[{row.get('url', '')}]: {row.get('snippet', '')}", axis=1
+        )
+        required_columns = ["title", "url", "snippet", "query", "context", "date"]
+        for col in required_columns:
+            if col not in query_df.columns:
+                query_df[col] = ""
+
+        ctx.context.merge_papers_df(query_df[required_columns])
+        successful_queries_list.append(query)
+        results_text = "\n".join(
+            f"{row.get('title', 'Untitled')} ({row.get('date', '')}): {row.get('url', '')}"
+            for _, row in query_df.iterrows()
+        )
+        all_results_sections.append(f"=== QUERY: {query} ===\n{results_text}")
+
+    ctx.context.queries.append(["exa_search"] + successful_queries_list)
+    ctx.context.configs.logger.info(
+        f"Exa search successful queries: {successful_queries_list}, "
+        f"collected total references: {len(ctx.context.papers_df) if ctx.context.papers_df is not None else 0}"
+    )
+    return "\n\n".join(all_results_sections)
+
+
+@function_tool
+async def read_exa_contents(
+    ctx: RunContextWrapper[AgentContext], urls: list[str]
+) -> str:
+    """
+    Retrieve the full text content for a list of URLs using Exa's content extraction.
+    Use this after `search_exa` surfaces promising URLs to get detailed content
+    for synthesis. The output includes each page's URL, title, and extracted text.
+
+    Args:
+        urls: A list of URLs to extract content from.
+            Example: ["https://arxiv.org/abs/2301.00001", "https://example.com/paper"]
+    """
+    ctx.context.configs.logger.info(f"Reading Exa content for urls: {urls}")
+    successful_inputs = ["exa_read"]
+    try:
+        contents_df = await asyncio.get_event_loop().run_in_executor(
+            None, lambda: _exa_get_contents(urls)
+        )
+        if contents_df.empty:
+            ctx.context.queries.append(successful_inputs)
+            return "No content found for the provided URLs."
+
+        results_text = []
+        for _, row in contents_df.iterrows():
+            full_text = row.get("full_text", "")
+            truncated = full_text[:1000] if full_text else ""
+            results_text.append(f"{row.get('url', '')}\n\n{truncated}")
+            paper_row = pd.DataFrame([{
+                "title": row.get("title", ""),
+                "url": row.get("url", ""),
+                "snippet": full_text,
+                "query": "exa_read",
+                "context": f"[{row.get('url', '')}]: {truncated}",
+                "date": "",
+            }])
+            ctx.context.merge_papers_df(paper_row)
+            successful_inputs.append(row.get("url", ""))
+
+        ctx.context.queries.append(successful_inputs)
+        ctx.context.configs.logger.info(
+            f"Exa read successful inputs: {successful_inputs}, "
+            f"collected total references: {len(ctx.context.papers_df) if ctx.context.papers_df is not None else 0}"
+        )
+        return "\n\n---\n\n".join(results_text) if results_text else "No content found"
+    except Exception as e:
+        ctx.context.queries.append(successful_inputs)
+        return f"Error extracting content from Exa for {urls}: {e}"
+
+
 def _call_model_input_filter(input: CallModelData[AgentContext]) -> ModelInputData:
     """
     This function is used to trim input to less than search_lm's max_ctx_len.
@@ -373,6 +549,15 @@ async def agentic_search(
             openai_sdk_search_system_prompt_without_cutoff
             if not end_date
             else openai_sdk_search_system_prompt
+        )
+    if configs.enable_exa_search:
+        configs.logger.info("Exa search is enabled, adding Exa search tools and prompt.")
+        tools.append(search_exa)
+        tools.append(read_exa_contents)
+        prompt = (
+            openai_sdk_exa_search_system_prompt_without_cutoff
+            if not end_date
+            else openai_sdk_exa_search_system_prompt
         )
     agent = Agent(
         name="Research Assistant",

@@ -20,6 +20,7 @@ class Configs(BaseModel):
 
     # Common for both agentic and recursive search
     enable_web_search: bool = True
+    enable_exa_search: bool = False
     per_query_max_search_results_count: int = 10
 
     # Only for agentic search

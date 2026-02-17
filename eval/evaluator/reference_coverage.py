@@ -1,3 +1,4 @@
+import logging
 import pandas as pd
 import re
 from typing import Optional
@@ -11,6 +12,8 @@ except ImportError:
     from .evaluator import Evaluator
     from ..parsers import Parser
     from .enum import EvaluationFunction
+
+logger = logging.getLogger(__name__)
 
 
 class ReferenceCoverageEvaluator(Evaluator):
@@ -75,7 +78,7 @@ class ReferenceCoverageEvaluator(Evaluator):
                         }
                     )
             self.important_citations = important_citations
-        print(self.important_citations)
+        logger.debug("Loaded important citations: %s", self.important_citations)
 
     def _calculate(self, parser: Parser) -> float:
         paper_important_citations = self.important_citations.get(
@@ -84,12 +87,12 @@ class ReferenceCoverageEvaluator(Evaluator):
         covered_important = 0
 
         for important_cite in paper_important_citations:
-            print(important_cite)
+            logger.debug("Processing important citation: %s", important_cite)
             important_title = str(important_cite["title"]).strip() or ""
             important_arxiv = str(important_cite["arxiv_link"]).strip() or ""
             match = re.search(r"(\d+\.\d+)(?:v\d+)?", important_arxiv)
             important_arxiv_id = match.group(1) if match else None
-            print(important_arxiv_id)
+            logger.debug("Important arxiv_id: %s", important_arxiv_id)
             for citations in parser.docs:
                 found_title = str(citations["title"]) or ""
                 found_abstract = str(citations["sent"]) or ""
@@ -102,7 +105,7 @@ class ReferenceCoverageEvaluator(Evaluator):
                     break
 
                 similarity = calculate_title_similarity(important_title, found_title)
-                print(found_title, similarity)
+                logger.debug("Title: %s, similarity: %s", found_title, similarity)
                 if similarity > 0.8:
                     covered_important += 1
                     break
