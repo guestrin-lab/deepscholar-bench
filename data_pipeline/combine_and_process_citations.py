@@ -93,19 +93,16 @@ def main():
     parser.add_argument(
         "--citations_folder",
         type=str,
-        default="/future/u/negara/home/deepscholar/deepscholar-bench/data_pipeline/outputs/citations",
         help="Folder containing individual citation CSV files",
     )
     parser.add_argument(
         "--papers_csv",
         type=str,
-        default="/future/u/negara/home/deepscholar/deepscholar-bench/data_pipeline/outputs/20251015_143311/paper_content_filtered_with_citations.csv",
         help="Path to papers CSV file",
     )
     parser.add_argument(
         "--output_dir",
         type=str,
-        default="/future/u/negara/home/deepscholar/deepscholar-bench/data_pipeline/outputs/20251015_143311",
         help="Output directory for results",
     )
     parser.add_argument(
