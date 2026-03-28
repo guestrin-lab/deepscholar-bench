@@ -68,6 +68,15 @@ class ArxivScraper:
         unique_papers = list(set(all_papers))
         logger.info(f"Found {len(unique_papers)} unique papers across all categories")
 
+        # Filter for published/accepted papers if enabled
+        if self.config.filter_accepted_papers:
+            published_papers = self._filter_published_papers(unique_papers)
+            logger.info(
+                f"After publication filter: {len(published_papers)} papers remain "
+                f"(filtered out {len(unique_papers) - len(published_papers)})"
+            )
+            return published_papers
+
         return unique_papers
 
     async def fetch_paper_by_id(self, arxiv_id: str) -> ArxivPaper | None:
@@ -155,3 +164,26 @@ class ArxivScraper:
         except Exception as e:
             logger.error(f"Error converting result to paper: {e}")
             return None
+
+    def _filter_published_papers(self, papers: list[ArxivPaper]) -> list[ArxivPaper]:
+        """
+        Filter papers to keep only those with 'published' or 'accepted' in comments.
+        
+        Args:
+            papers: List of ArxivPaper objects
+            
+        Returns:
+            Filtered list of papers with publication info in comments
+        """
+        published_papers = []
+        
+        for paper in papers:
+            if paper.comments:
+                comments_lower = paper.comments.lower()
+                if "published" in comments_lower or "accepted" in comments_lower:
+                    published_papers.append(paper)
+                    logger.debug(
+                        f"✓ Paper {paper.arxiv_id} has publication info: {paper.comments}"
+                    )
+            
+        return published_papers

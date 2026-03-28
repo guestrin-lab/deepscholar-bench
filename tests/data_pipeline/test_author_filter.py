@@ -157,7 +157,7 @@ class TestAuthorFilter:
         assert result.affiliation is None
         assert result.citations is None
 
-    @patch("data_pipeline.author_filter.AuthorFilter._paper_meets_hindex_criteria")
+    @patch("data_pipeline.author_filter.AuthorFilter.paper_meets_hindex_criteria")
     @patch("data_pipeline.author_filter.asyncio.sleep")
     async def test_filter_papers_by_author_hindex(
         self, mock_sleep, mock_meets_criteria, sample_config, sample_papers

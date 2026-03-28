@@ -16,6 +16,14 @@ query_in = "Carefully read the {title}, {abstract} and {related_work_section} of
 def get_important_citations(
     citation_df: pd.DataFrame, related_works_df: pd.DataFrame
 ) -> pd.DataFrame:
+    # Handle different column name variations
+    if "title" not in related_works_df.columns and "paper_title" in related_works_df.columns:
+        related_works_df["title"] = related_works_df["paper_title"]
+    
+    # Handle related works section column name
+    if "related_works_section" in related_works_df.columns and "clean_latex_related_works" not in related_works_df.columns:
+        related_works_df["clean_latex_related_works"] = related_works_df["related_works_section"]
+    
     joined_df = citation_df.merge(
         related_works_df, left_on="parent_paper_title", right_on="title", how="left"
     )
@@ -44,15 +52,16 @@ def print_stats(df: pd.DataFrame, joined_df: pd.DataFrame):
     print(
         f"Total num important cites: {len(df)} ({len(df) / len(joined_df) * 100:.2f}%)"
     )
-    print(
-        f"Total num important arxiv cites: {len(df[df.is_arxiv_paper])} ({len(df[df.is_arxiv_paper]) / len(df) * 100:.2f}%)"
-    )
-    print(
-        f"Mean citations per paper: {df.groupby('parent_paper_title').agg({'cited_paper_title': 'count'}).mean()}"
-    )
-    print(
-        f"Mean citations per paper: {df.groupby('parent_paper_title').agg({'cited_paper_title': 'count'}).mean()}"
-    )
+    if 'is_arxiv_paper' in df.columns:
+        arxiv_count = len(df[df.is_arxiv_paper])
+        print(
+            f"Total num important arxiv cites: {arxiv_count} ({arxiv_count / len(df) * 100:.2f}%)"
+        )
+    else:
+        print("Total num important arxiv cites: (column not available)")
+    
+    mean_cites = df.groupby('parent_paper_title').agg({'cited_paper_title': 'count'}).mean().values[0] if len(df) > 0 else 0
+    print(f"Mean citations per paper: {mean_cites:.2f}")
 
 
 if __name__ == "__main__":

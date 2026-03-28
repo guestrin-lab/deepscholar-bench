@@ -13,8 +13,8 @@ class PipelineConfig:
     """Configuration for the arxiv data collection pipeline."""
 
     # Date filtering (required fields first)
-    start_date: datetime  # Start date for paper search
-    end_date: datetime  # End date for paper search
+    start_date: datetime | None = None # Start date for paper search
+    end_date: datetime | None = None # End date for paper search
 
     existing_papers_csv: Optional[str] = None
 
@@ -34,6 +34,7 @@ class PipelineConfig:
     max_author_hindex: Optional[int] = None  # Maximum h-index (optional upper bound)
 
     # Paper filtering
+    filter_accepted_papers: bool = False  # Filter only papers with "published" or "accepted" in comments
     max_papers_per_category: int = (
         100  # Limit papers per category to avoid overwhelming
     )

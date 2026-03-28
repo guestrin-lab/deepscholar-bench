@@ -198,3 +198,8 @@ cython_debug/
 
 # Data pipeline outputs
 data_pipeline/outputs/
+data_pipeline/lotus_gpt-4.1_2_2
+data_pipeline/outputs_oct
+results/
+
+outputs/

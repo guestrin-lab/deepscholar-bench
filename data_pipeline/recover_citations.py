@@ -62,24 +62,49 @@ def search_arxiv_api(title: str) -> Dict[str, str] | None:
     except Exception as _:
         return None
 
+@tenacity.retry(
+    stop=tenacity.stop_after_attempt(3),
+    wait=tenacity.wait_exponential(multiplier=1, min=4, max=10),
+)
+def search_arxiv_id(arxiv_id: str) -> Dict[str, str] | None:
+    """
+    Search arXiv API for an arXiv ID and return title, url, and content of the first result
+    """
+    print(f"Searching arXiv ID for {arxiv_id}...")
+    search = arxiv.Search(id_list=[arxiv_id])
+    
+    results = list(arxiv_client.results(search))
+    if results:
+        return {
+            "original_title": results[0].title,
+            "search_res_title": results[0].title,
+            "search_res_url": results[0].pdf_url,
+            "search_res_content": results[0].summary,
+        }
+    else:
+        return None
 
+include_header=True
 def save_results(
     results: List[Dict[str, str]], df: pd.DataFrame, output_file_path: str
 ):
+    global include_header
     if not results:
         return
     df_results = pd.DataFrame(results)
-    df_results.to_csv(output_file_path, index=False, mode="a")
-
+    df_results.to_csv(output_file_path, index=False, mode="a", header=include_header)
+    include_header = False
 
 def process_dataset(csv_file_path: str, output_file_path: str):
     """
     Process the dataset and find arXiv matches.
     """
+    global include_header
     # Read the CSV file
     df = pd.read_csv(csv_file_path)
     if os.path.exists(output_file_path):
         existing_df: pd.DataFrame = pd.read_csv(output_file_path)
+        include_header = False
     else:
         existing_df = pd.DataFrame(columns=df.columns)
 
@@ -103,6 +128,14 @@ def process_dataset(csv_file_path: str, output_file_path: str):
             )
             continue
         # Search arXiv API
+        if not pd.isna(row['cited_paper_arxiv_link']):
+            print(f"Searching arXiv API for {row['cited_paper_arxiv_link'][:50]}...")
+            arxiv_id = row['cited_paper_arxiv_link'].split('/')[-1]
+            api_match = search_arxiv_id(arxiv_id)
+            if api_match is not None:
+                print(f"arXiv match found for {title[:50]}...")
+                results.append({**row.to_dict(), **api_match})
+                continue
         api_match = search_arxiv_api(title)
         if api_match is None:
             print(f"No arXiv match found for {title[:50]}...")
@@ -116,7 +149,7 @@ def process_dataset(csv_file_path: str, output_file_path: str):
             print(f"arXiv match found for {title[:50]}...")
         results.append({**row.to_dict(), **api_match})
 
-        if index % 100 == 0:
+        if index % 10 == 0:
             save_results(results, df, output_file_path)
             results = []
         # Add a small delay to be respectful to the API

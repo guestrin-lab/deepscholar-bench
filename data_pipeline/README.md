@@ -12,6 +12,8 @@ This pipeline automates the complete workflow from paper discovery to insight ex
 5. **Recovering missing citation metadata** using external APIs
 6. **Identifying important citations** using LLM-based filtering
 7. **Generating informational nuggets** from related works sections
+8. **Quality filtering papers** based on related works completeness and citation counts
+9. **Adding reference citation counts** using OpenAlex API for all references in related works
 
 ## 🚀 Complete Workflow
 
@@ -65,34 +67,117 @@ Uses LLM analysis to identify citations that are truly important to each paper's
 
 ```bash
 python -m data_pipeline.get_important_citations \
-    --citation_input_file recovered_citations.csv \
-    --related_works_input_file papers_with_related_works_YYYYMMDD_HHMMSS.csv \
+    --citation_input_file all_citations.csv \
+    --related_works_input_file paper_content_filtered_with_citations.csv \
     --model gpt-4o \
     --output_file important_citations.csv
 ```
 
 **What it does:**
-- Analyzes each citation in context of its parent paper
+- Analyzes each citation in context of its parent paper (title, abstract, related works section)
 - Determines if citations are important vs. tangential/substitutable
 - Filters out non-important references
 - Provides a curated list of the most important prior work
+
+**Prerequisites:**
+- Combined citations CSV file (if you have individual citation files, combine them first)
+- Papers CSV file with related works sections
+
+**Configuration Options:**
+- `--citation_input_file`: Combined citations CSV file (required)
+- `--related_works_input_file`: Papers CSV file with related works sections (required)
+- `--model`: LLM model to use (required, e.g., gpt-4o)
+- `--output_file`: Output important citations CSV file (required)
+
+**Note:** If you have individual citation CSV files (one per paper), you'll need to combine them first before running this script. You can use a simple script or pandas to concatenate all citation files from the `outputs/citations/` folder.
 
 ### Step 4: Nugget Generation (`generate_nuggets_from_reports.py`)
 
 Extracts key informational "nuggets" from related works sections using the nuggetizer library.
 
 ```bash
-python -m data_pipeline.generate_nuggets_from_reports \
-    --output_dir gt_nuggets_outputs \
-    --model gpt-4.1
+
+
+
+# Specify input directory (default: outputs/20251015_143311)
+python data_pipeline/generate_nuggets_from_reports.py \
+    --input_dir outputs/20251015_143311
+
+# Use different CSV file and model
+python data_pipeline/generate_nuggets_from_reports.py \
+    --input_dir outputs/20251015_143311 \
+    --csv_file paper_content_filtered.csv \
+    --model gpt-4o \
+
 ```
 
 **What it does:**
-- Processes related works sections to identify key claims
-- Scores nuggets by importance and relevance
-- Assigns support levels (support, partial_support, etc.)
-- Calculates comprehensive metrics for each paper
-- Outputs structured JSON and CSV files with detailed nugget analysis
+- Processes related works sections from papers to identify key informational nuggets
+- Uses LLM to extract atomic information claims from related works sections
+- Scores nuggets by importance (vital vs. okay)
+
+
+**Output Structure:**
+- Creates `nuggets/` folder in the input directory (or specified output directory)
+- Each paper gets its own folder: `nuggets/{arxiv_id}/res.json`
+- Output JSON contains:
+  - `qid`: ArXiv ID
+  - `query`: The prompt used (related works section generation based on abstract)
+  - `nuggets`: All extracted nuggets with importance and assignment
+  - `supported_nuggets`: Fully supported nuggets only
+  - `partially_supported_nuggets`: Nuggets with partial or full support
+
+**Configuration Options:**
+- `--input_dir`: Path to input directory containing CSV file (default: outputs/20251015_143311)
+- `--csv_file`: CSV file name in input directory (default: paper_content_filtered.csv)
+- `--output_dir`: Output directory for nuggets (default: input_dir/nuggets)
+- `--model`: LLM model for nuggetizer (default: gpt-4o)
+- `--log_level`: Logging verbosity 0-2 (default: 1)
+- `--skip_existing`: Skip papers that already have nuggets generated
+- `--use_azure_openai`: Use Azure OpenAI instead of standard OpenAI
+- `--use_vllm`: Use vLLM API endpoint
+
+### Step 5: Quality Filtering (`filter_quality_papers.py`)
+
+Filters papers based on related works quality and citation count to ensure high-quality datasets for downstream tasks.
+
+```bash
+# Single folder - standard quality
+python filter_quality_papers.py --input-folder outputs/20251015_143311/
+
+# All folders in outputs/
+./batch_filter_papers.sh
+
+# Custom thresholds
+python filter_quality_papers.py \
+    --input-folder outputs/20251015_143311/ \
+    --min-citations 10 \
+    --min-rw-length 500 \
+    --max-rw-length 8000
+```
+
+**What it does:**
+- Filters papers with no related works section
+- Removes papers with very short related works (< 200 chars default)
+- Removes papers with excessively long related works (> 10000 chars default)
+- Filters papers with fewer than 5 citations (default)
+
+**Quality Presets:**
+
+| Goal | min_citations | min_rw_length | max_rw_length |
+|------|--------------|---------------|---------------|
+| **Strict** | 15 | 800 | 8000 |
+| **Standard** | 5 | 200 | 10000 |
+| **Lenient** | 3 | 100 | 15000 |
+| **Surveys** | 20 | 1000 | 20000 |
+
+**Outputs:**
+- New folder with the name of the input folder, but with the suffix _filtered or the name of the output folder specified in the command.
+    - `paper_content.csv` - Filtered paper data
+    - `papers.csv` - Filtered paper metadata
+    - `papers_with_related_works.csv` - Filtered paper and related works data
+    - `related_works_combined.csv` - Filtered related works data
+    - `citations.csv` - Filtered citations data
 
 ## 📊 Output Files
 
@@ -105,14 +190,6 @@ python -m data_pipeline.generate_nuggets_from_reports \
 | `citations_*.csv` | Individual citations from papers | `parent_paper_title`, `cited_paper_title`, `has_metadata`, `is_arxiv_paper` |
 | `citation_stats_*.csv` | Aggregated citation statistics | `total_citations`, `resolution_rate`, `arxiv_citation_rate` |
 | `papers_with_related_works_*.csv` | **Main output**: Combined paper and related works data | All paper metadata + related works content |
-
-### Enhanced Outputs (Steps 2-4)
-
-| File | Description |
-|------|-------------|
-| `recovered_citations.csv` | Citations with enhanced metadata from external APIs |
-| `important_citations.csv` | LLM-filtered list of important citations only |
-| `gt_nuggets_outputs/` | Directory containing nugget analysis for each paper (JSON + CSV) |
 
 ## ⚙️ Configuration Options
 
@@ -141,16 +218,35 @@ python -m data_pipeline.generate_nuggets_from_reports \
 - `--input_file`: Input citations CSV
 - `--output_file`: Output enhanced citations CSV
 
-**Essential Citations:**
-- `--citation_input_file`: Citations CSV (preferably recovered)
-- `--related_works_input_file`: Papers with related works CSV
-- `--model`: LLM model (e.g., gpt-4o)
-- `--output_file`: Output important citations CSV
+**Important Citations:**
+- `--citation_input_file`: Combined citations CSV file (required)
+- `--related_works_input_file`: Papers CSV file with related works sections (required)
+- `--model`: LLM model (e.g., gpt-4o, required)
+- `--output_file`: Output important citations CSV file (required)
 
 **Nugget Generation:**
-- `--output_dir`: Output directory for nugget files
-- `--model`: LLM model (e.g., gpt-4.1)
-- `--log_level`: Logging verbosity (0=warning, 1=info, 2=debug)
+- `--input_dir`: Path to input directory containing CSV file (default: outputs/20251015_143311)
+- `--csv_file`: CSV file name in input directory (default: paper_content_filtered.csv)
+- `--output_dir`: Output directory for nugget files (default: input_dir/nuggets)
+- `--model`: LLM model (e.g., gpt-4o, default: gpt-4o)
+- `--log_level`: Logging verbosity (0=warning, 1=info, 2=debug, default: 1)
+- `--skip_existing`: Skip papers that already have nuggets generated
+- `--use_azure_openai`: Use Azure OpenAI instead of standard OpenAI
+- `--use_vllm`: Use vLLM API endpoint
+
+**Quality Filtering:**
+- `--input-folder`: Path to folder containing `paper_content.csv` (required)
+- `--min-citations`: Minimum number of citations required (default: 5)
+- `--min-rw-length`: Minimum related works length in characters (default: 200)
+- `--max-rw-length`: Maximum related works length in characters (default: 10000)
+- `--citations-folder`: Path to citations folder (default: ../citations/)
+- `--output-suffix`: Suffix for output filenames (default: _filtered)
+
+**Reference Citation Counts:**
+- `--papers-csv`: Path to papers CSV file (required)
+- `--citations-folder`: Path to folder containing citation CSV files (required)
+- `--output-csv`: Output CSV path (if not provided, overwrites input)
+- `--rate-limit-delay`: Delay between API requests in seconds (default: 0.05)
 
 ## 📋 Example Workflows
 
@@ -167,15 +263,24 @@ python -m data_pipeline.recover_citations \
 
 # Step 3: Filter to important citations
 python -m data_pipeline.get_important_citations \
-    --citation_input_file recovered_citations.csv \
-    --related_works_input_file outputs/20240101_120000/papers_with_related_works.csv \
+    --citation_input_file outputs/20240101_120000/all_citations.csv \
+    --related_works_input_file outputs/20240101_120000/paper_content_filtered_with_citations.csv \
     --model gpt-4o \
-    --output_file important_citations.csv
+    --output_file outputs/20240101_120000/important_citations.csv
 
 # Step 4: Generate nuggets from related works
 python -m data_pipeline.generate_nuggets_from_reports \
-    --output_dir nugget_analysis \
-    --model gpt-4.1
+    --input_dir outputs/20240101_120000 \
+    --model gpt-4o
+
+# Step 5: Filter for quality papers
+python -m data_pipeline.filter_quality_papers --input-folder outputs/20240101_120000/ --output-folder outputs/20240101_120000_filtered/
+
+# Step 6: Add reference citation counts
+python -m data_pipeline.add_reference_citations \
+    --papers-csv outputs/20240101_120000_filtered/paper_content.csv \
+    --citations-path outputs/20240101_120000_filtered/citations.csv \
+    --output-csv outputs/20240101_120000_filtered/paper_content_with_citations.csv
 ```
 
 ### Quick Testing
@@ -211,6 +316,8 @@ python -m data_pipeline.main --paper-id 2502.07374 --min-hindex 0
 ### Quality Control
 - **Author filtering**: H-index-based quality filtering using Semantic Scholar
 - **Content validation**: Minimum citation requirements and section length checks
+- **Post-processing filtering**: Removes papers with incomplete/inadequate related works sections
+- **Citation quality**: Ensures papers have sufficient extracted citations (configurable threshold)
 - **Error handling**: Graceful failures with detailed logging
 - **Rate limiting**: Configurable delays to respect API limits
 
@@ -234,6 +341,7 @@ python -m data_pipeline.main --paper-id 2502.07374 --min-hindex 0
 - **ArXiv API**: Respect rate limits, use appropriate delays
 - **Semantic Scholar**: Author h-index lookup may fail for some authors
 - **Tavily API**: Requires API key for citation recovery
+- **OpenAlex API**: Free API for citation counts (respects rate limits with built-in delays)
 - **OpenAI/Anthropic**: Required for LLM-based important citation filtering and nugget generation
 
 ### Resource Requirements

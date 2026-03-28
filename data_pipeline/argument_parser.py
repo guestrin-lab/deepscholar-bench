@@ -139,7 +139,7 @@ def parse_args():
     parser.add_argument(
         "--min-hindex",
         type=int,
-        default=20,
+        default=0,
         help="Minimum h-index for at least one author",
     )
     parser.add_argument(
@@ -147,6 +147,13 @@ def parse_args():
         type=int,
         default=None,
         help="Maximum h-index (optional upper bound)",
+    )
+
+    # Paper filtering
+    parser.add_argument(
+        "--filter-accepted-papers",
+        action="store_true",
+        help="Filter only papers with 'published' or 'accepted' in comments",
     )
 
     # Paper limits
@@ -237,14 +244,20 @@ def parse_args():
     start_date = datetime.strptime(args.start_date, "%Y-%m-%d")
     end_date = datetime.strptime(args.end_date, "%Y-%m-%d")
 
+    categories = []
+    for category in args.categories:
+        categories.extend(category.split("\n"))
+    print(f"Categories: {categories}")
+
     # Create configuration
     config = PipelineConfig(
         start_date=start_date,
         end_date=end_date,
         existing_papers_csv=args.existing_papers_csv,
-        arxiv_categories=args.categories,
+        arxiv_categories=categories,
         min_author_hindex=args.min_hindex,
         max_author_hindex=args.max_hindex,
+        filter_accepted_papers=args.filter_accepted_papers,
         max_papers_per_category=args.max_papers_per_category,
         min_citations_in_related_works=args.min_citations,
         output_dir=args.output_dir,

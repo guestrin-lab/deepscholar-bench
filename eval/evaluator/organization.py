@@ -35,6 +35,7 @@ class OrganizationEvaluator(Evaluator):
             },
             inplace=True,
         )
+        df.head()
         results: pd.DataFrame = df.pairwise_judge(
             col1="related_work_a",
             col2="related_work_b",
@@ -44,15 +45,37 @@ class OrganizationEvaluator(Evaluator):
             permute_cols=True,  # evaluate both (A,B) and (B,A) orders
             response_format=OrganizationResponse,
         )
+        
+        # _judge_0 compares (A, B)
+        # _judge_1 compares (B, A) due to permute_cols=True
+        # decision "A" means A is better, "B" means B is better
+        def safe_get_decision(judge_response, default="B"):
+            """Safely extract decision from judge response, handling edge cases."""
+            if not hasattr(judge_response, "decision"):
+                return default
+            decision = str(judge_response.decision).strip().upper()
+            # Check if "A" or "B" is in the decision string (more robust)
+            if "A" in decision:
+                return "A"
+            elif "B" in decision:
+                return "B"
+            else:
+                return default
+        
         results["score_1"] = results["_judge_0"].map(
-            lambda x: 1 if x.decision == "A" else 0
+            lambda x: 1 if safe_get_decision(x, "B") == "A" else 0
         )
         results["score_2"] = results["_judge_1"].map(
-            lambda x: 1 if x.decision == "B" else 0
+            lambda x: 1 if safe_get_decision(x, "B") == "A" else 0
         )
+        # Store individual scores as organization_v1 and organization_v2
+        results["organization_v1"] = results["score_1"]
+        results["organization_v2"] = results["score_2"]
+        # Calculate final organization score as average
         results[self.evaluation_function.value] = (
             results["score_1"] + results["score_2"]
         ) / 2
+        # Drop intermediate columns but keep organization_v1 and organization_v2
         results.drop(
             columns=["_judge_0", "_judge_1", "score_1", "score_2"], inplace=True
         )

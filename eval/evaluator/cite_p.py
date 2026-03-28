@@ -30,6 +30,9 @@ class CitePEvaluator(Evaluator):
             for r in ref:
                 if r > len(parser.docs) - 1 or r < 0:
                     continue
+                # Check if citations_for_cite_quality is available
+                if parser.citations_for_cite_quality is None or r >= len(parser.citations_for_cite_quality):
+                    continue
                 current_doc = _format_document(parser.citations_for_cite_quality[r])
                 single_entail = get_support(current_doc, target)
                 correct_citations.append(single_entail)

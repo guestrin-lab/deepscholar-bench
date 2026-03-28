@@ -1,0 +1,205 @@
+folder_path,paper_title,paper_abstract,related_work_a,related_work_b,organization
+tests/baselines_results/deepscholar_base_gpt_4.1/0,Universal Domain Adaptation for Semantic Segmentation,"Unsupervised domain adaptation for semantic segmentation (UDA-SS) aims to
+transfer knowledge from labeled source data to unlabeled target data. However,
+traditional UDA-SS methods assume that category settings between source and
+target domains are known, which is unrealistic in real-world scenarios. This
+leads to performance degradation if private classes exist. To address this
+limitation, we propose Universal Domain Adaptation for Semantic Segmentation
+(UniDA-SS), achieving robust adaptation even without prior knowledge of
+category settings. We define the problem in the UniDA-SS scenario as low
+confidence scores of common classes in the target domain, which leads to
+confusion with private classes. To solve this problem, we propose UniMAP:
+UniDA-SS with Image Matching and Prototype-based Distinction, a novel framework
+composed of two key components. First, Domain-Specific Prototype-based
+Distinction (DSPD) divides each class into two domain-specific prototypes,
+enabling finer separation of domain-specific features and enhancing the
+identification of common classes across domains. Second, Target-based Image
+Matching (TIM) selects a source image containing the most common-class pixels
+based on the target pseudo-label and pairs it in a batch to promote effective
+learning of common classes. We also introduce a new UniDA-SS benchmark and
+demonstrate through various experiments that UniMAP significantly outperforms
+baselines. The code is available at
+\href{https://github.com/KU-VGI/UniMAP}{this https URL}.","## Related Works
+
+Economic inequality and the design of effective, adaptive tax policies have been central topics in computational economics, agent-based modeling, and artificial intelligence research. This section reviews key contributions in these areas, focusing on agent-based simulations of tax and redistribution, the integration of machine learning and reinforcement learning for fiscal policy, and the evolution of optimal taxation frameworks.
+
+### Agent-Based and Computational Models of Taxation and Inequality
+
+Agent-based modeling (ABM) has become a prominent approach for studying the emergence and mitigation of economic inequality. Early ABM studies demonstrated that wealth and income distributions observed empirically can be reproduced through simple models of agent interactions, with taxation and redistribution mechanisms playing a critical role in shaping steady-state inequality. For example, kinetic exchange models have shown that redistributive taxation can significantly reduce inequality, even in the presence of spatial segregation or heterogeneous agent interactions, whereas individual saving propensities alone are insufficient to counteract inequality in segregated economies \[1]\]. Extensions of these models have incorporated non-uniform income redistribution policies and tax evasion, finding that well-designed redistribution and strict control of tax planning are essential for promoting more egalitarian and sustainable societies \[2]\].
+
+Further, micro-to-macro kinetic models have been developed to explain the emergence of income profiles from individual interactions, with ternary interactions representing taxation and redistribution. Computational simulations using these models have shown that the Gini index is more sensitive to reductions in welfare and subsidies for the rich than to increases in upper tax rates, suggesting that targeted welfare policies can be more effective in reducing inequality \[3]\]. Other studies have explored the effects of tax dynamics in systems with stochastic resetting, revealing that increasing taxation can transition a society from one dominated by poverty to one where wealth is more evenly distributed, with optimal taxation levels producing complete economic equality under certain conditions \[4]\].
+
+### Machine Learning, Reinforcement Learning, and AI-Driven Tax Policy
+
+Recent advances have leveraged machine learning and reinforcement learning to design and evaluate adaptive tax policies. The AI Economist framework introduced a two-level deep reinforcement learning approach, where both agents and a government learn and adapt within a simulated economy. This approach enables the discovery of tax policies that improve the trade-off between equality and productivity, outperforming traditional frameworks such as the Saez Optimal Taxation model. Notably, AI-driven tax policies set higher top tax rates and provide greater net subsidies for low incomes, and they remain robust against emergent tax-gaming strategies by agents \[5]\]. Similar approaches have used deep Q-learning to model the tax evasion behavior of risk-averse firms, providing a testbed for evaluating tax policies and offering policy recommendations based on simulated taxpayer responses \[6]\].
+
+Agent-based simulations powered by large language models (LLMs) and deep reinforcement learning have also been proposed to study the organic emergence of informal economic behaviors, such as tax evasion, without presupposing their existence. These frameworks allow for the exploration of socio-economic determinants of compliance, highlighting the complementary roles of efficient public goods provision and robust enforcement mechanisms in curtailing informal activity \[7]\]. Multi-agent economic models with reinforcement learning agents of various types have been used to investigate the impact of tax credit allocation on household behavior, demonstrating that strategic distribution of tax credits can ameliorate inequalities across households \[8]\].
+
+### Optimal Taxation Theory and Extensions
+
+The theory of optimal taxation, notably the Mirrlees model, has long provided a foundation for tax policy design. However, it has been observed that the Mirrlees paradigm, which maximizes total utility, often fails to produce progressive tax schedules consistent with ethical and practical considerations in developed economies. Recent work has proposed augmenting the objective function with the standard deviation of utility, analogous to portfolio optimization, to yield more transparent and interpretable optimality criteria for income tax \[9]\]. Kinetic models for optimal control of wealth inequalities have introduced model predictive control strategies to minimize wealth variance, offering alternative theoretical approaches to taxation and redistribution at the macro level \[10]\].
+
+Dynamic approaches to optimal taxation have drawn analogies to physical processes, such as the heat equation, to describe the smoothing of tax burdens across incomes. The ""fairness principle"" posits that the optimal tax at any income is a weighted average of optimal taxes at other incomes, providing a unified framework for reforming nonlinear income tax schedules \[11]\]. Other studies have analytically solved models coupling public and private sectors through wealth tax and redistribution, identifying conditions under which optimal tax rates maximize economic growth while balancing residual inequality \[12]\].
+
+### Fiscal Policy, Redistribution, and Social Welfare
+
+The broader literature on fiscal policy emphasizes the importance of redistribution and government intervention in reducing inequality and promoting social welfare. Computational analyses have shown that the financial accumulation process, particularly compound returns, is a major driver of inequality, but institutional arrangements such as taxation can significantly shape aggregate economic outcomes \[13]\]. Fiscal policy models with endogenous positional concerns demonstrate that government consumption funded by taxes on labor income and wealth can move economies toward egalitarian equilibria, even when initial inequality is high \[14]\]. Simulations of service economies with random transactions have highlighted the influence of tax rates and government spending on economic behavior, sales, and overall stability \[15]\].
+
+Empirical and simulation-based studies have also examined the effectiveness of fiscal multipliers, finding that increasing government spending is generally more effective in stimulating the economy than reducing taxes \[16]\]. During economic crises, such as the COVID-19 pandemic, agent-based macroeconomic-epidemiological models have shown that anticyclical fiscal policy—expansionary government spending during downturns—can limit economic losses and support rapid recovery without increasing mortality \[17]\]. The balance between monetary and fiscal policy, particularly the allocation of government support to lower-income households, has been identified as crucial for optimizing growth and investment opportunities \[18]\].
+
+### Tax Evasion, Loopholes, and Enforcement
+
+Tax evasion and avoidance remain persistent challenges in the design of equitable tax systems. Agent-based and reinforcement learning models have been used to simulate the emergence and dynamics of tax evasion, revealing that individual personality traits, external narratives, enforcement probabilities, and perceptions of public goods provision all influence compliance behavior \[7]\]\[6]\]. AI-driven systems have been developed to systematically identify and address tax loopholes, enhancing social welfare by closing gaps in tax policy \[19]\]. The interplay between enforcement, audit probabilities, and taxpayer risk aversion has been explored to inform the design of more effective tax policies \[6]\].
+
+### Multi-Objective and Environmental Taxation
+
+Beyond traditional income and wealth taxation, multi-objective optimization frameworks have been applied to environmental taxation and resource extraction. Differential game and Stackelberg game approaches model the interaction between government regulators and private firms, balancing objectives such as tax revenue maximization and environmental damage minimization. Analytical and evolutionary algorithm solutions provide optimal taxation and extraction strategies under various scenarios \[20]\]\[21]\]. In the context of climate policy, constrained efficient carbon taxation has been studied in heterogeneous agent models, with financial frictions and cost-sharing schemes significantly affecting optimal abatement levels and distributional outcomes \[22]\].
+
+### Summary Table: Key Approaches in Adaptive Tax Policy Research
+
+| Approach/Model                        | Key Features                                                      | Representative References |
+|---------------------------------------|-------------------------------------------------------------------|--------------------------|
+| Agent-Based Modeling (ABM)            | Simulates heterogeneous agents, emergent inequality, redistribution | \[2]\]\[1]\]\[3]\]\[4]\]          |
+| Reinforcement Learning & AI           | Adaptive tax policy discovery, agent learning, robustness to gaming | \[7]\]\[8]\]\[5]\]\[6]\]           |
+| Optimal Taxation Theory               | Analytical models, utility maximization, fairness principles        | \[10]\]\[11]\]\[9]\]\[12]\]          |
+| Fiscal Policy & Redistribution        | Government spending, welfare, fiscal multipliers, crisis response   | \[13]\]\[15]\]\[14]\]\[16]\]\[18]\]\[17]\]  |
+| Tax Evasion & Loophole Detection      | Simulation of evasion, AI for loophole identification               | \[7]\]\[6]\]\[19]\]              |
+| Environmental & Multi-Objective Tax   | Resource extraction, environmental damage, multi-objective games    | \[20]\]\[22]\]\[21]\]              |
+
+### Conclusion
+
+The intersection of agent-based modeling, machine learning, and optimal taxation theory has produced a rich body of research on adaptive tax policy and economic inequality. Recent advances demonstrate the potential of integrating large language models and reinforcement learning within agent-based simulations to design tax policies that dynamically balance equity and productivity, address taxpayer heterogeneity, and remain robust to strategic behavior. These developments provide a foundation for scalable, data-driven frameworks for fiscal policy evaluation and highlight the importance of continued interdisciplinary research in this domain.
+
+---
+
+**References**
+
+\[7]\] Investigating Tax Evasion Emergence Using Dual Large Language Model and Deep Reinforcement Learning Powered Agent-based Simulation  
+\[10]\] Kinetic models for optimal control of wealth inequalities  
+\[8]\] Analyzing the Impact of Tax Credits on Households in Simulated Economic Systems with Learning Agents  
+\[20]\] Optimal Extraction and Taxation of Strategic Natural Resources: A Differential Game Approach  
+\[2]\] Effects of taxes, redistribution actions and fiscal evasion on wealth inequality: an agent-based model approach  
+\[13]\] Inequality, mobility and the financial accumulation process: A computational economic analysis  
+\[11]\] Tax Mechanisms and Gradient Flows  
+\[9]\] A new approach to the theory of optimal income tax  
+\[1]\] Effect of segregation on inequality in kinetic models of wealth exchange  
+\[15]\] Dynamics of a Service Economy Driven by Random Transactions  
+\[14]\] Fiscal policy and inequality in a model with endogenous positional concerns  
+\[22]\] Climate uncertainty, financial frictions and constrained efficient carbon taxation  
+\[5]\] The AI Economist: Improving Equality and Productivity with AI-Driven Tax Policies  
+\[3]\] Microscopic Models for Welfare Measures Addressing a Reduction of Economic Inequality  
+\[6]\] Using deep Q-learning to understand the tax evasion behavior of risk-averse firms  
+\[16]\] Estimating Fiscal Multipliers by Combining Statistical Identification with Potentially Endogenous Proxies  
+\[4]\] Effect of tax dynamics on linearly growing processes under stochastic resetting: a possible economic model  
+\[18]\] Preliminary steps toward a universal economic dynamics for monetary and fiscal policy  
+\[21]\] Multi-objective Stackelberg Game Between a Regulating Authority and a Mining Company: A Case Study in Environmental Economics  
+\[19]\] Can AI expose tax loopholes? Towards a new generation of legal policy assistants  
+\[12]\] On growth-optimal tax rates and the issue of wealth inequalities  
+\[17]\] COVID-Town: An Integrated Economic-Epidemiological Agent-Based Model","\subsection{Semantic Segmentation.}
+Semantic segmentation aims to classify each pixel in an image into a specific semantic. A foundational approach, Fully Convolutional Networks (FCNs)~\cite{long2015fully}, has demonstrated impressive performance in this task. To enhance contextual understanding, subsequent works have introduced methods such as dilated convolutions ~\cite{chen2017deeplab}, global pooling ~\cite{liu2015parsenet}, pyramid pooling ~\cite{zhao2017pyramid}, and attention mechanisms~\cite{zhao2018psanet, zhu2019asymmetric}.  More recently, transformer-based methods have achieved significant performance gains ~\cite{xie2021segformer, zheng2021rethinking}.  Despite various studies, semantic segmentation models are still vulnerable to domain shifts or category shifts. To address this issue, we propose a universal domain adaptation for semantic segmentation that handles domain shifts and category shifts.
+% \vspace{-1mm}
+
+\subsection{Unsupervised Domain Adaptation for Semantic Segmentation.}
+% The goal of Unsupervised Domain Adaptation (UDA) is to bridge the domain gap by transferring the knowledge from the labeled source domain to the unlabeled target domain. UDA is an important task for semantic segmentation because it can efficiently solve the cost problem of per-pixel annotation. The general ideas for UDA semantic segmentation include adversarial learning~\cite{hong2018conditional,kim2020learning,tsai2018learning} and self-training strategy~\cite{tranheden2021dacs,hoyer2022daformer,hoyer2023mic}. We briefly review some recent works. First, adversarial learning-based methods employ a discriminator network. A segmentation network generates the segmentation maps of the different domains, and the discriminator network is trained to predict the domain between the source and target domain. The segmentation network aims to fool the discriminator. Then, it ensures that the features of the two domains have a similar distribution. In recent years, self-training methods have shown significant performance improvement in UDA. The self-training approach generates the segmentation map of the given target image and obtains pseudo labels by collecting only the results of pixels whose confidence score exceeds a certain threshold. The generated pseudo labels then iteratively re-train the model with both the ground truth of the source domain and pseudo labels of the target domain. At this time, since the quality of the pseudo labels is crucial, various studies have been conducted to refine the noisy pseudo labels. However, this research is primarily conducted in a closed-set setting, assuming complete alignment of label sets between the source and target domains. In real-world scenarios, the absence of labels for the target makes it challenging to confirm whether it is a closed setting, thereby constraining its applicability.
+Unsupervised Domain Adaptation (UDA) aims to leverage labeled source data to achieve high performance on unlabeled target data. Existing UDA methods for semantic segmentation can be categorized into two approaches: adversarial learning-based and self-training. Adversarial learning-based methods~\cite{tsai2018learning,hong2018conditional,kim2020learning,pan2020unsupervised,tsai2019domain,chen2019synergistic,du2019ssf} use an adversarial domain classifier to learn domain-invariant features. Self-training methods~\cite{melas2021pixmatch,hoyer2022daformer,hoyer2022hrda,zou2018unsupervised,chen2019domain,zou2019confidence, wang2021domain,lian2019constructing,li2019bidirectional,wang2021uncertainty,zhang2021prototypical, tranheden2021dacs} assign pseudo-labels to each pixel in the target domain using confidence thresholding, and several self-training approaches further enhance target domain performance by re-training the model with these pseudo-labels. Although UDA allows the model to be trained on the target domain without annotations, it requires prior knowledge of class overlap between the source and target domains, which limits the model's applicability and generalizability. To overcome this limitation, we propose a universal domain adaptation approach for semantic segmentation, where the model can adapt to the target domain without requiring prior knowledge of class overlap.
+
+
+\subsection{Universal Domain Adaptation in Classification}
+Universal Domain Adaptation (UniDA)~\cite{you2019universal} was introduced to address various domain adaptation settings, such as closed-set, open-set, and partial domain adaptation. UniDA is a more challenging scenario because it operates without prior knowledge of the category configuration of the source and target domains. To tackle UniDA in classification tasks, prior works have focused on computing confidence scores for known classes and treating samples with lower scores as unknowns. CMU~\cite{fu2020learning} proposed a thresholding function, while ROS~\cite{bucci2020effectiveness} used the mean confidence score as a threshold, which results in neglecting about half of the target data as unknowns. DANCE~\cite{saito2020universal} set a threshold based on the number of classes in the source domain. OVANet~\cite{saito2021ovanet} introduced training a threshold using source samples and adapting it to the target domain. While UniDA has been extensively studied in the context of classification tasks, it remains underexplored in semantic segmentation, which requires a higher level of visual understanding due to the need for pixel-wise classification. In this work, we aim to investigate UniDA for semantic segmentation.
+
+% Universal Domain Adaptation (UniDA) extends the capabilities of domain adaptation by allowing the target domain to contain any combination of shared, source-private, and target-private classes. UniDA aims to adaptively handle both common and unknown classes without assuming any predefined class overlap. This flexibility makes UniDA a more robust framework for real-world applications where the target domain may include diverse categories not observed in the source domain.
+
+% Recent UniDA methods tackle this challenge by leveraging pseudo-labeling and self-training techniques to identify shared classes dynamically while treating unrecognized target-specific classes as ``unknown"" \cite{you2019universal, fu2020learning}. In the context of semantic segmentation, where spatial class distributions vary significantly across images, UniDA has proven effective in achieving a balanced alignment between domains. However, a primary difficulty lies in effectively adapting to complex spatial variations inherent in segmentation tasks.
+
+% To address this, we propose a novel approach specifically tailored for semantic segmentation in the UniDA setting. Our method, Target Pseudo Label Based Sampling, leverages target pseudo labels to guide both common and unknown class sampling, enhancing model performance across diverse and complex target domains without requiring prior knowledge of class definitions.",0.5
+tests/baselines_results/deepscholar_base_gpt_4.1/1,"Learning Pyramid-structured Long-range Dependencies for 3D Human Pose
+  Estimation","Action coordination in human structure is indispensable for the spatial
+constraints of 2D joints to recover 3D pose. Usually, action coordination is
+represented as a long-range dependence among body parts. However, there are two
+main challenges in modeling long-range dependencies. First, joints should not
+only be constrained by other individual joints but also be modulated by the
+body parts. Second, existing methods make networks deeper to learn dependencies
+between non-linked parts. They introduce uncorrelated noise and increase the
+model size. In this paper, we utilize a pyramid structure to better learn
+potential long-range dependencies. It can capture the correlation across joints
+and groups, which complements the context of the human sub-structure. In an
+effective cross-scale way, it captures the pyramid-structured long-range
+dependence. Specifically, we propose a novel Pyramid Graph Attention (PGA)
+module to capture long-range cross-scale dependencies. It concatenates
+information from various scales into a compact sequence, and then computes the
+correlation between scales in parallel. Combining PGA with graph convolution
+modules, we develop a Pyramid Graph Transformer (PGFormer) for 3D human pose
+estimation, which is a lightweight multi-scale transformer architecture. It
+encapsulates human sub-structures into self-attention by pooling. Extensive
+experiments show that our approach achieves lower error and smaller model size
+than state-of-the-art methods on Human3.6M and MPI-INF-3DHP datasets. The code
+is available at https://github.com/MingjieWe/PGFormer.","## Related Works
+
+The rapid growth in the deployment of large language models (LLMs) has led to significant research on optimizing inference efficiency, with key-value (KV) cache management emerging as a central focus. KV caching, which stores intermediate results from attention computations, is widely recognized for its ability to accelerate LLM serving by reducing redundant computation and improving throughput and latency \[1]\]\[2]\]. However, the increasing context lengths and diverse workload patterns in real-world deployments have introduced new challenges in cache management, particularly regarding cache eviction policies and their impact on system performance.
+
+### KV Cache Compression and Eviction Strategies
+
+A substantial body of work has explored KV cache compression and eviction to address the memory and computational bottlenecks associated with long-context LLM inference. Early approaches primarily focused on token-level strategies, such as pruning unimportant tokens based on attention scores or quantizing KV pairs to lower precision \[1]\]\[3]\]\[4]\]\[5]\]\[6]\]\[7]\]\[8]\]\[9]\]\[10]\]. For instance, GEAR integrates quantization, low-rank approximation, and sparse correction to achieve near-lossless compression, significantly improving throughput and reducing memory usage \[3]\]. Similarly, MILLION employs product quantization to address outlier sensitivity in KV values, enabling 4-bit quantization with minimal accuracy loss \[6]\]. KIVI further refines quantization by applying per-channel and per-token strategies for keys and values, respectively, achieving substantial memory savings without compromising quality \[7]\].
+
+Beyond quantization, eviction-based methods have been developed to selectively remove less important KV pairs from the cache. KVzip introduces a query-agnostic eviction mechanism that quantifies KV pair importance via context reconstruction, enabling effective reuse and substantial cache size reduction with negligible performance loss \[11]\]. CAKE frames eviction as a resource allocation problem across layers, adaptively distributing cache capacity based on layer-specific attention dynamics and token importance, resulting in significant memory savings and speedup \[12]\]. Other works, such as RoCo, leverage temporal attention scores and robustness measures to improve eviction decisions, demonstrating superior performance over prior policies \[13]\].
+
+Recent research has also highlighted the limitations of uniform compression or eviction rates across attention heads and layers. UNComp addresses this by employing uncertainty-aware, adaptive compression based on matrix entropy, grouping layers and heads according to their uncertainty and selectively compressing both hidden states and KV cache \[14]\]. KV-Compress similarly applies variable compression rates per attention head within a paged attention framework, achieving high compression ratios with minimal performance degradation \[9]\]. These adaptive approaches are particularly effective in heterogeneous workloads, where the importance of tokens and attention patterns can vary significantly across model components.
+
+### Semantic and Structural Approaches
+
+To further enhance cache efficiency, several works have proposed leveraging semantic or structural properties of the input. ClusterKV clusters tokens in semantic space, enabling recallable compression at the granularity of semantic clusters rather than fixed textual positions, which preserves accuracy and output quality even under aggressive compression \[15]\]. PyramidInfer exploits the observation that the number of crucial KV pairs decreases across layers, retaining only the most influential context in a layer-wise manner to reduce memory usage without sacrificing performance \[16]\]. KVMerger identifies and merges similar KV states within a sequence, capitalizing on token-level similarity to adaptively compress the cache for long-context tasks \[17]\].
+
+### Mixed-Precision and Hybrid Methods
+
+Mixed-precision strategies have gained traction as a means to balance compression and performance. MiKV proposes retaining evicted KV pairs in low precision while preserving important pairs at higher precision, mitigating the risks of context loss, hallucinations, and safety breaches associated with aggressive eviction \[5]\]. Quantized pruning, which stores more tokens at lower precision, has been shown to enhance long-context performance and retrieval tasks, offering a stable and effective trade-off across various pruning and quantization methods \[4]\]. LeanKV advances this line of work by differentiating the impact of keys and values, token importance, and dynamic sparsity patterns across attention heads, achieving high compression ratios with near-lossless accuracy \[8]\].
+
+### System-Level and Workload-Aware Optimizations
+
+System-level optimizations have also been explored to address the challenges of dynamic and bursty workloads in real-world LLM serving. MorphServe introduces runtime mechanisms for quantized layer swapping and pressure-aware KV cache resizing, dynamically adapting to workload fluctuations and reducing service-level objective (SLO) violations without compromising generation quality \[18]\]. PrefillOnly targets prefill-only workloads, where only a single output token is generated, by storing KV cache for only the last computed layer, drastically reducing memory footprint and enabling efficient scheduling \[19]\]. Cache-Craft focuses on retrieval-augmented generation (RAG) scenarios, managing and reusing chunk-caches to minimize redundant computation and improve throughput \[20]\].
+
+The importance of workload-aware cache management is further underscored by studies that analyze real-world usage patterns. For example, KVzip and KV-Compress demonstrate that query-agnostic and variable-rate eviction policies can outperform traditional query-aware methods, especially in multi-query and long-context scenarios \[11]\]\[9]\]. Analytical models have also been proposed to evaluate the economic trade-offs of KV cache reuse in cloud environments, showing that reuse can yield both delay and cost savings across diverse workloads \[21]\].
+
+### Benchmarks and Taxonomies
+
+Comprehensive surveys and benchmarks have been developed to systematically evaluate KV cache management techniques. A recent survey categorizes strategies into token-level, model-level, and system-level optimizations, providing taxonomies and comparative analyses to guide future research \[1]\]. SCBench offers a KV cache-centric benchmark that evaluates long-context methods across cache generation, compression, retrieval, and loading, revealing that dynamic sparsity and adaptive strategies yield more expressive and efficient caches than static patterns \[2]\].
+
+### Specialized and Privacy-Preserving Methods
+
+Specialized methods have been proposed for unique deployment scenarios. MPCache adapts KV cache eviction for secure multi-party computation (MPC), combining static and dynamic selection algorithms with MPC-friendly optimizations to reduce latency and communication overhead in privacy-preserving inference \[22]\]. VidKV extends quantization techniques to video LLMs, introducing mixed-precision strategies tailored to the unique characteristics of visual tokens and demonstrating effective compression with minimal performance loss \[10]\].
+
+### Limitations and Open Challenges
+
+Despite significant progress, several challenges remain. Many existing methods rely on synthetic workloads or single-request benchmarks, which may not capture the diversity and unpredictability of real-world usage patterns \[2]\]. Uniform compression or eviction strategies can harm performance in heterogeneous workloads, underscoring the need for adaptive, workload-aware approaches \[14]\]\[9]\]. Additionally, the trade-offs between cache size, hit ratio, and system cost require further exploration, particularly in cloud environments with varying resource constraints \[21]\].
+
+### Summary Table: Key Approaches in KV Cache Management
+
+| Approach Type         | Example Methods         | Key Features/Contributions                | Reference |
+|-----------------------|------------------------|-------------------------------------------|-----------|
+| Quantization          | GEAR, MILLION, KIVI    | Low-bit quantization, outlier handling    | \[3]\]\[6]\]\[7]\] |
+| Eviction/Pruning      | KVzip, CAKE, RoCo      | Importance-based, adaptive, temporal      | \[11]\]\[12]\]\[13]\] |
+| Mixed-Precision       | MiKV, Quantized Pruning| Retain important tokens at high precision | \[4]\]\[5]\]  |
+| Semantic/Structural   | ClusterKV, PyramidInfer| Semantic clustering, layer-wise retention | \[15]\]\[16]\]   |
+| Adaptive Compression  | UNComp, KV-Compress    | Uncertainty-aware, variable-rate eviction | \[14]\]\[9]\]  |
+| System-Level          | MorphServe, PrefillOnly| Runtime adaptation, workload awareness    | \[19]\]\[18]\]  |
+| Privacy-Preserving    | MPCache                | MPC-friendly eviction and selection       | \[22]\]      |
+| RAG Optimization      | Cache-Craft            | Chunk-cache reuse in retrieval scenarios  | \[20]\]      |
+| Benchmarking/Survey   | SCBench, Survey        | Taxonomies, comprehensive evaluation      | \[1]\]\[2]\]   |
+
+### Conclusion
+
+The literature on KV cache management for LLM serving is extensive and rapidly evolving, with a wide array of strategies addressing compression, eviction, quantization, and system-level adaptation. While significant advances have been made in reducing memory footprint and improving inference efficiency, the diversity of real-world workloads and the need for adaptive, workload-aware policies remain open challenges. Recent works increasingly emphasize the importance of characterizing actual usage patterns and developing flexible, context-sensitive cache management techniques to optimize LLM serving in production environments.","%-------------------------------------------------------------------------
+\subsection{3D Human pose estimation}
+{The inference of human body coordinates in 3D space from a single image was first proposed by Lee and Chen \cite{lee1985determination}. Recently, state-of-the-art approaches have employed deep neural networks. Some methods use end-to-end regression \cite{mehta2017monocular, pavlakos2017coarse} to predict 3D coordinates or heatmaps directly from a single image. For instance, Pavlakos et al. \cite{pavlakos2017coarse} proposed a coarse-to-fine network that predicts depth heatmaps using a convolutional neural network. However, these methods struggle with the mapping from a 2D image to a 3D human body.}\par
+{With advancements in 2D HPE, researchers decoupled the problem of 3D HPE and addressed it through 2D-to-3D lifting. \cite{cai2019exploiting,martinez2017simple,zhao2019semantic,zou2021modulated,zhao2022graformer,ZhongTMM2024,WangTMM2024,tang20233d,li2022mhformer, liu2023posynda}. This approach is capable of exploring spatial \cite{cai2019exploiting,martinez2017simple,zhao2019semantic,zou2021modulated,zhao2022graformer} and temporal \cite{ZhongTMM2024,WangTMM2024,tang20233d,li2022mhformer, chen2023hdformer} information to achieve excellent performance,  Consequently, we adopt this two-stage approach as well.
+To model human structure and exploit the relations, some works \cite{cai2019exploiting,zhao2019semantic,hu2021conditional,ci2019optimizing,liu2020comprehensive} are based on GCN network architecture. For example, Zhao et al. \cite{zhao2019semantic} use semmantic graph convolution and non-local modules \cite{wang2018non} to learn spatial constrains. However, local graph convolution aggregates information from adjacent keypoints but lacks the establishment of long-range coordination. The method we proposed builds upon local information and delves into the modeling of long-range dependencies.}\par 
+In addition, some distribution-based methods \cite{gong2023diffpose, holmquist2023diffpose, liu2023posynda} propose to learn pose distribution. {For instance, a reliable 3D pose is estimated by using diffusion model \cite{gong2023diffpose}. But they also require a conditional reverse diffusion step by modeling the spatial context. The proposed hierarchical long-range dependencies are also helpful to capture spatial priors and model sub-structures at different levels in the diffusion process.} \par
+%-------------------------------------------------------------------------
+\subsection{Long-range dependence}
+Long-range dependence refers to the dependencies among non-adjacent nodes in 3D HPE \cite{zou2021modulated}. In recent years, some methods \cite{fang2018learning, he2021db,zeng2021learning,zhao2022graformer} have recognized this widespread dependence in the structure of human body. It is often used to model human coordination in different actions. Therefore, taking this into consideration yields better results in some complex actions.\par
+{Fang et al. \cite{fang2018learning} propose to learn the symmetry and coordination of specific joint pairs via hand-craft connection. Zou and Tang \cite{zou2021modulated} propose to learn the motion patterns beyond natural connection via aggregating all high-order nodes. However, this manual design and reliance on graph convolution limits the efficiency of learning long-range constraints. }
+Nowadays, some of the latest methods \cite{zhao2022graformer,zhang2023learning,li2022exploiting,li2022mhformer,zhang2022mixste} design the network architecture based on attention  \cite{vaswani2017attention}. For example, Zhao et al. \cite{zhao2022graformer} design the transformer architecture that combines graph convolution and attention. Li et al. \cite{li2022exploiting} use transformer to exploit long-range dependence. {However, calculation process of self-attention ignores the rich structural information of human body. Previous work \cite{zhao2022graformer} improves long-range dependencies learning by replacing MLP with convolution, and does not improve the fundamental problem of the lack of structural information in attention. So, our approach further considers improving the self-attention mechanism to learn efficient feature representations of long distance dependencies, rather than noise data due to pure coordinate values.}
+%-------------------------------------------------------------------------
+\subsection{Hierarchical human structure}
+{The hierarchical human structure is a critical concept in the field of human pose estimation. It involves modeling the human body as a series of interconnected parts with different levels of hierarchy. This representation reflects the natural organization of the human body and its joints, allowing for more accurate and realistic predictions of poses. Grouping \cite{zhou2019hemlets,zeng2020srnet,xue2022boosting,wu2022hpgcn} or pooling\cite{xu2021graph, hua2022unet, zhang2023learning} are used to achieve hierarchical representation, such as the proposed pyramid structure. Different from image tasks \cite{wu2022p2t,PVT}, in 3D HPE, the pyramid structure provides graph-like hierarchical information about the substructure of the human body.}\par
+{These methods\cite{zhou2019hemlets,zeng2020srnet,xue2022boosting,wu2022hpgcn} demonstrate the importance of part-level analysis in 3D HPE. For example, Zhou et al. \cite{zhou2019hemlets} propose to learn part-centric heatmaps and Wu et al.\cite{wu2022hpgcn} represented human structure using hierarchical poselets. However, they do not adopt a explicit pooling approach to directly acquire part-level information. The proposed pyramid structure facilitates adequate information exchange across multiple scales. And it is an intuitive and efficient method to extract human substructure feature by pooling, which is explainable.
+Similarly, Xu et al. \cite{xu2021graph} construct a Graph Hourglass network by pooling on the hierarchical representation of the human skeleton. The proposed pyramid retains the original scale information, and achieves cross-scale calculation, which is conducive to the utilization of multi-scale information. Additionally, Zhang et al. \cite{zhang2023learning} introduce a parallel framework to compute semantic relations between different scales for 3D human pose estimation, but the architecture is redundant. We propose to integrate multi-scale concepts into self-attention, which can learn human substructure features in parallel and calculate correlations using a small number of parameters. In sum, we implement pooling in the self-attention to efficiently learn hierarchical human structure information.} \par",0.5

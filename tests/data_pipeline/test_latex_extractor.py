@@ -426,13 +426,13 @@ This is the methodology section.
 
         # Test cases with expected search terms
         test_cases = [
-            ("guo2025deepseek", ["guo", "deepseek"]),
-            ("jaech2024openai", ["jaech", "openai"]),
-            ("team2024qwq", ["team", "qwq"]),
-            ("snell2024scaling", ["snell", "scaling"]),
-            ("brown2024large", ["brown", "large"]),
+            ("guo2025deepseek", ["2025", "guo", "deepseek"]),
+            ("jaech2024openai", ["2024", "jaech", "openai"]),
+            ("team2024qwq", ["2024", "team", "qwq"]),
+            ("snell2024scaling", ["2024", "snell", "scaling"]),
+            ("brown2024large", ["2024", "brown", "large"]),
             ("noYearAuthor", ["noYearAuthor"]),
-            ("2023onlyYear", ["onlyYear"]),
+            ("2023onlyYear", ["2023", "onlyYear"]),
             ("", []),  # Edge case: empty string
         ]
 

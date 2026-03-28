@@ -25,6 +25,10 @@ class DeepScholarBaseParser(Parser):
         self.clean_text, self.docs = self._to_autoais(
             self.raw_generated_text, reference_map
         )
+        # Set citations_for_cite_quality from docs (list of tuples: (title, abstract))
+        self.citations_for_cite_quality = [
+            (doc.get("title", ""), doc.get("sent", "")) for doc in self.docs
+        ]
 
     def _to_autoais(self, updated_text: str, reference_map: dict):
         link2id: OrderedDict[str, int] = OrderedDict()

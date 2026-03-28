@@ -946,7 +946,7 @@ class LatexExtractor:
         terms = []
 
         # Extract years (4-digit numbers that look like years)
-        years = re.findall(r"\b(19|20)\d{2}\b", citation_text)
+        years = re.findall(r"(19\d{2}|20\d{2})", citation_text)
         if years:
             terms.extend(years)
 
